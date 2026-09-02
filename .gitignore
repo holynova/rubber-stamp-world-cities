@@ -1,0 +1,4 @@
+# Keep only renamed gallery assets in the repository
+images/chatgpt_*.png
+__pycache__/
+.DS_Store
