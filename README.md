@@ -1,18 +1,28 @@
-# 橡胶戳旅行实地笔记海报｜世界城市 30 张
+# 橡胶戳旅行实地笔记 · 世界城市 (Rubber Stamp World Cities)
 
-基于小红书参考提示词，为 30 个世界著名城市制作独立的 4:5 橡胶戳旅行实地笔记海报。
+为 30 座世界著名城市制作的 4:5 橡胶戳旅行实地笔记海报画廊。每张海报精选一个城市最具代表性的地标建筑、地形或天际线轮廓，呈现温暖旧米白纸张、手工多色套印橡胶戳与克制旅行手账的独特质感。
 
-## 项目状态
+## 在线体验
 
-- 城市数量：30
-- 视觉母版：`source_prompt.md`
-- 原始参考：`source_note.md`
-- 结构化提示词：`prompts.json`
-- 图片目录：`images/`
-- 网站：`index.html`（已完成）
-- 生成结果：30/30 张 PNG，统一 1122×1402（4:5）
-- 验收材料：`contact_sheet/world-cities-contact-sheet.jpg`、`mapping.csv`、`generation_manifest.json`
+- **GitHub Pages 演示**：<https://holynova.github.io/rubber-stamp-world-cities/>
+- **GitHub 源码仓库**：<https://github.com/holynova/rubber-stamp-world-cities>
 
-## 原则
+![项目截图](./screenshot.png)
 
-每张图只描绘一个城市，使用城市最具识别度的建筑、地形或天际线；保持 4:5 纵向、旧米白纸张、紧凑橡胶戳和克制的旅行实地笔记气质。
+### 手机扫码体验
+
+手机扫描二维码直接访问移动端画廊：
+
+<img src="./qrcode.png" width="180" alt="GitHub Pages 二维码">
+
+## 本地运行
+
+```bash
+npm run dev
+# 或
+npm run serve
+```
+
+## 收录城市
+
+上海、北京、东京、京都、首尔、曼谷、新加坡、孟买、迪拜、伊斯坦布尔、莫斯科、巴黎、伦敦、罗马、巴塞罗那、阿姆斯特丹、雅典、开罗、内罗毕、开普敦、纽约、旧金山、墨西哥城、里约热内卢、布宜诺斯艾利斯、利马、悉尼、墨尔本、温哥华、库斯科等 30 座世界城市。

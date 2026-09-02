@@ -1,9 +1,349 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>橡胶戳旅行实地笔记 · 世界城市</title><meta name="description" content="30座世界城市的橡胶戳旅行实地笔记海报。"><style>
-:root{--paper:#eee5d5;--ink:#292722;--muted:#746d60;--line:#cfc2ad;--accent:#8d4d39}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Songti SC",serif;background-image:radial-gradient(#7e6f5c18 .7px,transparent .7px);background-size:7px 7px}header{max-width:1240px;margin:auto;padding:64px 28px 32px;border-bottom:1px solid var(--line)}.kicker{font:12px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}h1{font-size:clamp(36px,6vw,76px);line-height:.98;font-weight:400;margin:18px 0 20px;max-width:800px}header p{max-width:660px;color:var(--muted);font-size:16px;line-height:1.7}.toolbar{max-width:1240px;margin:auto;padding:22px 28px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;border-bottom:1px solid var(--line)}input,select{background:#f7f0e4;border:1px solid var(--line);border-radius:3px;padding:11px 13px;color:var(--ink);font:14px ui-monospace,monospace}input{min-width:240px}.count{margin-left:auto;color:var(--muted);font:12px ui-monospace,monospace}.grid{max-width:1240px;margin:auto;padding:32px 28px 80px;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:28px}.card{cursor:pointer}.frame{position:relative;aspect-ratio:4/5;background:#ddd0bb;border:1px solid #c7b9a2;box-shadow:4px 5px 0 #c7b9a244;overflow:hidden}.frame img{width:100%;height:100%;object-fit:contain;display:block}.badge{position:absolute;top:10px;left:10px;background:#eee5d5dd;border:1px solid var(--line);padding:5px 7px;font:11px ui-monospace,monospace}.card h2{font-size:20px;font-weight:400;margin:13px 0 5px}.meta{font:11px ui-monospace,monospace;color:var(--muted);line-height:1.5}.keywords{margin-top:8px;color:var(--accent);font-size:12px}.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:60px}.lightbox{position:fixed;inset:0;background:#211f1bdd;display:none;align-items:center;justify-content:center;padding:22px;z-index:3}.lightbox.open{display:flex}.modal{max-width:900px;width:100%;max-height:94vh;display:grid;grid-template-columns:minmax(260px,1fr) minmax(220px,.65fr);background:var(--paper);padding:14px;gap:20px}.modal img{width:100%;height:100%;max-height:88vh;object-fit:contain;background:#ddd0bb}.modal aside{padding:20px 12px}.modal h2{font-size:34px;font-weight:400;margin:0 0 12px}.close{float:right;border:0;background:transparent;font-size:28px;cursor:pointer;color:var(--muted)}.modal p{color:var(--muted);line-height:1.7}.source{border-top:1px solid var(--line);margin-top:20px;padding-top:15px;font:11px/1.6 ui-monospace,monospace;color:var(--muted)}@media(max-width:700px){header{padding:42px 20px 24px}.toolbar,.grid{padding-left:20px;padding-right:20px}.count{width:100%;margin-left:0}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card h2{font-size:17px}.modal{grid-template-columns:1fr;max-height:96vh;overflow:auto}.modal img{max-height:58vh}}
-</style></head><body><header><div class="kicker">field notes / rubber stamp travel posters / 2026</div><h1>橡胶戳旅行实地笔记<br>世界城市</h1><p>30 座城市，30 枚低调的多色橡胶戳。每一张只留下一个地点最易辨认的轮廓：建筑、山脉、海岸线与城市的呼吸。</p></header><div class="toolbar"><input id="search" placeholder="搜索城市或关键词…"><select id="filter"><option value="all">全部城市</option><option value="ready">已生成</option><option value="pending">待生成</option></select><span class="count" id="count"></span></div><main class="grid" id="grid"></main><div class="lightbox" id="lightbox"><div class="modal"><img id="big" alt=""><aside><button class="close" id="close">×</button><div class="kicker" id="number"></div><h2 id="title"></h2><div class="meta" id="details"></div><p id="desc"></p><div class="source">每张海报：4:5 纵向 · 温暖旧米白纸张 · 2–4 色手工橡胶戳 · 2026</div></aside></div></div><script src="data.js"></script><script>
-const grid=document.querySelector('#grid'), search=document.querySelector('#search'), filter=document.querySelector('#filter'), count=document.querySelector('#count');
-const exists=new Set();
-function render(){let q=search.value.trim().toLowerCase(), f=filter.value;let rows=CITIES.filter(x=>(!q||(x.city+x.features+x.keywords.join(' ')).toLowerCase().includes(q))&&(f==='all'||(f==='ready'&&exists.has(x.id))||(f==='pending'&&!exists.has(x.id))));count.textContent=`${rows.length} / ${CITIES.length} 城市 · ${exists.size} 张已生成`;grid.innerHTML=rows.length?rows.map(x=>`<article class="card" data-id="${x.id}"><div class="frame"><img src="${exists.has(x.id)?x.output:'placeholder.svg'}" alt="${x.city} 橡胶戳旅行海报" loading="lazy"><span class="badge">NO. ${String(x.id).padStart(2,'0')}</span></div><h2>${x.city}</h2><div class="meta">${x.features}</div><div class="keywords">${x.keywords.join(' · ')}</div></article>`).join(''):'<div class="empty">没有匹配的实地笔记。</div>'}
-CITIES.forEach(x=>{const im=new Image();im.onload=()=>{if(im.naturalWidth>500){exists.add(x.id);render()}};im.src=x.output});render();search.oninput=render;filter.onchange=render;grid.onclick=e=>{let c=e.target.closest('.card');if(!c)return;let x=CITIES.find(v=>v.id==c.dataset.id);document.querySelector('#big').src=exists.has(x.id)?x.output:'placeholder.svg';document.querySelector('#big').alt=x.city;document.querySelector('#number').textContent=`FIELD NOTE ${String(x.id).padStart(2,'0')} / 30`;document.querySelector('#title').textContent=x.city;document.querySelector('#details').textContent=x.features;document.querySelector('#desc').textContent=x.keywords.join(' · ');document.querySelector('#lightbox').classList.add('open')};document.querySelector('#close').onclick=()=>document.querySelector('#lightbox').classList.remove('open');document.querySelector('#lightbox').onclick=e=>{if(e.target.id==='lightbox')e.currentTarget.classList.remove('open')};
-</script></body></html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>橡胶戳旅行实地笔记 · 世界城市</title>
+  <meta name="description" content="30座世界城市的橡胶戳旅行实地笔记海报。">
+
+  <!-- Analytics -->
+  <script
+    defer
+    src="https://cloud.umami.is/script.js"
+    data-website-id="e01c9f78-4607-4e60-b01c-77c8190b12b4"
+    data-domains="holynova.github.io"
+    data-exclude-search="true"
+    data-exclude-hash="true"
+  ></script>
+
+  <style>
+    :root {
+      --paper: #eee5d5;
+      --ink: #292722;
+      --muted: #746d60;
+      --line: #cfc2ad;
+      --accent: #8d4d39;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Georgia, "Songti SC", serif;
+      background-image: radial-gradient(#7e6f5c18 .7px, transparent .7px);
+      background-size: 7px 7px;
+    }
+    header {
+      max-width: 1240px;
+      margin: auto;
+      padding: 64px 28px 32px;
+      border-bottom: 1px solid var(--line);
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+    }
+    .header-content { flex: 1; }
+    .kicker {
+      font: 12px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    h1 {
+      font-size: clamp(36px, 6vw, 76px);
+      line-height: .98;
+      font-weight: 400;
+      margin: 18px 0 20px;
+      max-width: 800px;
+    }
+    header p {
+      max-width: 660px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+      margin: 0;
+    }
+    .github-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #f7f0e4;
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      padding: 8px 14px;
+      color: var(--ink);
+      text-decoration: none;
+      font: 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+      letter-spacing: .05em;
+      transition: all .15s ease;
+      box-shadow: 2px 2px 0 #c7b9a244;
+      flex-shrink: 0;
+    }
+    .github-link:hover {
+      background: #ede3d0;
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-1px);
+      box-shadow: 3px 3px 0 #c7b9a288;
+    }
+    .github-icon {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+    .toolbar {
+      max-width: 1240px;
+      margin: auto;
+      padding: 22px 28px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--line);
+    }
+    input, select {
+      background: #f7f0e4;
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      padding: 11px 13px;
+      color: var(--ink);
+      font: 14px ui-monospace, monospace;
+    }
+    input { min-width: 240px; }
+    .count {
+      margin-left: auto;
+      color: var(--muted);
+      font: 12px ui-monospace, monospace;
+    }
+    .grid {
+      max-width: 1240px;
+      margin: auto;
+      padding: 32px 28px 80px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 28px;
+    }
+    .card { cursor: pointer; }
+    .frame {
+      position: relative;
+      aspect-ratio: 4/5;
+      background: #ddd0bb;
+      border: 1px solid #c7b9a2;
+      box-shadow: 4px 5px 0 #c7b9a244;
+      overflow: hidden;
+    }
+    .frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #eee5d5dd;
+      border: 1px solid var(--line);
+      padding: 5px 7px;
+      font: 11px ui-monospace, monospace;
+    }
+    .card h2 {
+      font-size: 20px;
+      font-weight: 400;
+      margin: 13px 0 5px;
+    }
+    .meta {
+      font: 11px ui-monospace, monospace;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .keywords {
+      margin-top: 8px;
+      color: var(--accent);
+      font-size: 12px;
+    }
+    .empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      color: var(--muted);
+      padding: 60px;
+    }
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: #211f1bdd;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 22px;
+      z-index: 3;
+    }
+    .lightbox.open { display: flex; }
+    .modal {
+      max-width: 900px;
+      width: 100%;
+      max-height: 94vh;
+      display: grid;
+      grid-template-columns: minmax(260px, 1fr) minmax(220px, .65fr);
+      background: var(--paper);
+      padding: 14px;
+      gap: 20px;
+    }
+    .modal img {
+      width: 100%;
+      height: 100%;
+      max-height: 88vh;
+      object-fit: contain;
+      background: #ddd0bb;
+    }
+    .modal aside { padding: 20px 12px; }
+    .modal h2 {
+      font-size: 34px;
+      font-weight: 400;
+      margin: 0 0 12px;
+    }
+    .close {
+      float: right;
+      border: 0;
+      background: transparent;
+      font-size: 28px;
+      cursor: pointer;
+      color: var(--muted);
+    }
+    .modal p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .source {
+      border-top: 1px solid var(--line);
+      margin-top: 20px;
+      padding-top: 15px;
+      font: 11px/1.6 ui-monospace, monospace;
+      color: var(--muted);
+    }
+    @media(max-width: 700px) {
+      header { padding: 42px 20px 24px; }
+      .header-inner { flex-direction: column-reverse; gap: 18px; }
+      .github-link { align-self: flex-start; }
+      .toolbar, .grid { padding-left: 20px; padding-right: 20px; }
+      .count { width: 100%; margin-left: 0; }
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+      .card h2 { font-size: 17px; }
+      .modal { grid-template-columns: 1fr; max-height: 96vh; overflow: auto; }
+      .modal img { max-height: 58vh; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="header-content">
+        <div class="kicker">field notes / rubber stamp travel posters / 2026</div>
+        <h1>橡胶戳旅行实地笔记<br>世界城市</h1>
+        <p>30 座城市，30 枚低调的多色橡胶戳。每一张只留下一个地点最易辨认的轮廓：建筑、山脉、海岸线与城市的呼吸。</p>
+      </div>
+      <a href="https://github.com/holynova/rubber-stamp-world-cities" target="_blank" rel="noopener noreferrer" class="github-link" title="GitHub Repository">
+        <svg class="github-icon" viewBox="0 0 24 24">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <input id="search" placeholder="搜索城市或关键词…">
+    <select id="filter">
+      <option value="all">全部城市</option>
+      <option value="ready">已生成</option>
+      <option value="pending">待生成</option>
+    </select>
+    <span class="count" id="count"></span>
+  </div>
+
+  <main class="grid" id="grid"></main>
+
+  <div class="lightbox" id="lightbox">
+    <div class="modal">
+      <img id="big" alt="">
+      <aside>
+        <button class="close" id="close">×</button>
+        <div class="kicker" id="number"></div>
+        <h2 id="title"></h2>
+        <div class="meta" id="details"></div>
+        <p id="desc"></p>
+        <div class="source">每张海报：4:5 纵向 · 温暖旧米白纸张 · 2–4 色手工橡胶戳 · 2026</div>
+      </aside>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script>
+    const grid = document.querySelector('#grid');
+    const search = document.querySelector('#search');
+    const filter = document.querySelector('#filter');
+    const count = document.querySelector('#count');
+    const exists = new Set();
+
+    function render() {
+      const q = search.value.trim().toLowerCase();
+      const f = filter.value;
+      const rows = CITIES.filter(x => (
+        (!q || (x.city + x.features + x.keywords.join(' ')).toLowerCase().includes(q)) &&
+        (f === 'all' || (f === 'ready' && exists.has(x.id)) || (f === 'pending' && !exists.has(x.id)))
+      ));
+      count.textContent = `${rows.length} / ${CITIES.length} 城市 · ${exists.size} 张已生成`;
+      grid.innerHTML = rows.length
+        ? rows.map(x => `
+            <article class="card" data-id="${x.id}">
+              <div class="frame">
+                <img src="${exists.has(x.id) ? x.output : 'placeholder.svg'}" alt="${x.city} 橡胶戳旅行海报" loading="lazy">
+                <span class="badge">NO. ${String(x.id).padStart(2, '0')}</span>
+              </div>
+              <h2>${x.city}</h2>
+              <div class="meta">${x.features}</div>
+              <div class="keywords">${x.keywords.join(' · ')}</div>
+            </article>
+          `).join('')
+        : '<div class="empty">没有匹配的实地笔记。</div>';
+    }
+
+    CITIES.forEach(x => {
+      const im = new Image();
+      im.onload = () => {
+        if (im.naturalWidth > 500) {
+          exists.add(x.id);
+          render();
+        }
+      };
+      im.src = x.output;
+    });
+
+    render();
+    search.oninput = render;
+    filter.onchange = render;
+
+    grid.onclick = e => {
+      const c = e.target.closest('.card');
+      if (!c) return;
+      const x = CITIES.find(v => v.id == c.dataset.id);
+      if (!x) return;
+      document.querySelector('#big').src = exists.has(x.id) ? x.output : 'placeholder.svg';
+      document.querySelector('#big').alt = x.city;
+      document.querySelector('#number').textContent = `FIELD NOTE ${String(x.id).padStart(2, '0')} / 30`;
+      document.querySelector('#title').textContent = x.city;
+      document.querySelector('#details').textContent = x.features;
+      document.querySelector('#desc').textContent = x.keywords.join(' · ');
+      document.querySelector('#lightbox').classList.add('open');
+    };
+
+    document.querySelector('#close').onclick = () => document.querySelector('#lightbox').classList.remove('open');
+    document.querySelector('#lightbox').onclick = e => {
+      if (e.target.id === 'lightbox') e.currentTarget.classList.remove('open');
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "name": "rubber-stamp-world-cities",
+  "version": "1.0.0",
+  "description": "30 world city rubber stamp travel field-note posters | 30座世界城市的橡胶戳旅行实地笔记海报画廊",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8080",
+    "serve": "npx serve .",
+    "start": "open index.html"
+  },
+  "keywords": [
+    "travel-poster",
+    "rubber-stamp",
+    "world-cities",
+    "field-notes",
+    "gallery",
+    "ai-art"
+  ],
+  "author": "holy_nova <holy_nova@126.com>",
+  "license": "MIT",
+  "homepage": "https://holynova.github.io/rubber-stamp-world-cities/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holynova/rubber-stamp-world-cities.git"
+  },
+  "bugs": {
+    "url": "https://github.com/holynova/rubber-stamp-world-cities/issues"
+  }
+}
