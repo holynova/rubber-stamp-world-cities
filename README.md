@@ -9,7 +9,9 @@
 - 原始参考：`source_note.md`
 - 结构化提示词：`prompts.json`
 - 图片目录：`images/`
-- 网站：`index.html`（生成图片后创建）
+- 网站：`index.html`（已完成）
+- 生成结果：30/30 张 PNG，统一 1122×1402（4:5）
+- 验收材料：`contact_sheet/world-cities-contact-sheet.jpg`、`mapping.csv`、`generation_manifest.json`
 
 ## 原则
 
