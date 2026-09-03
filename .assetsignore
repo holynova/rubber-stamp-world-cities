@@ -1,0 +1,21 @@
+.git/
+.gitignore
+.assetsignore
+.wrangler/
+node_modules/
+*.log
+.DS_Store
+
+# Source and generation-only files; the public Worker serves the gallery output.
+README.md
+package.json
+*.py
+*.json
+*.txt
+*.csv
+source_note.md
+source_prompt.md
+screenshot.png
+qrcode.png
+contact_sheet/
+*.jpg
