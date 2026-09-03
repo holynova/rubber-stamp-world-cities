@@ -5,6 +5,7 @@
 node_modules/
 *.log
 .DS_Store
+wrangler.jsonc
 
 # Source and generation-only files; the public Worker serves the gallery output.
 README.md
