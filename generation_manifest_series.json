@@ -1,0 +1,254 @@
+{
+  "images/zodiac/02_牛.png": {
+    "name": "牛",
+    "series": "zodiac",
+    "output": "images/zodiac/02_牛.png",
+    "status": "success",
+    "time": "2026-09-05 20:02:28"
+  },
+  "images/zodiac/03_虎.png": {
+    "name": "虎",
+    "series": "zodiac",
+    "output": "images/zodiac/03_虎.png",
+    "status": "success",
+    "time": "2026-09-05 20:02:32"
+  },
+  "images/zodiac/01_鼠.png": {
+    "name": "鼠",
+    "series": "zodiac",
+    "output": "images/zodiac/01_鼠.png",
+    "status": "success",
+    "time": "2026-09-05 20:02:24"
+  },
+  "images/zodiac/04_兔.png": {
+    "name": "兔",
+    "series": "zodiac",
+    "output": "images/zodiac/04_兔.png",
+    "status": "success",
+    "time": "2026-09-05 20:02:36"
+  },
+  "images/zodiac/05_龙.png": {
+    "name": "龙",
+    "series": "zodiac",
+    "output": "images/zodiac/05_龙.png",
+    "status": "success",
+    "time": "2026-09-05 20:03:27"
+  },
+  "images/zodiac/06_蛇.png": {
+    "name": "蛇",
+    "series": "zodiac",
+    "output": "images/zodiac/06_蛇.png",
+    "status": "success",
+    "time": "2026-09-05 20:04:19"
+  },
+  "images/zodiac/07_马.png": {
+    "name": "马",
+    "series": "zodiac",
+    "output": "images/zodiac/07_马.png",
+    "status": "success",
+    "time": "2026-09-05 20:05:10"
+  },
+  "images/zodiac/08_羊.png": {
+    "name": "羊",
+    "series": "zodiac",
+    "output": "images/zodiac/08_羊.png",
+    "status": "success",
+    "time": "2026-09-05 20:06:01"
+  },
+  "images/zodiac/09_猴.png": {
+    "name": "猴",
+    "series": "zodiac",
+    "output": "images/zodiac/09_猴.png",
+    "status": "success",
+    "time": "2026-09-05 20:06:50"
+  },
+  "images/zodiac/10_鸡.png": {
+    "name": "鸡",
+    "series": "zodiac",
+    "output": "images/zodiac/10_鸡.png",
+    "status": "success",
+    "time": "2026-09-05 20:07:47"
+  },
+  "images/zodiac/11_狗.png": {
+    "name": "狗",
+    "series": "zodiac",
+    "output": "images/zodiac/11_狗.png",
+    "status": "success",
+    "time": "2026-09-05 20:08:39"
+  },
+  "images/zodiac/12_猪.png": {
+    "name": "猪",
+    "series": "zodiac",
+    "output": "images/zodiac/12_猪.png",
+    "status": "success",
+    "time": "2026-09-05 20:09:56"
+  },
+  "images/solar_terms/01_立春.png": {
+    "name": "立春",
+    "series": "solar_terms",
+    "output": "images/solar_terms/01_立春.png",
+    "status": "success",
+    "time": "2026-09-05 20:11:21"
+  },
+  "images/solar_terms/02_雨水.png": {
+    "name": "雨水",
+    "series": "solar_terms",
+    "output": "images/solar_terms/02_雨水.png",
+    "status": "success",
+    "time": "2026-09-05 20:12:16"
+  },
+  "images/solar_terms/03_惊蛰.png": {
+    "name": "惊蛰",
+    "series": "solar_terms",
+    "output": "images/solar_terms/03_惊蛰.png",
+    "status": "success",
+    "time": "2026-09-05 20:13:07"
+  },
+  "images/solar_terms/04_春分.png": {
+    "name": "春分",
+    "series": "solar_terms",
+    "output": "images/solar_terms/04_春分.png",
+    "status": "success",
+    "time": "2026-09-05 20:14:03"
+  },
+  "images/solar_terms/05_清明.png": {
+    "name": "清明",
+    "series": "solar_terms",
+    "output": "images/solar_terms/05_清明.png",
+    "status": "success",
+    "time": "2026-09-05 20:15:10"
+  },
+  "images/solar_terms/06_谷雨.png": {
+    "name": "谷雨",
+    "series": "solar_terms",
+    "output": "images/solar_terms/06_谷雨.png",
+    "status": "failed",
+    "time": "2026-09-05 20:21:01"
+  },
+  "images/solar_terms/07_立夏.png": {
+    "name": "立夏",
+    "series": "solar_terms",
+    "output": "images/solar_terms/07_立夏.png",
+    "status": "success",
+    "time": "2026-09-05 20:22:09"
+  },
+  "images/solar_terms/08_小满.png": {
+    "name": "小满",
+    "series": "solar_terms",
+    "output": "images/solar_terms/08_小满.png",
+    "status": "success",
+    "time": "2026-09-05 20:52:06"
+  },
+  "images/solar_terms/09_芒种.png": {
+    "name": "芒种",
+    "series": "solar_terms",
+    "output": "images/solar_terms/09_芒种.png",
+    "status": "success",
+    "time": "2026-09-05 20:28:59"
+  },
+  "images/solar_terms/10_夏至.png": {
+    "name": "夏至",
+    "series": "solar_terms",
+    "output": "images/solar_terms/10_夏至.png",
+    "status": "success",
+    "time": "2026-09-05 20:59:02"
+  },
+  "images/solar_terms/11_小暑.png": {
+    "name": "小暑",
+    "series": "solar_terms",
+    "output": "images/solar_terms/11_小暑.png",
+    "status": "success",
+    "time": "2026-09-05 20:35:58"
+  },
+  "images/solar_terms/12_大暑.png": {
+    "name": "大暑",
+    "series": "solar_terms",
+    "output": "images/solar_terms/12_大暑.png",
+    "status": "success",
+    "time": "2026-09-05 21:00:20"
+  },
+  "images/solar_terms/13_立秋.png": {
+    "name": "立秋",
+    "series": "solar_terms",
+    "output": "images/solar_terms/13_立秋.png",
+    "status": "success",
+    "time": "2026-09-05 21:01:39"
+  },
+  "images/solar_terms/14_处暑.png": {
+    "name": "处暑",
+    "series": "solar_terms",
+    "output": "images/solar_terms/14_处暑.png",
+    "status": "success",
+    "time": "2026-09-05 21:02:48"
+  },
+  "images/solar_terms/15_白露.png": {
+    "name": "白露",
+    "series": "solar_terms",
+    "output": "images/solar_terms/15_白露.png",
+    "status": "success",
+    "time": "2026-09-05 21:03:56"
+  },
+  "images/solar_terms/16_秋分.png": {
+    "name": "秋分",
+    "series": "solar_terms",
+    "output": "images/solar_terms/16_秋分.png",
+    "status": "success",
+    "time": "2026-09-05 21:05:02"
+  },
+  "images/solar_terms/17_寒露.png": {
+    "name": "寒露",
+    "series": "solar_terms",
+    "output": "images/solar_terms/17_寒露.png",
+    "status": "success",
+    "time": "2026-09-05 21:06:25"
+  },
+  "images/solar_terms/18_霜降.png": {
+    "name": "霜降",
+    "series": "solar_terms",
+    "output": "images/solar_terms/18_霜降.png",
+    "status": "success",
+    "time": "2026-09-05 21:07:29"
+  },
+  "images/solar_terms/19_立冬.png": {
+    "name": "立冬",
+    "series": "solar_terms",
+    "output": "images/solar_terms/19_立冬.png",
+    "status": "success",
+    "time": "2026-09-05 21:08:44"
+  },
+  "images/solar_terms/20_小雪.png": {
+    "name": "小雪",
+    "series": "solar_terms",
+    "output": "images/solar_terms/20_小雪.png",
+    "status": "success",
+    "time": "2026-09-05 21:09:55"
+  },
+  "images/solar_terms/21_大雪.png": {
+    "name": "大雪",
+    "series": "solar_terms",
+    "output": "images/solar_terms/21_大雪.png",
+    "status": "success",
+    "time": "2026-09-05 21:11:02"
+  },
+  "images/solar_terms/22_冬至.png": {
+    "name": "冬至",
+    "series": "solar_terms",
+    "output": "images/solar_terms/22_冬至.png",
+    "status": "success",
+    "time": "2026-09-05 21:12:25"
+  },
+  "images/solar_terms/23_小寒.png": {
+    "name": "小寒",
+    "series": "solar_terms",
+    "output": "images/solar_terms/23_小寒.png",
+    "status": "success",
+    "time": "2026-09-05 21:14:24"
+  },
+  "images/solar_terms/24_大寒.png": {
+    "name": "大寒",
+    "series": "solar_terms",
+    "output": "images/solar_terms/24_大寒.png",
+    "status": "success",
+    "time": "2026-09-05 21:15:52"
+  }
+}
