@@ -1,8 +1,16 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "rubber-stamp-world-cities",
+  "account_id": "ef7863c4de93e71c3496f940c8ab4865",
   "compatibility_date": "2026-09-03",
+  "workers_dev": false,
   "assets": {
     "directory": "."
-  }
+  },
+  "routes": [
+    {
+      "pattern": "rubber-stamp-world-cities.xiaosang.cc",
+      "custom_domain": true
+    }
+  ]
 }
