@@ -1382,11 +1382,11 @@
       </div>
       <div class="header-actions">
         <button class="btn-top btn-top-puzzle" id="btn-open-journal">
-          <span>🧩 盖章手账本</span>
+          <span>手账拼贴</span>
           <span class="passport-badge" id="journal-count-badge">0</span>
         </button>
         <button class="btn-top btn-top-accent" id="btn-open-passport">
-          <span>📖 印记收集册</span>
+          <span>印记收集册</span>
           <span class="passport-badge" id="passport-count-badge">0</span>
         </button>
         <a href="https://github.com/holynova/rubber-stamp-world-cities" target="_blank" rel="noopener noreferrer" class="btn-top" title="GitHub 源码仓库">
@@ -1435,7 +1435,7 @@
 
     <!-- Ink Palette Switcher -->
     <div class="ink-selector-wrap">
-      <span class="ink-label">🎨 配色:</span>
+      <span class="ink-label">油墨配色:</span>
       <div class="ink-pill-group">
         <button class="ink-pill active" data-ink="original" title="原版天然专色">天然原色</button>
         <button class="ink-pill" data-ink="cinnabar" title="传统朱砂印泥 (赤红)">传统朱砂</button>
@@ -1469,13 +1469,13 @@
         
         <div class="modal-interactive-btns">
           <button class="btn-modal-action btn-modal-stamp" id="modal-stamp-btn">
-            <span>🏷️ 盖入收集册</span>
+            <span>盖入收集册</span>
           </button>
           <button class="btn-modal-action" id="modal-journal-btn" style="background:#ede0cb;border-color:var(--accent);color:var(--accent);">
-            <span>🧩 贴入手账本</span>
+            <span>贴入手账本</span>
           </button>
           <button class="btn-modal-action btn-modal-exlibris" id="modal-exlibris-btn">
-            <span>🔖 制作藏书票</span>
+            <span>制作藏书票</span>
           </button>
         </div>
 
@@ -1492,16 +1492,16 @@
     <div class="passport-modal-inner">
       <div class="passport-header">
         <div>
-          <h2 class="passport-title">📖 印记收集册 · Stamp Passport</h2>
+          <h2 class="passport-title">印记收集册 · Stamp Passport</h2>
           <div class="passport-stats" id="passport-stats-text">已收集 0 枚印章</div>
         </div>
         <button class="close" id="passport-close" title="关闭 (Esc)">×</button>
       </div>
       <div class="passport-toolbar">
-        <button class="btn-top btn-top-accent" id="btn-export-postcard">📥 导出旅行打卡明信片</button>
-        <button class="btn-top" id="btn-passport-to-journal">🧩 拼入盖章手账本</button>
-        <button class="btn-top" id="btn-stamp-all">✨ 一键盖章全收集</button>
-        <button class="btn-top" id="btn-reset-passport" style="color:#b83b26;">🧹 清空收集记录</button>
+        <button class="btn-top btn-top-accent" id="btn-export-postcard">导出明信片</button>
+        <button class="btn-top" id="btn-passport-to-journal">排入手账本</button>
+        <button class="btn-top" id="btn-stamp-all">全套盖印</button>
+        <button class="btn-top" id="btn-reset-passport" style="color:#b83b26;">清空记录</button>
       </div>
       <div class="passport-grid" id="passport-grid">
         <!-- Filled dynamically -->
@@ -1517,16 +1517,16 @@
       <!-- Left: Interactive Journal Preview Pane -->
       <div class="journal-preview-pane">
         <div class="journal-toolbar-top">
-          <span class="journal-toolbar-title">📖 手账跨页预览 (Live Stamped Page)</span>
+          <span class="journal-toolbar-title">手账跨页预览</span>
           <div class="journal-quick-actions">
-            <button class="btn-journal-tool" id="btn-fill-collected" title="将已盖章的作品自动拼贴排版入本">
-              🌟 填入已盖章
+            <button class="btn-journal-tool" id="btn-fill-collected" title="将已收集的作品自动排版入本">
+              填入已收集
             </button>
             <button class="btn-journal-tool" id="btn-random-journal" title="从全部 76 款印章中随机挑选">
-              🎲 随机一页
+              随机排版
             </button>
             <button class="btn-journal-tool" id="btn-clear-journal" title="清空当前手账页中的印章">
-              🗑️ 清空
+              清空本页
             </button>
           </div>
         </div>
@@ -1537,10 +1537,10 @@
 
         <div class="journal-export-bar">
           <button class="btn-top btn-top-accent btn-journal-export" id="btn-download-journal">
-            📥 下载高清手账跨页 (PNG 2400×1600 超清版)
+            导出高清跨页 (PNG 2400×1600)
           </button>
           <button class="btn-top btn-journal-print" id="btn-print-journal">
-            🖨️ 打印 / 存 PDF
+            打印 / 导出 PDF
           </button>
         </div>
       </div>
@@ -1548,24 +1548,24 @@
       <!-- Right: Settings & Stamp Picker Drawer -->
       <div class="journal-sidebar-pane">
         <div class="journal-sidebar-header">
-          <h2>🧩 盖章手账工坊</h2>
-          <p>将心仪的印章盖入同一本手账跨页，支持自由版式、纸张质感与自然手作微倾角。</p>
+          <h2>手账拼贴工坊</h2>
+          <p>自由组合印章并排版入对开手账书笺，支持自定版式、纸张质感与手作微倾角。</p>
         </div>
 
         <!-- Configuration Form -->
         <div class="journal-config-form">
           <div class="form-row">
             <div class="form-group">
-              <label>📐 排版版式:</label>
+              <label>排版版式:</label>
               <select id="journal-layout">
                 <option value="grid2x2">2 × 2 四宫格 (4 印章 · 经典对开)</option>
                 <option value="grid2x3" selected>2 × 3 六宫格 (6 印章 · 游历手账)</option>
                 <option value="grid3x3">3 × 3 八宫格 (8 印章 · 密集集锦)</option>
-                <option value="featured1p4">1 大 + 4 小 (5 印章 · 杂志版式)</option>
+                <option value="featured1p4">1 大 + 4 小 (5 印章 · 焦点版式)</option>
               </select>
             </div>
             <div class="form-group">
-              <label>📜 手账纸张:</label>
+              <label>纸张材质:</label>
               <select id="journal-paper">
                 <option value="warm_xuan" selected>暖米宣纸 (手工纤维质感)</option>
                 <option value="kraft">复古牛皮纸 (陈旧棕褐)</option>
@@ -1578,22 +1578,22 @@
 
           <div class="form-row">
             <div class="form-group">
-              <label>📖 手账主标题:</label>
+              <label>主标题:</label>
               <input id="journal-title-input" value="《四时风物 · 游历手账》" maxlength="24" placeholder="例如：游历实地手账">
             </div>
             <div class="form-group">
-              <label>✍️ 手账主人 / 印记人:</label>
+              <label>题签 / 署名:</label>
               <input id="journal-author-input" value="COLLECTED BY HOLY NOVA" maxlength="28" placeholder="你的署名">
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label>📅 手账副标 / 日期:</label>
+              <label>副标 / 日期:</label>
               <input id="journal-subtitle-input" value="FIELD NOTES & SEALS • EDITION 2026" maxlength="40">
             </div>
             <div class="form-group">
-              <label>🎨 印泥色彩:</label>
+              <label>印泥色彩:</label>
               <select id="journal-ink">
                 <option value="current" selected>跟随当前页面配色</option>
                 <option value="original">天然原色专色</option>
@@ -1608,9 +1608,9 @@
 
           <div class="form-row" style="margin-top:2px;">
             <div class="form-group" style="grid-column: span 2;">
-              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--ink);text-transform:none;">
-                <input type="checkbox" id="journal-natural-tilt" checked style="width:auto;height:auto;margin:0;">
-                <span>✨ 启用自然手盖微倾角（模拟真实盖章落在纸上的微抖动与手作感）</span>
+              <label class="journal-checkbox-wrap">
+                <input type="checkbox" id="journal-natural-tilt" checked>
+                <span>启用手作微倾角（模拟手工盖印微偏角）</span>
               </label>
             </div>
           </div>
@@ -1620,8 +1620,8 @@
         <div class="stamp-picker-section">
           <div class="stamp-picker-header">
             <div class="stamp-picker-title-row">
-              <span>🖼️ 挑选印章盖入本页:</span>
-              <span class="stamp-slot-counter" id="stamp-slot-counter">已贴 0 / 6</span>
+              <span>印章库 (点击填入当前位):</span>
+              <span class="stamp-slot-counter" id="stamp-slot-counter">已选 0 / 6</span>
             </div>
             <div class="picker-tabs" id="picker-tabs">
               <button class="picker-tab active" data-filter="all">全部 (76)</button>
@@ -1629,7 +1629,7 @@
               <button class="picker-tab" data-filter="zodiac">生肖 (12)</button>
               <button class="picker-tab" data-filter="solar_terms">节气 (24)</button>
               <button class="picker-tab" data-filter="shanhaijing">山海 (10)</button>
-              <button class="picker-tab" data-filter="collected">已盖章 (<span id="picker-collected-count">0</span>)</button>
+              <button class="picker-tab" data-filter="collected">已收集 (<span id="picker-collected-count">0</span>)</button>
             </div>
           </div>
 
@@ -1650,8 +1650,8 @@
       <div class="exlibris-form">
         <div class="passport-header" style="margin-bottom:6px;padding-bottom:10px;">
           <div>
-            <h2 class="passport-title" style="font-size:22px;">🔖 专属藏书票工坊</h2>
-            <div class="passport-stats">Ex-Libris Custom Bookplate Studio</div>
+            <h2 class="passport-title" style="font-size:22px;">藏书票工坊 · Ex-Libris</h2>
+            <div class="passport-stats">Custom Bookplate Studio</div>
           </div>
           <button class="close" id="exlibris-close" title="关闭 (Esc)">×</button>
         </div>
@@ -1707,7 +1707,7 @@
         </div>
 
         <button class="btn-top btn-top-accent" id="btn-download-exlibris" style="margin-top:10px;padding:12px;font-size:14px;justify-content:center;">
-          📥 下载高清藏书票 (PNG 1200×1600)
+          导出高清藏书票 (PNG 1200×1600)
         </button>
       </div>
     </div>
@@ -1963,13 +1963,13 @@
               <div class="keywords">${(x.keywords || []).join(" · ")}</div>
               <div class="card-actions">
                 <button class="btn-card-action btn-card-stamp ${stamped ? "stamped" : ""}" onclick="toggleStamp('${currentSeriesKey}', ${x.id})" title="在印记收集册中盖章">
-                  ${stamped ? "✓ 已盖印" : "🏷️ 盖章"}
+                  ${stamped ? "已盖印" : "盖章"}
                 </button>
-                <button class="btn-card-action" onclick="addToJournalDirect('${currentSeriesKey}', ${x.id})" title="将此印章贴入盖章手账本">
-                  🧩 贴手账
+                <button class="btn-card-action" onclick="addToJournalDirect('${currentSeriesKey}', ${x.id})" title="将此印章贴入手账本">
+                  贴入手账
                 </button>
                 <button class="btn-card-action" onclick="openExLibrisFor(${idx})" title="制作专属藏书票">
-                  🔖 藏书票
+                  藏书票
                 </button>
               </div>
             </div>
@@ -2013,7 +2013,7 @@
       const stamped = isStamped(currentSeriesKey, x.id);
       const btn = document.querySelector("#modal-stamp-btn");
       btn.className = `btn-modal-action btn-modal-stamp ${stamped ? "stamped" : ""}`;
-      btn.innerHTML = stamped ? "<span>✓ 已盖入收集册</span>" : "<span>🏷️ 盖入收集册</span>";
+      btn.innerHTML = stamped ? "<span>已盖入收集册</span>" : "<span>盖入收集册</span>";
     }
 
     function openModal(index) {
@@ -2541,15 +2541,15 @@
     /* -------------------------------------------------------------
        8. Toast Notification Utility
        ------------------------------------------------------------- */
-    function showToast(msg, icon = "✨") {
+    function showToast(msg) {
       const toast = document.getElementById("toast");
       if (!toast) return;
-      toast.innerHTML = `<span style="font-size:16px;">${icon}</span> <span>${msg}</span>`;
+      toast.textContent = msg;
       toast.classList.add("show");
       clearTimeout(toast._timer);
       toast._timer = setTimeout(() => {
         toast.classList.remove("show");
-      }, 2400);
+      }, 2200);
     }
 
     /* -------------------------------------------------------------
@@ -2618,7 +2618,7 @@
       if (badge) badge.textContent = journalStamps.length;
       const counter = document.querySelector("#stamp-slot-counter");
       const cap = getLayoutCapacity(document.querySelector("#journal-layout").value);
-      if (counter) counter.textContent = `已贴 ${journalStamps.length} / ${cap}`;
+      if (counter) counter.textContent = `已选 ${journalStamps.length} / ${cap}`;
       const pickerCollCount = document.querySelector("#picker-collected-count");
       if (pickerCollCount) pickerCollCount.textContent = getTotalCollectedCount();
     }
@@ -2683,7 +2683,7 @@
 
       if (existingIdx >= 0) {
         journalStamps.splice(existingIdx, 1);
-        showToast(`已从手账本移除【${target.city || target.title || target.name}】`, "🗑️");
+        showToast(`已从手账移出「${target.city || target.title || target.name}」`);
       } else {
         if (journalStamps.length < cap) {
           journalStamps.push(target);
@@ -2693,7 +2693,7 @@
           activeSlotIndex = (activeSlotIndex + 1) % cap;
         }
         playStampSound();
-        showToast(`已将【${target.city || target.title || target.name}】盖入手账本！`, "🏷️");
+        showToast(`已将「${target.city || target.title || target.name}」填入手账`);
       }
 
       updateJournalBadge();
@@ -2727,7 +2727,7 @@
           <div class="picker-stamp-item ${inJournal ? "in-journal" : ""}" data-output="${item.output}" title="点击贴入或移除手账本">
             <img src="${item.output}" alt="${displayName}" loading="lazy">
             <div class="picker-stamp-item-label">${displayName}</div>
-            ${inJournal ? '<span class="picker-stamp-item-badge">✓ 已贴</span>' : ""}
+            ${inJournal ? '<span class="picker-stamp-item-badge">已选</span>' : ""}
           </div>
         `;
       }).join("");
@@ -2758,7 +2758,7 @@
       const collected = all.filter(x => isStamped(x.seriesKey, x.id));
       const cap = getLayoutCapacity(document.querySelector("#journal-layout").value);
       if (collected.length === 0) {
-        showToast("收集册暂无印章，已为你随机挑选！", "💡");
+        showToast("收集册暂无印章，已随机挑选");
         randomJournalPage();
         return;
       }
@@ -2768,7 +2768,7 @@
       updateJournalBadge();
       renderPickerGrid();
       drawJournal();
-      showToast(`已自动将 ${journalStamps.length} 枚盖章填入手账本！`, "📖");
+      showToast(`已自动填入 ${journalStamps.length} 枚已收集印章`);
     }
 
     function randomJournalPage() {
@@ -2781,7 +2781,7 @@
       updateJournalBadge();
       renderPickerGrid();
       drawJournal();
-      showToast(`已随机生成一页 ${journalStamps.length} 款风物印章手账！`, "🎲");
+      showToast(`已随机生成一页 ${journalStamps.length} 款印章手账`);
     }
 
     function clearJournalPage() {
@@ -2790,7 +2790,7 @@
       updateJournalBadge();
       renderPickerGrid();
       drawJournal();
-      showToast("已清空当前手账页", "🗑️");
+      showToast("已清空当前手账页");
     }
 
     document.querySelector("#btn-fill-collected").onclick = fillWithCollectedStamps;
@@ -2813,7 +2813,7 @@
             clickY >= slot.y - 10 && clickY <= slot.y + slot.h + 30) {
           activeSlotIndex = idx;
           drawJournal();
-          showToast(`当前选中第 ${idx + 1} 个印章位，点击右侧印章即可填入`, "🎯");
+          showToast(`当前选中第 ${idx + 1} 个印位，点击右侧印章填入`);
         }
       });
     };
@@ -3137,7 +3137,7 @@
           ctx.font = `${slot.isHero ? 10 * scale : 8.5 * scale}px ui-monospace, monospace`;
           ctx.fillText(badge, 0, slot.h / 2 + (slot.isHero ? 34 * scale : 24 * scale));
         } else {
-          // Empty Slot: Dashed Stamp Frame + Prompt
+          // Empty Slot: Dashed Stamp Frame + Typographic Prompt
           ctx.strokeStyle = (idx === activeSlotIndex && !exportMode) ? "#8d4d39" : "rgba(160, 140, 110, 0.5)";
           ctx.lineWidth = (idx === activeSlotIndex && !exportMode) ? 2 * scale : 1.5 * scale;
           ctx.setLineDash([5 * scale, 4 * scale]);
@@ -3148,13 +3148,13 @@
           ctx.fillRect(-slot.w / 2, -slot.h / 2, slot.w, slot.h);
 
           ctx.fillStyle = (idx === activeSlotIndex && !exportMode) ? "#8d4d39" : "rgba(140, 120, 95, 0.65)";
-          ctx.font = `${24 * scale}px sans-serif`;
+          ctx.font = `300 ${22 * scale}px ui-monospace, monospace`;
           ctx.textAlign = "center";
           ctx.textBaseline = "middle";
-          ctx.fillText("🏷️", 0, -10 * scale);
+          ctx.fillText("+", 0, -8 * scale);
 
-          ctx.font = `bold ${10 * scale}px ui-monospace, monospace`;
-          ctx.fillText(idx === activeSlotIndex && !exportMode ? "【当前填入位】" : "+ 盖章留痕", 0, 16 * scale);
+          ctx.font = `${10 * scale}px ui-monospace, monospace`;
+          ctx.fillText(idx === activeSlotIndex && !exportMode ? "当前编辑位" : "点击填入印章", 0, 14 * scale);
         }
 
         // Highlight Active Slot with golden focus indicator
@@ -3170,7 +3170,7 @@
 
     // High-Resolution Export
     document.querySelector("#btn-download-journal").onclick = async () => {
-      showToast("正在渲染 2400×1600 超清手账跨页……", "🎨");
+      showToast("正在导出 2400×1600 高清手账跨页…");
       const exportCanvas = document.createElement("canvas");
       await drawJournal(true, exportCanvas);
 
@@ -3180,7 +3180,7 @@
       link.download = `Stamp_Journal_${cleanTitle}_${Date.now()}.png`;
       link.href = exportCanvas.toDataURL("image/png");
       link.click();
-      showToast("手账跨页导出成功！", "📥");
+      showToast("手账跨页导出成功");
     };
 
     // Print / PDF
