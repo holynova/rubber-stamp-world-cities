@@ -61,6 +61,19 @@ solar_items = [
     {"id": 24, "name": "大寒", "title": "大寒 · 鸡始乳", "features": "岁暮坚冰、迎春松柏红梅与瑞雪待迎新春", "keywords": ["坚冰", "瑞雪", "除旧迎新"], "season": "冬", "colors": "炭黑 · 朱红 · 松绿", "output": "images/solar_terms/24_大寒.png"},
 ]
 
+kama_items = [
+    {"id": 1, "name": "莲华合一", "title": "莲华合一 · 跏趺相依", "features": "双人跏趺莲花座相依、盛开千瓣莲华、静谧水波与灵性圆融", "keywords": ["莲华", "跏趺", "静谧", "圆融"], "colors": "印度陶土红 · 荷花朱粉 · 苔绿", "output": "images/kama_sutra/01_莲华合一.png"},
+    {"id": 2, "name": "繁枝相依", "title": "繁枝相依 · 菩提庇佑", "features": "古老菩提树冠下相拥、繁花垂落、飘拂纱丽与自然庇佑", "keywords": ["菩提", "相拥", "繁花", "庇佑"], "colors": "姜黄 · 焦茶树皮褐 · 柔米黄", "output": "images/kama_sutra/02_繁枝相依.png"},
+    {"id": 3, "name": "月影共舞", "title": "月影共舞 · 新月流波", "features": "新月清辉下双人古典舞姿、飘逸丝带、星芒与律动之美", "keywords": ["新月", "舞姿", "飘逸", "律动"], "colors": "靛蓝夜色 · 砂金色 · 月白", "output": "images/kama_sutra/03_月影共舞.png"},
+    {"id": 4, "name": "孔雀灵犀", "title": "孔雀灵犀 · 羽翎相顾", "features": "孔雀开屏羽翎环绕、相顾凝眸、典雅羽纹与深情眷恋", "keywords": ["孔雀", "羽翎", "相顾", "深情"], "colors": "孔雀青 · 暖赭 · 朱红", "output": "images/kama_sutra/04_孔雀灵犀.png"},
+    {"id": 5, "name": "天籁和鸣", "title": "天籁和鸣 · 琴笛共振", "features": "共抚维纳琴与竹笛、音律流动、仙乐和弦与心灵共振", "keywords": ["维纳琴", "竹笛", "和鸣", "共振"], "colors": "檀木褐 · 姜金黄 · 赤红", "output": "images/kama_sutra/05_天籁和鸣.png"},
+    {"id": 6, "name": "合掌印契", "title": "合掌印契 · 曼海蒂誓约", "features": "执手合十相扣、曼海蒂手绘藤蔓、婚戒与誓约印记", "keywords": ["执手", "印契", "曼海蒂", "誓约"], "colors": "指甲花红 · 陶土橙 · 宣纸米色", "output": "images/kama_sutra/06_合掌印契.png"},
+    {"id": 7, "name": "晨曦相望", "title": "晨曦相望 · 霞光微拂", "features": "旭日东升金光微曦、侧影依偎、万道霞光与晨风初醒", "keywords": ["旭日", "晨曦", "依偎", "霞光"], "colors": "晨曦赤金 · 茜草红 · 焦褐", "output": "images/kama_sutra/07_晨曦相望.png"},
+    {"id": 8, "name": "浮云双栖", "title": "浮云双栖 · 梵天祥云", "features": "祥云流波之上并肩倚卧、繁星点点、如梦似幻与天外飞仙", "keywords": ["祥云", "双栖", "繁星", "飞仙"], "colors": "普鲁士蓝 · 柔砂金 · 炭黑", "output": "images/kama_sutra/08_浮云双栖.png"},
+    {"id": 9, "name": "同心花环", "title": "同心花环 · 茉莉良缘", "features": "互赠茉莉万寿菊花环、枝叶缠绕、温情满溢与良缘缔结", "keywords": ["花环", "茉莉", "万寿菊", "良缘"], "colors": "万寿菊橙 · 茉莉白 · 橄榄绿", "output": "images/kama_sutra/09_同心花环.png"},
+    {"id": 10, "name": "圆满曼荼罗", "title": "圆满曼荼罗 · 日月同辉", "features": "日月神圣曼荼罗圆环、阴阳交融、宇宙和谐与永恒圆满", "keywords": ["曼荼罗", "日月", "交融", "圆满"], "colors": "庙宇赭红 · 暗夜靛蓝 · 古金黄", "output": "images/kama_sutra/10_圆满曼荼罗.png"},
+]
+
 collections = {
     "cities": {
         "id": "cities",
@@ -97,17 +110,30 @@ collections = {
         "tagPrefix": "节气",
         "badgeFormat": "节气 {id}",
         "items": solar_items
+    },
+    "kama_sutra": {
+        "id": "kama_sutra",
+        "title": "爱经印契",
+        "titleEn": "Kama Sutra",
+        "count": len(kama_items),
+        "kicker": "kama sutra / classical intimate postures / 2026",
+        "headline": "橡胶戳古典浪漫<br>爱经印契",
+        "desc": "10 帧东方古典情爱与身心圆融的艺术版画。取材于古印度石雕造像、飞天壁画与莲华曼荼罗，以纯粹无文字的木刻印章质感诠释神圣亲密之美。",
+        "tagPrefix": "印契",
+        "badgeFormat": "印契 {id}",
+        "items": kama_items
     }
 }
 
-output_js = f"""// 橡胶戳艺术画廊数据集：世界城市 (30) · 十二生肖 (12) · 二十四节气 (24)
+output_js = f"""// 橡胶戳艺术画廊数据集：世界城市 (30) · 十二生肖 (12) · 二十四节气 (24) · 爱经印契 (10)
 window.COLLECTIONS = {json.dumps(collections, ensure_ascii=False, indent=2)};
 
 // 兼容旧版引用
 window.CITIES = window.COLLECTIONS.cities.items;
 window.ZODIAC = window.COLLECTIONS.zodiac.items;
 window.SOLAR_TERMS = window.COLLECTIONS.solar_terms.items;
+window.KAMA_SUTRA = window.COLLECTIONS.kama_sutra.items;
 """
 
 (BASE / "data.js").write_text(output_js, encoding="utf-8")
-print(f"data.js updated successfully! Collections: cities({len(cities_items)}), zodiac({len(zodiac_items)}), solar_terms({len(solar_items)})")
+print(f"data.js updated successfully! Collections: cities({len(cities_items)}), zodiac({len(zodiac_items)}), solar_terms({len(solar_items)}), kama_sutra({len(kama_items)})")
