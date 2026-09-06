@@ -1398,6 +1398,11 @@
         <span class="tab-title">世界城市</span>
         <span class="tab-sub">Cities</span>
       </button>
+      <button class="series-tab" data-series="scenic_spots">
+        <span class="tab-badge">50</span>
+        <span class="tab-title">名胜风景</span>
+        <span class="tab-sub">5A Scenic</span>
+      </button>
       <button class="series-tab" data-series="zodiac">
         <span class="tab-badge">12</span>
         <span class="tab-title">十二生肖</span>
@@ -1609,7 +1614,8 @@
               <span class="stamp-slot-counter" id="stamp-slot-counter">已选 0 / 6</span>
             </div>
             <div class="picker-tabs" id="picker-tabs">
-              <button class="picker-tab active" data-filter="all">全部 (76)</button>
+              <button class="picker-tab active" data-filter="all">全部 (126)</button>
+              <button class="picker-tab" data-filter="scenic_spots">胜景 (50)</button>
               <button class="picker-tab" data-filter="cities">城市 (30)</button>
               <button class="picker-tab" data-filter="zodiac">生肖 (12)</button>
               <button class="picker-tab" data-filter="solar_terms">节气 (24)</button>
@@ -1864,7 +1870,19 @@
     }
 
     function initFilterOptions() {
-      if (currentSeriesKey === "solar_terms") {
+      if (currentSeriesKey === "scenic_spots") {
+        filter.style.display = "";
+        filter.innerHTML = `
+          <option value="all">全部名胜风景 (50)</option>
+          <option value="region-华北">华北名胜 (9)</option>
+          <option value="region-华东">华东名胜 (11)</option>
+          <option value="region-西南">西南名胜 (10)</option>
+          <option value="region-西北">西北名胜 (9)</option>
+          <option value="region-华中">华中名胜 (6)</option>
+          <option value="region-华南">华南名胜 (2)</option>
+          <option value="region-东北">东北名胜 (3)</option>
+        `;
+      } else if (currentSeriesKey === "solar_terms") {
         filter.style.display = "";
         filter.innerHTML = `
           <option value="all">全部节气 (24)</option>
@@ -1905,12 +1923,13 @@
       const f = filter.value;
 
       currentFilteredRows = col.items.filter(x => {
-        const titleStr = (x.city || x.title || x.name || "") + " " + (x.animal || "") + " " + (x.season || "");
+        const titleStr = (x.city || x.title || x.name || "") + " " + (x.animal || "") + " " + (x.season || "") + " " + (x.region || "") + " " + (x.province || "");
         const textToMatch = (titleStr + " " + (x.features || "") + " " + (x.keywords || []).join(" ")).toLowerCase();
         const matchesQuery = !q || textToMatch.includes(q);
         
         let matchesFilter = true;
         if (f && f.startsWith("season-")) matchesFilter = (x.season === f.replace("season-", ""));
+        if (f && f.startsWith("region-")) matchesFilter = (x.region && x.region.includes(f.replace("region-", "")));
 
         return matchesQuery && matchesFilter;
       });
@@ -2685,7 +2704,8 @@
       const all = getAllStampsList();
       let filtered = all;
 
-      if (journalPickerCategory === "cities") filtered = all.filter(x => x.seriesKey === "cities");
+      if (journalPickerCategory === "scenic_spots") filtered = all.filter(x => x.seriesKey === "scenic_spots");
+      else if (journalPickerCategory === "cities") filtered = all.filter(x => x.seriesKey === "cities");
       else if (journalPickerCategory === "zodiac") filtered = all.filter(x => x.seriesKey === "zodiac");
       else if (journalPickerCategory === "solar_terms") filtered = all.filter(x => x.seriesKey === "solar_terms");
       else if (journalPickerCategory === "shanhaijing") filtered = all.filter(x => x.seriesKey === "shanhaijing");

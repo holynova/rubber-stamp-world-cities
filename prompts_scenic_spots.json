@@ -1,0 +1,852 @@
+[
+  {
+    "id": 1,
+    "name": "故宫博物院",
+    "title": "北京故宫 · 紫禁红墙",
+    "region": "华北",
+    "province": "北京",
+    "features": "太和殿重檐庑殿顶、角楼倒影、红墙金瓦、汉白玉雕栏",
+    "keywords": [
+      "紫禁城",
+      "太和殿",
+      "角楼",
+      "宫廷"
+    ],
+    "colors": "故宫朱红 · 琉璃金黄 · 汉白玉米白",
+    "output": "images/scenic_spots/01_故宫博物院.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Forbidden City (Palace Museum) in Beijing. Majestic Imperial Hall of Supreme Harmony with sweeping multi-tiered golden curved roof tiles, classical red palace walls, and delicate carved corner turret pagoda reflected in moat waters under auspicious drifting clouds. Traditional Chinese woodblock linocut aesthetic, bold carved relief lines, 2-3 muted spot colors: imperial cinnabar red, forbidden city ochre gold, and soot black. Natural textured handmade paper with visible fibers, rough dry ink stamp impression. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 2,
+    "name": "八达岭长城",
+    "title": "万里长城 · 雄关蜿蜒",
+    "region": "华北",
+    "province": "北京",
+    "features": "万里长城蜿蜒崇山峻岭、敌楼烽燧、古砖苍松",
+    "keywords": [
+      "长城",
+      "八达岭",
+      "烽火台",
+      "雄关"
+    ],
+    "colors": "苍松青褐 · 古砖灰石 · 晨曦橙金",
+    "output": "images/scenic_spots/02_八达岭长城.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Great Wall of China (Badaling Pass). Iconic monumental stone fortress wall and watchtowers snaking majestically across rugged mountain ridges under morning mist ribbons, framed by gnarled ancient pine branches. Traditional Chinese linocut woodblock relief aesthetic, bold carved contours, 2-3 muted spot colors: masonry granite grey, mountain pine green, and warm sunrise ochre. Coarse fibrous Xuan paper texture, dry rubber stamp mark. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 3,
+    "name": "颐和园",
+    "title": "北京颐和园 · 万寿昆明",
+    "region": "华北",
+    "province": "北京",
+    "features": "佛香阁巍峨万寿山、昆明湖十七孔桥、湖山画舫",
+    "keywords": [
+      "佛香阁",
+      "昆明湖",
+      "十七孔桥",
+      "皇家园林"
+    ],
+    "colors": "湖光青绿 · 琉璃黄 · 宫廷赤",
+    "output": "images/scenic_spots/03_颐和园.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Summer Palace (Yiheyuan) in Beijing. Imposing Tower of Buddhist Incense (Foxiangge) perched on Longevity Hill overlooking shimmering Kunming Lake and the iconic Seventeen-Arch Bridge with willow silhouettes. Chinese woodblock stamp print style, bold carved contours, 2-3 muted ink colors: jade lake green, imperial temple yellow, and cinnabar crimson. Textured paper with dry stamp edge. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 4,
+    "name": "天坛",
+    "title": "北京天坛 · 祈年圆丘",
+    "region": "华北",
+    "province": "北京",
+    "features": "祈年殿三层圆形蓝琉璃攒尖顶、汉白玉基座、苍翠古柏",
+    "keywords": [
+      "祈年殿",
+      "天坛",
+      "圜丘",
+      "古柏"
+    ],
+    "colors": "宝蓝琉璃 · 汉白玉白 · 苍柏墨绿",
+    "output": "images/scenic_spots/04_天坛.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Temple of Heaven (Hall of Prayer for Good Harvests) in Beijing. Iconic triple-gabled circular pavilion with deep cobalt blue glazed roof tiles resting on a white tiered marble terrace, flanked by solemn ancient cypress trees under sweeping auspicious sky scrolls. Traditional Chinese woodcut relief aesthetic, 2-3 spot colors: temple cobalt blue, cinnabar red lacquer, and aged marble cream. Fibrous handmade paper with dry stamp edge. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 5,
+    "name": "兵马俑",
+    "title": "秦陵兵马俑 · 地下军阵",
+    "region": "西北",
+    "province": "陕西",
+    "features": "秦始皇陵兵马俑军阵、铠甲武士俑、青铜战马",
+    "keywords": [
+      "秦俑",
+      "始皇陵",
+      "军阵",
+      "大秦"
+    ],
+    "colors": "陶俑泥赭 · 古铜青灰 · 战袍朱砂",
+    "output": "images/scenic_spots/05_兵马俑.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Terracotta Army (Emperor Qinshihuang Mausoleum) in Xian. Impressive close-up of stoic ancient terracotta warriors and noble battle steeds in disciplined formation, with carved armor plates, topknots, and archaic bronze spear silhouettes. Ancient Chinese linocut woodblock relief aesthetic, 2-3 spot colors: terracotta earthenware ochre, bronze patina grey, and ancient vermilion red. Rough textured paper with stamp impression. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 6,
+    "name": "杭州西湖",
+    "title": "西湖胜景 · 三潭印月",
+    "region": "华东",
+    "province": "浙江",
+    "features": "三潭印月石塔、断桥残雪、雷峰夕照、苏堤春柳",
+    "keywords": [
+      "西湖",
+      "三潭印月",
+      "断桥",
+      "雷峰塔"
+    ],
+    "colors": "龙井湖绿 · 烟雨墨青 · 荷花粉白",
+    "output": "images/scenic_spots/06_杭州西湖.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: West Lake in Hangzhou. Three miniature gourd-shaped stone pagodas floating peacefully on misty lake ripples, with Leifeng Pagoda silhouette on a distant lush hill and weeping willows framing serene lotus flowers. Traditional Chinese woodblock linocut style, 2-3 muted spot colors: misty Longjing green, indigo lake blue, and delicate lotus blush. Aged deckle paper with rough dry stamp texture. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 7,
+    "name": "黄山",
+    "title": "安徽黄山 · 迎客松云海",
+    "region": "华东",
+    "province": "安徽",
+    "features": "迎客松凌空苍劲、光明顶云海奇峰、怪石松涛",
+    "keywords": [
+      "迎客松",
+      "云海",
+      "奇峰",
+      "光明顶"
+    ],
+    "colors": "苍黛松青 · 云海素白 · 赭石山褐",
+    "output": "images/scenic_spots/07_黄山.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Mount Huangshan (Yellow Mountain) in Anhui. Iconic ancient Guest-Greeting Pine (Yingkesong) extending its welcoming branch proudly from a sheer granite cliff overlook over rolling seas of clouds and jagged misty mountain peaks. Traditional Chinese woodblock linocut relief style, 2-3 spot colors: mountain pine green, cliff stone charcoal, and warm cloud ochre. Fibrous paper with dry ink stamp impression. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 8,
+    "name": "九寨沟",
+    "title": "九寨沟 · 五花瑶池",
+    "region": "西南",
+    "province": "四川",
+    "features": "五花海叠翠彩池、诺日朗飞瀑、原始森林雪峰倒影",
+    "keywords": [
+      "五花海",
+      "诺日朗",
+      "彩林",
+      "碧海"
+    ],
+    "colors": "翡翠孔雀蓝 · 钙华浅金 · 飞瀑白",
+    "output": "images/scenic_spots/08_九寨沟.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Jiuzhaigou Valley in Sichuan. Multi-tiered turquoise travertine waterfall cascading into radiant multi-colored crystal lakes, backed by autumn foliage forest and distant snow-capped Himalayan peaks. Chinese woodcut relief stamp aesthetic, 2-3 muted spot colors: glowing turquoise blue, golden birch ochre, and evergreen pine green. Textured handmade Xuan paper with dry stamp edge. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 9,
+    "name": "桂林漓江",
+    "title": "桂林山水 · 象山漓水",
+    "region": "华南",
+    "province": "广西",
+    "features": "漓江竹筏渔舟唱晚、象鼻山水月洞、喀斯特千峰环立",
+    "keywords": [
+      "漓江",
+      "象鼻山",
+      "竹筏",
+      "喀斯特"
+    ],
+    "colors": "碧水青峦 · 渔火暖红 · 翠竹绿",
+    "output": "images/scenic_spots/09_桂林漓江.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Li River and Elephant Trunk Hill in Guilin. Iconic limestone karst peaks rising gracefully from placid river waters with an arching Elephant Trunk rock formation and a lone fisherman on a slender bamboo raft with cormorant bird under sunset clouds. Chinese linocut woodblock style, 2-3 spot colors: river emerald green, mountain slate blue, and warm terracotta sunset. Aged paper with rough dry stamp texture. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 10,
+    "name": "张家界武陵源",
+    "title": "张家界 · 奇峰御笔",
+    "region": "华中",
+    "province": "湖南",
+    "features": "御笔峰三千石英砂岩奇峰拔地而起、天门洞云雾蒸腾",
+    "keywords": [
+      "武陵源",
+      "御笔峰",
+      "天门山",
+      "石英峰林"
+    ],
+    "colors": "砂岩赭石 · 云雾青灰 · 苍崖绿",
+    "output": "images/scenic_spots/10_张家界武陵源.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Zhangjiajie Wulingyuan (Avatar Hallelujah Mountains) in Hunan. Towering slender sandstone pillar peaks piercing vertically through swirling sea of mist, topped with ancient bonsai pines and framed by airborne cliff birds. Traditional Chinese woodcut print aesthetic, 2-3 spot colors: sandstone ochre, misty indigo grey, and pine green. Natural fibrous Xuan paper with dry stamp impression. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 11,
+    "name": "敦煌莫高窟",
+    "title": "敦煌莫高窟 · 飞天千佛",
+    "region": "西北",
+    "province": "甘肃",
+    "features": "九层楼依崖而建、反弹琵琶飞天曼舞、鸣沙山月牙泉环抱",
+    "keywords": [
+      "莫高窟",
+      "飞天",
+      "月牙泉",
+      "丝绸之路"
+    ],
+    "colors": "矿物石青 · 鸣沙赭金 · 飞天朱红",
+    "output": "images/scenic_spots/11_敦煌莫高窟.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Mogao Caves and Crescent Lake in Dunhuang. Majestic red Nine-Story Wooden Pagoda built into sheer sandstone cliffside, accompanied by an elegant floating Dunhuang Apsara (Feitian) celestial fairy playing pipa lute among swirling silk ribbons and desert dunes. Chinese Dunhuang mural linocut relief style, 2-3 muted mineral colors: lapis lazuli blue, cinnabar red, and desert sand gold. Aged paper with dry stamp mark. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 12,
+    "name": "泰山",
+    "title": "东岳泰山 · 绝顶天门",
+    "region": "华东",
+    "province": "山东",
+    "features": "五岳之首南天门、十八盘天梯、日出东方云海玉皇顶",
+    "keywords": [
+      "泰山",
+      "南天门",
+      "十八盘",
+      "五岳独尊"
+    ],
+    "colors": "泰山黛青 · 晨曦金丹 · 崖刻朱红",
+    "output": "images/scenic_spots/12_泰山.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Mount Tai (Taishan) in Shandong. Historic South Gate to Heaven (Nantianmen) atop steep monumental stone stairs rising through clouds, flanked by rugged granite cliffs and cliffside pine trees overlooking a glorious golden sunrise. Traditional Chinese woodblock relief style, 2-3 spot colors: granite indigo grey, temple cinnabar red, and rising sun amber. Fibrous Xuan paper with dry stamp imprint. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 13,
+    "name": "华山",
+    "title": "西岳华山 · 奇险天下",
+    "region": "西北",
+    "province": "陕西",
+    "features": "西峰莲花绝壁、长空栈道险绝千仞、苍龙岭云霄脊道",
+    "keywords": [
+      "华山",
+      "西峰",
+      "苍龙岭",
+      "奇险"
+    ],
+    "colors": "花岗岩灰白 · 苍松墨绿 · 险峰赭",
+    "output": "images/scenic_spots/13_华山.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Mount Hua (Huashan) in Shaanxi. Dramatic precipitous granite cliff peaks shaped like a blooming stone lotus, featuring sheer vertical rock faces, narrow mountain ridge paths, and solitary cliffside Daoist shrines shrouded in high alpine clouds. Chinese linocut woodblock aesthetic, 2-3 spot colors: cold granite grey, alpine evergreen green, and warm cloud ochre. Textured aged paper with dry rubber stamp texture. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 14,
+    "name": "丽江古城与玉龙雪山",
+    "title": "丽江玉龙 · 古城雪岭",
+    "region": "西南",
+    "province": "云南",
+    "features": "玉龙雪山十三峰银装素裹、大水车纳西木府瓦屋连绵",
+    "keywords": [
+      "丽江",
+      "玉龙雪山",
+      "大水车",
+      "纳西木府"
+    ],
+    "colors": "雪山纯白 · 纳西木褐 · 晴空滇蓝",
+    "output": "images/scenic_spots/14_丽江古城与玉龙雪山.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Lijiang Ancient Town and Jade Dragon Snow Mountain in Yunnan. Traditional wooden waterwheel turning in clear canal water flanked by tiled Naxi courtyard houses, framed dramatically by towering jagged snow-covered peaks under a crystalline highland sky. Traditional Chinese woodblock print style, 2-3 muted spot colors: Yunnan sky indigo blue, warm timber brown, and snowy white relief. Coarse Xuan paper with dry stamp mark. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 15,
+    "name": "成都大熊猫基地",
+    "title": "天府熊猫 · 竹林萌影",
+    "region": "西南",
+    "province": "四川",
+    "features": "国宝大熊猫憨态可掬抱竹啃笋、翠竹掩映生机盎然",
+    "keywords": [
+      "大熊猫",
+      "成都",
+      "竹林",
+      "国宝"
+    ],
+    "colors": "熊猫黑白 · 嫩竹翠绿 · 泥土暖赭",
+    "output": "images/scenic_spots/15_成都大熊猫基地.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Giant Panda Breeding Base in Chengdu, Sichuan. Adorable giant panda sitting playfully on a wooden platform munching on crisp green bamboo shoots, surrounded by dense leafy bamboo groves and gentle mist. Chinese linocut woodblock relief aesthetic, 2-3 spot colors: ink charcoal black, fresh bamboo green, and warm clay ochre. Rough textured handmade paper with dry stamp imprint. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 16,
+    "name": "苏州拙政园",
+    "title": "苏州园林 · 拙政荷风",
+    "region": "华东",
+    "province": "江苏",
+    "features": "见山楼水榭亭台、曲廊漏窗荷风四面、太湖奇石修竹",
+    "keywords": [
+      "拙政园",
+      "苏州园林",
+      "水榭",
+      "漏窗"
+    ],
+    "colors": "黛瓦白墙 · 苔藓幽绿 · 荷红",
+    "output": "images/scenic_spots/16_苏州拙政园.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Humble Administrator Garden (Zhuozhengyuan) in Suzhou. Classic Jiangnan garden pavilion with upturned eaves overlooking placid pond with blooming lotus pads, connected by a winding covered zigzag bridge and ornate garden lattice windows with Taihu scholar stones. Traditional Chinese woodcut relief style, 2-3 muted spot colors: garden moss green, roof tile charcoal grey, and delicate lotus cinnabar. Textured fibrous paper with dry stamp impression. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 17,
+    "name": "乌镇",
+    "title": "水乡乌镇 · 枕水江南",
+    "region": "华东",
+    "province": "浙江",
+    "features": "小桥流水人家、摇橹乌篷船、临河水阁雕花木窗",
+    "keywords": [
+      "乌镇",
+      "水乡",
+      "乌篷船",
+      "江南"
+    ],
+    "colors": "水墨江南黑 · 碧波绿 · 暖木茶色",
+    "output": "images/scenic_spots/17_乌镇.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Wuzhen Water Town in Zhejiang. Picturesque stone arch bridge spanning a calm canal, with black-awning wooden gondola boat (Wupeng boat) drifting gently past traditional stilt-house riverbanks and drying indigo batik fabrics. Chinese woodblock linocut aesthetic, 2-3 muted spot colors: river green, ink roof black, and tea wood brown. Natural aged Xuan paper with dry ink stamp edge. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 18,
+    "name": "武汉黄鹤楼",
+    "title": "江城黄鹤楼 · 极目楚天",
+    "region": "华中",
+    "province": "湖北",
+    "features": "昔人已乘黄鹤去、五层飞檐翘角凌空、极目楚天舒龟蛇锁大江",
+    "keywords": [
+      "黄鹤楼",
+      "长江",
+      "楚天",
+      "名楼"
+    ],
+    "colors": "楼阁赤金 · 黄鹤仙白 · 江水碧蓝",
+    "output": "images/scenic_spots/18_武汉黄鹤楼.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Yellow Crane Tower (Huanghelou) in Wuhan. Grand five-story ancient wooden tower with soaring upturned golden eaves on Snake Hill, with an elegant yellow crane flying in the sky overlooking the vast Yangtze River bridge below. Traditional Chinese woodblock relief style, 2-3 spot colors: imperial golden yellow, lacquer vermilion red, and river indigo blue. Fibrous paper with dry stamp impression. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 19,
+    "name": "西安大雁塔",
+    "title": "西安大雁塔 · 盛唐梵音",
+    "region": "西北",
+    "province": "陕西",
+    "features": "唐代七层四面砖塔巍然屹立、大慈恩寺古刹古意盎然",
+    "keywords": [
+      "大雁塔",
+      "玄奘",
+      "慈恩寺",
+      "长安"
+    ],
+    "colors": "古砖暖赭 · 盛唐朱砂 · 穹顶灰青",
+    "output": "images/scenic_spots/19_西安大雁塔.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Giant Wild Goose Pagoda (Dayanta) in Xian. Majestic seven-tiered square brick Buddhist pagoda standing tall amidst ancient temple courtyards and blossoming cherry trees under gentle afternoon sun. Traditional Chinese linocut woodblock relief aesthetic, 2-3 muted spot colors: ancient terracotta brick red, temple ochre, and soot black. Rough deckle paper with dry rubber stamp texture. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 20,
+    "name": "长江三峡",
+    "title": "长江三峡 · 夔门雄峙",
+    "region": "华中",
+    "province": "重庆/湖北",
+    "features": "瞿塘峡夔门天下雄、巫峡十二峰云雨、神女峰客轮轻舟",
+    "keywords": [
+      "三峡",
+      "夔门",
+      "瞿塘峡",
+      "巫峡"
+    ],
+    "colors": "夔门苍岩 · 江水碧绿 · 云霞朝红",
+    "output": "images/scenic_spots/20_长江三峡.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Yangtze River Three Gorges (Kuimen Gate). Monumental vertical limestone canyon cliffs framing the emerald river gorge where a traditional river ferry glides smoothly between dramatic misty mountain silhouettes. Chinese woodblock print aesthetic, 2-3 spot colors: river jade green, mountain cliff charcoal, and sunrise peach pink. Fibrous Xuan paper with dry ink stamp mark. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 21,
+    "name": "乐山大佛",
+    "title": "四川乐山 · 依山弥勒",
+    "region": "西南",
+    "province": "四川",
+    "features": "弥勒坐佛临江依山而凿、三江汇流气势雄伟庄严慈祥",
+    "keywords": [
+      "乐山大佛",
+      "弥勒佛",
+      "三江汇流",
+      "石刻"
+    ],
+    "colors": "崖石暖褐 · 佛座青苔 · 江涛水蓝",
+    "output": "images/scenic_spots/21_乐山大佛.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Leshan Giant Buddha in Sichuan. Monumental colossal stone seated Maitreya Buddha carved directly into the red sandstone cliffside, serenely overlooking the swirling junction of three mountain rivers with pilgrim boats below. Traditional Chinese woodblock linocut style, 2-3 spot colors: sandstone sienna brown, cliffside moss green, and river blue. Aged handmade paper with dry stamp edge. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 22,
+    "name": "峨眉山",
+    "title": "峨眉金顶 · 普贤祥云",
+    "region": "西南",
+    "province": "四川",
+    "features": "金顶十方普贤金像云海放光、佛光普照万佛顶古刹",
+    "keywords": [
+      "峨眉山",
+      "金顶",
+      "普贤菩萨",
+      "云海"
+    ],
+    "colors": "金顶灿金 · 云海素白 · 峨眉青黛",
+    "output": "images/scenic_spots/22_峨眉山.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Mount Emei Golden Summit in Sichuan. Radiant multi-faced golden statue of Samantabhadra (Puxian Bodhisattva) atop a sacred elephant, towering above golden temple roofs and rolling ocean of clouds with rainbow halo rays. Traditional Chinese linocut relief aesthetic, 2-3 spot colors: temple gold ochre, mountain cobalt blue, and cloud white relief. Coarse fibrous Xuan paper with dry stamp impression. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 23,
+    "name": "洛阳龙门石窟",
+    "title": "洛阳龙门 · 卢舍那佛",
+    "region": "华中",
+    "province": "河南",
+    "features": "卢舍那大佛慈悲微笑、奉先寺伊阙两山相对、伊水悠悠",
+    "keywords": [
+      "龙门石窟",
+      "卢舍那佛",
+      "奉先寺",
+      "洛阳"
+    ],
+    "colors": "石窟灰青 · 盛唐金赭 · 佛光红",
+    "output": "images/scenic_spots/23_洛阳龙门石窟.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Longmen Grottoes (Lushena Giant Buddha) in Luoyang. Magnificent carved stone Buddha statue with a serene compassionate smile carved into limestone cliffside niche, flanked by guardian disciples overlooking the Yi River. Ancient Chinese woodcut stamp aesthetic, 2-3 spot colors: stone quarry grey, Tang dynasty cinnabar, and antique gold. Aged textured paper with dry stamp edge. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 24,
+    "name": "普陀山",
+    "title": "海天佛国 · 南海观音",
+    "region": "华东",
+    "province": "浙江",
+    "features": "海天佛国南海观音立像、普济寺古刹、紫竹林千步金沙",
+    "keywords": [
+      "普陀山",
+      "南海观音",
+      "海天佛国",
+      "紫竹林"
+    ],
+    "colors": "观音白玉 · 梵宇明黄 · 海天碧蓝",
+    "output": "images/scenic_spots/24_普陀山.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Mount Putuo (Nanhai Guanyin) in Zhejiang. Colossal elegant standing golden Guanyin statue gazing calmly across rolling ocean waves and golden beach sand, surrounded by purple bamboo shoots and temple incense smoke. Chinese linocut woodblock style, 2-3 spot colors: ocean teal blue, radiant lotus gold, and cinnabar temple red. Fibrous paper with dry ink stamp impression. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 25,
+    "name": "厦门鼓浪屿",
+    "title": "海上花园 · 鼓浪琴岛",
+    "region": "华东",
+    "province": "福建",
+    "features": "日光岩登高俯瞰、菽庄花园海景木栈道、万国风情老建筑",
+    "keywords": [
+      "鼓浪屿",
+      "日光岩",
+      "琴岛",
+      "万国建筑"
+    ],
+    "colors": "红砖红瓦 · 鹭岛海蓝 · 绿树婆娑",
+    "output": "images/scenic_spots/25_厦门鼓浪屿.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Gulangyu Island in Xiamen. Sunlight Rock towering over terracotta red-roofed colonial villas, sandy beach coves, and lush subtropical banyan trees beside gentle ocean waves. Traditional Chinese woodblock relief style, 2-3 spot colors: terracotta red, sea blue, and coastal palm green. Aged Xuan paper texture with dry rubber stamp mark. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 26,
+    "name": "稻城亚丁",
+    "title": "香格里拉之魂 · 稻城三怙主",
+    "region": "西南",
+    "province": "四川",
+    "features": "仙乃日三座神山圣洁巍峨、牛奶海五色海碧蓝澄澈",
+    "keywords": [
+      "稻城亚丁",
+      "仙乃日",
+      "牛奶海",
+      "三怙主神山"
+    ],
+    "colors": "圣洁雪白 · 高原蔚蓝 · 草甸金黄",
+    "output": "images/scenic_spots/26_稻城亚丁.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Daocheng Yading in Sichuan (Soul of Shangri-La). Majestic pyramid-shaped snow mountain (Mount Xiannairi) reflected in a pristine turquoise alpine glacier lake with golden autumn tundra grass and prayer flags in foreground. Traditional Chinese woodblock linocut style, 2-3 spot colors: turquoise lake blue, golden autumn ochre, and snowy mountain white. Fibrous paper with dry stamp edge. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 27,
+    "name": "拉萨布达拉宫",
+    "title": "日光城布达拉宫 · 雪域圣殿",
+    "region": "西南",
+    "province": "西藏",
+    "features": "玛布日山红白双宫依山而筑、金顶佛光五彩经幡飘扬",
+    "keywords": [
+      "布达拉宫",
+      "拉萨",
+      "雪域",
+      "红宫白宫"
+    ],
+    "colors": "藏地红宫赭 · 白宫石灰白 · 经幡金",
+    "output": "images/scenic_spots/27_拉萨布达拉宫.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Potala Palace in Lhasa, Tibet. Grand fortress palace with deep crimson Red Palace and stark white White Palace rising majestically on Moburi hill under bright plateau sunshine and fluttering Tibetan prayer flags. Chinese linocut woodblock relief aesthetic, 2-3 spot colors: Tibetan deep red, golden roof yellow, and slate mountain grey. Rough deckle paper with dry stamp texture. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 28,
+    "name": "青海湖",
+    "title": "大美青海湖 · 碧波花海",
+    "region": "西北",
+    "province": "青海",
+    "features": "高原蓝宝石湖水接天、金黄油菜花海绵延、水鸟翔集",
+    "keywords": [
+      "青海湖",
+      "二郎剑",
+      "油菜花海",
+      "高原湖泊"
+    ],
+    "colors": "高原湛蓝 · 油菜灿黄 · 白云雪",
+    "output": "images/scenic_spots/28_青海湖.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Qinghai Lake in Qinghai. Vast deep sapphire blue highland lake stretching to horizon, bordered by endless vibrant yellow rapeseed flower fields and grazing Tibetan yaks beneath soaring snow peaks. Traditional Chinese woodblock relief style, 2-3 spot colors: deep lake indigo blue, golden flower yellow, and grassland green. Natural Xuan paper with dry ink stamp impression. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 29,
+    "name": "三亚亚龙湾",
+    "title": "南海椰风 · 亚龙湾韵",
+    "region": "华南",
+    "province": "海南",
+    "features": "椰风海韵银白沙滩、玻璃海珊瑚礁、热带风情海湾",
+    "keywords": [
+      "亚龙湾",
+      "三亚",
+      "天涯海角",
+      "椰树"
+    ],
+    "colors": "碧海孔雀蓝 · 细沙米白 · 艳阳赤红",
+    "output": "images/scenic_spots/29_三亚亚龙湾.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Yalong Bay in Sanya, Hainan. Tropical paradise bay with graceful curved coconut palm trees over curved white sandy beach and crystal turquoise surf under a tropical sun. Chinese linocut woodblock aesthetic, 2-3 spot colors: tropical turquoise blue, palm leaf emerald green, and warm sun coral orange. Fibrous textured paper with rough dry stamp edge. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 30,
+    "name": "庐山",
+    "title": "江西庐山 · 飞瀑烟云",
+    "region": "华东",
+    "province": "江西",
+    "features": "三叠泉飞瀑直下三千尺、含鄱口云雾缭绕、匡庐松风",
+    "keywords": [
+      "庐山",
+      "三叠泉",
+      "含鄱口",
+      "云雾"
+    ],
+    "colors": "飞瀑素白 · 匡庐青黛 · 霞光橙",
+    "output": "images/scenic_spots/30_庐山.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Mount Lushan in Jiangxi. Dramatic three-tiered Sandiequan Waterfall plunging down sheer forested granite cliffs, shrouded in ethereal swirling mountain mist with ancient viewing pavilions. Traditional Chinese woodcut relief style, 2-3 spot colors: deep mountain forest green, cascade white relief, and granite slate grey. Coarse Xuan paper with dry stamp imprint. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 31,
+    "name": "武夷山",
+    "title": "武夷丹霞 · 九曲清流",
+    "region": "华东",
+    "province": "福建",
+    "features": "九曲溪竹筏漂流、玉女峰丹霞绝壁、大红袍古茶树",
+    "keywords": [
+      "武夷山",
+      "九曲溪",
+      "玉女峰",
+      "大红袍"
+    ],
+    "colors": "丹霞赤壁 · 九曲清碧 · 茶叶嫩绿",
+    "output": "images/scenic_spots/31_武夷山.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Mount Wuyi in Fujian. Iconic smooth red Danxia sandstone peaks (Yunvfeng) towering over the winding clear Nine-Bend River with a traditional bamboo raft gently drifting by. Chinese woodblock linocut style, 2-3 spot colors: terracotta Danxia red, river jade green, and tea leaf olive. Aged paper with dry rubber stamp texture. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 32,
+    "name": "承德避暑山庄",
+    "title": "避暑山庄 · 热河行宫",
+    "region": "华北",
+    "province": "河北",
+    "features": "皇家园林小金山热河烟雨楼、外八庙行宫、苍翠山峦",
+    "keywords": [
+      "避暑山庄",
+      "烟雨楼",
+      "外八庙",
+      "皇家行宫"
+    ],
+    "colors": "皇家墨绿 · 宫墙赭红 · 湖波青",
+    "output": "images/scenic_spots/32_承德避暑山庄.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Mountain Resort in Chengde, Hebei. Elegant imperial lakeside pavilion with traditional grey tile roofs nestled among weeping willows and serene lotus lakes, with rolling forested hills in background. Traditional Chinese linocut woodblock relief aesthetic, 2-3 spot colors: imperial green, court brick red, and lake blue. Fibrous Xuan paper with dry stamp edge. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 33,
+    "name": "皖南宏村",
+    "title": "水墨宏村 · 画里乡村",
+    "region": "华东",
+    "province": "安徽",
+    "features": "月沼南湖画桥倒影、徽派马头墙层叠、黑瓦白墙如水墨画",
+    "keywords": [
+      "宏村",
+      "月沼",
+      "徽派建筑",
+      "马头墙"
+    ],
+    "colors": "水墨黛黑 · 宣纸米白 · 砖雕青灰",
+    "output": "images/scenic_spots/33_皖南宏村.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Hongcun Ancient Village in Anhui. Crescent-shaped Moon Pond (Yuezhao) reflecting white horse-head gable walls and black tiled roofs of ancient Ming-Qing merchant houses, with red lanterns hanging quietly. Chinese Huizhou ink painting woodcut style, 2-3 muted spot colors: ink charcoal black, lantern red, and aged plaster cream. Textured paper with dry ink stamp edge. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 34,
+    "name": "平遥古城",
+    "title": "平遥古城 · 晋商雄关",
+    "region": "华北",
+    "province": "山西",
+    "features": "完整明清古城墙四方严整、市楼明清老街镖局票号商铺",
+    "keywords": [
+      "平遥",
+      "古城墙",
+      "市楼",
+      "晋商"
+    ],
+    "colors": "古城青砖 · 晋商灯笼红 · 飞檐木褐",
+    "output": "images/scenic_spots/34_平遥古城.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Ancient City of Pingyao in Shanxi. Historic grand wooden Market Tower (Shilou) spanning a cobblestone Ming-Qing commercial street lined with traditional brick storehouses and hanging crimson lanterns under a watchtower wall. Traditional Chinese woodblock relief style, 2-3 spot colors: brick grey, timber sienna, and festive red. Coarse deckle paper with dry stamp texture. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 35,
+    "name": "大同云冈石窟",
+    "title": "大同云冈 · 北魏佛雕",
+    "region": "华北",
+    "province": "山西",
+    "features": "第20窟露天大佛庄严慈祥、北魏雕刻胡风汉韵精妙绝伦",
+    "keywords": [
+      "云冈石窟",
+      "露天大佛",
+      "北魏",
+      "石雕"
+    ],
+    "colors": "砂岩石灰 · 矿物丹红 · 岁月青褐",
+    "output": "images/scenic_spots/35_大同云冈石窟.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Yungang Grottoes in Datong, Shanxi. Colossal open-air seated Buddha carving (Cave 20) with serene archaic smile and broad majestic shoulders carved into sandstone cliffside niches. Ancient Chinese woodcut relief stamp aesthetic, 2-3 spot colors: sandstone warm grey, ancient cinnabar, and deep shadow charcoal. Aged fibrous paper with dry rubber stamp impression. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 36,
+    "name": "新疆喀纳斯",
+    "title": "净土喀纳斯 · 月亮秋湾",
+    "region": "西北",
+    "province": "新疆",
+    "features": "喀纳斯月亮湾弯曲如月、图瓦人木屋村落、秋日白桦金黄倒影",
+    "keywords": [
+      "喀纳斯",
+      "月亮湾",
+      "神仙湾",
+      "阿勒泰"
+    ],
+    "colors": "湖水翡翠青 · 白桦金黄 · 针叶墨绿",
+    "output": "images/scenic_spots/36_新疆喀纳斯.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Kanas Lake (Moon Bay) in Xinjiang. Crescent-shaped turquoise glacial river winding through a valley of golden autumn larch trees and dark green spruce forests beneath snow-tipped Altai mountains. Traditional Chinese woodblock linocut style, 2-3 spot colors: glacial turquoise green, golden birch yellow, and forest evergreen. Fibrous Xuan paper with dry stamp edge. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 37,
+    "name": "天山天池",
+    "title": "天山天池 · 瑶池雪影",
+    "region": "西北",
+    "province": "新疆",
+    "features": "博格达雪峰倒映碧绿高山湖泊、西王母瑶池云杉环绕",
+    "keywords": [
+      "天山天池",
+      "博格达峰",
+      "瑶池",
+      "云杉"
+    ],
+    "colors": "雪峰银白 · 瑶池碧蓝 · 云杉深绿",
+    "output": "images/scenic_spots/37_天山天池.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Heavenly Lake of Tianshan (Tianchi) in Xinjiang. Pristine high alpine sapphire lake reflecting the jagged glaciated pyramid of Mount Bogda, surrounded by dense dark spruce woods and alpine wildflowers. Chinese linocut woodblock relief aesthetic, 2-3 spot colors: alpine lake deep cyan, spruce forest green, and mountain peak white. Coarse paper with dry ink stamp impression. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 38,
+    "name": "长白山天池",
+    "title": "长白山天池 · 圣水十六峰",
+    "region": "东北",
+    "province": "吉林",
+    "features": "十六座火山群峰环抱天池火山口、十六峰峥嵘、长白飞瀑",
+    "keywords": [
+      "长白山",
+      "天池",
+      "白头山",
+      "火山口"
+    ],
+    "colors": "火山灰青 · 湖水幽蓝 · 白雪素洁",
+    "output": "images/scenic_spots/38_长白山天池.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Changbai Mountain Heavenly Lake in Jilin. Majestic deep blue volcanic crater lake encircled by sixteen rugged volcanic crags and snow patches beneath dramatic mountain clouds. Traditional Chinese woodblock relief style, 2-3 spot colors: deep caldera blue, volcanic basalt grey, and snow crest white. Aged textured Xuan paper with dry stamp edge. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 39,
+    "name": "壶口瀑布",
+    "title": "黄河壶口 · 金涛骇浪",
+    "region": "华北",
+    "province": "山西/陕西",
+    "features": "千里黄河一壶收、浊浪排空万马奔腾、金涛骇浪彩虹飞架",
+    "keywords": [
+      "壶口瀑布",
+      "黄河",
+      "金涛",
+      "母亲河"
+    ],
+    "colors": "泥沙金黄 · 赭石赤褐 · 激流飞白",
+    "output": "images/scenic_spots/39_壶口瀑布.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Hukou Waterfall on the Yellow River. Roaring golden amber river waters rushing violently into a narrow canyon kettle mouth, throwing up mighty spray and mist arcs over dramatic layered stone banks. Chinese linocut woodblock relief style, 2-3 spot colors: muddy amber gold, canyon sandstone ochre, and spray white relief. Rough fibrous paper with dry rubber stamp texture. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 40,
+    "name": "贵州黄果树瀑布",
+    "title": "黄果树飞瀑 · 银河挂川",
+    "region": "西南",
+    "province": "贵州",
+    "features": "亚洲第一大瀑布白水如练横空出世、水帘洞犀牛潭彩虹腾空",
+    "keywords": [
+      "黄果树",
+      "水帘洞",
+      "瀑布",
+      "贵州"
+    ],
+    "colors": "激流飞白 · 喀斯特深绿 · 潭水幽青",
+    "output": "images/scenic_spots/40_贵州黄果树瀑布.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Huangguoshu Waterfall in Guizhou. Massive roaring curtain of whitewater plunging dramatically over sheer limestone cliffs into a deep emerald pool, framed by lush subtropical jungle vines and mist rainbow. Traditional Chinese woodblock print aesthetic, 2-3 spot colors: tropical forest green, plunge pool turquoise, and roaring cascade white. Fibrous Xuan paper with dry stamp impression. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 41,
+    "name": "荔波小七孔",
+    "title": "荔波小七孔 · 绿野仙桥",
+    "region": "西南",
+    "province": "贵州",
+    "features": "绿宝石般的古石桥跨越清流、六十八级跌水飞瀑、水上森林",
+    "keywords": [
+      "荔波",
+      "小七孔",
+      "古石桥",
+      "喀斯特水景"
+    ],
+    "colors": "宝石碧绿 · 石桥古灰 · 飞瀑浪白",
+    "output": "images/scenic_spots/41_荔波小七孔.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Xiaoqikong (Seven-Arch Stone Bridge) in Libo, Guizhou. Ancient moss-covered seven-arch stone bridge gracefully spanning an impossibly vibrant turquoise karst river flanked by lush overhang trees and gentle water rapids. Chinese linocut woodblock relief aesthetic, 2-3 spot colors: emerald river green, antique stone grey, and foliage moss green. Natural aged paper with dry stamp edge. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 42,
+    "name": "湘西凤凰古城",
+    "title": "凤凰古城 · 沱江水阁",
+    "region": "华中",
+    "province": "湖南",
+    "features": "沱江吊脚楼依江而立、万名塔倒影、虹桥横跨乌篷摇曳",
+    "keywords": [
+      "凤凰古城",
+      "沱江",
+      "吊脚楼",
+      "虹桥"
+    ],
+    "colors": "沱江水绿 · 吊脚楼木褐 · 晨雾淡青",
+    "output": "images/scenic_spots/42_湘西凤凰古城.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Fenghuang Ancient Town in Hunan. Traditional wooden Diaojiaolou stilt houses extending over the peaceful Tuojiang River, with a historic stone pagoda and wooden punt boat reflected in the morning mist. Traditional Chinese woodblock linocut style, 2-3 spot colors: river green, weathered timber brown, and lantern crimson red. Fibrous Xuan paper with dry stamp impression. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 43,
+    "name": "南京中山陵",
+    "title": "金陵中山陵 · 钟山毓秀",
+    "region": "华东",
+    "province": "江苏",
+    "features": "中山陵蓝色琉璃瓦祭堂依紫金山势、明孝陵神道石象路红叶",
+    "keywords": [
+      "中山陵",
+      "南京",
+      "钟山",
+      "明孝陵"
+    ],
+    "colors": "祭堂霁蓝 · 紫金松翠 · 宫墙明黄",
+    "output": "images/scenic_spots/43_南京中山陵.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Sun Yat-sen Mausoleum on Purple Mountain in Nanjing. Grand blue glazed tile ceremonial hall resting at the summit of sweeping stone staircase surrounded by deep green pine forests and autumn foliage. Chinese woodblock relief style, 2-3 spot colors: royal tile blue, mountain forest green, and granite stairway grey. Aged deckle paper with rough dry stamp texture. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 44,
+    "name": "重庆大足石刻",
+    "title": "大足石刻 · 千手观音",
+    "region": "西南",
+    "province": "重庆",
+    "features": "千手观音金碧辉煌、崖壁宝顶山造像、佛法庄严",
+    "keywords": [
+      "大足石刻",
+      "宝顶山",
+      "千手观音",
+      "石窟"
+    ],
+    "colors": "观音镏金 · 崖壁赭红 · 佛光翠青",
+    "output": "images/scenic_spots/44_重庆大足石刻.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Dazu Rock Carvings (Thousand-Hand Avalokitesvara) in Chongqing. Splendid gilded Thousand-Hand Guanyin statue carved into cliffside niche with countless radiating hands holding ritual implements, framed by flowing celestial robes and lotus pedestals. Traditional Chinese woodcut linocut aesthetic, 2-3 spot colors: antique gold ochre, cliff cinnabar red, and shadow black. Coarse fibrous Xuan paper with dry stamp mark. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 45,
+    "name": "嵩山少林寺",
+    "title": "中岳嵩山 · 少林禅宗",
+    "region": "华中",
+    "province": "河南",
+    "features": "天下第一名刹少林寺山门、塔林古柏肃穆、中岳峻极峰",
+    "keywords": [
+      "少林寺",
+      "嵩山",
+      "塔林",
+      "禅武"
+    ],
+    "colors": "少林红墙 · 塔林青灰 · 嵩山苍翠",
+    "output": "images/scenic_spots/45_嵩山少林寺.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Shaolin Temple and Pagoda Forest on Mount Song in Henan. Ancient temple gate with red walls and curved roofs flanked by historic stone stupa towers (Talin) under gnarled cypress trees and steep rocky mountain peaks. Chinese woodblock relief style, 2-3 spot colors: temple red, ancient stone grey, and mountain pine green. Natural aged paper with dry rubber stamp texture. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 46,
+    "name": "嘉峪关",
+    "title": "天下雄关 · 嘉峪关城",
+    "region": "西北",
+    "province": "甘肃",
+    "features": "天下第一雄关巍峨三重城郭、戈壁祁连雪峰相映、落日大漠",
+    "keywords": [
+      "嘉峪关",
+      "天下第一雄关",
+      "戈壁",
+      "祁连雪峰"
+    ],
+    "colors": "雄关城砖黄 · 祁连雪白 · 大漠赭赤",
+    "output": "images/scenic_spots/46_嘉峪关.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Jiayuguan Pass (First and Greatest Pass Under Heaven) in Gansu. Imposing multi-storied fortress gate tower with triple defensive walls rising in the vast desert Gobi plain, with distant snow-capped Qilian Mountains under an evening sunset. Traditional Chinese linocut woodblock relief aesthetic, 2-3 spot colors: rammed earth ochre, fortress crimson, and mountain slate blue. Rough deckle paper with dry stamp impression. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 47,
+    "name": "西藏纳木错",
+    "title": "雪域圣湖 · 纳木错天",
+    "region": "西南",
+    "province": "西藏",
+    "features": "天湖纳木错倒映念青唐古拉雪山、扎西半岛玛尼堆五彩经幡",
+    "keywords": [
+      "纳木错",
+      "念青唐古拉",
+      "圣湖",
+      "扎西半岛"
+    ],
+    "colors": "圣湖藏蓝 · 圣山雪白 · 玛尼堆赭",
+    "output": "images/scenic_spots/47_西藏纳木错.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Namtso Lake in Tibet. Ethereal turquoise-blue sacred highland lake reflecting the imposing snow range of Mount Nyenchen Tanglha, with lakeside stone stupas and colourful prayer flag strings blowing in the mountain wind. Chinese woodblock print aesthetic, 2-3 spot colors: sacred lake cyan blue, snow mountain white relief, and prayer flag red. Fibrous Xuan paper with dry stamp edge. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 48,
+    "name": "宁夏沙坡头",
+    "title": "大漠长河 · 中卫沙坡头",
+    "region": "西北",
+    "province": "宁夏",
+    "features": "大漠孤烟直长河落日圆、腾格里浩瀚金沙接黄河绿洲",
+    "keywords": [
+      "沙坡头",
+      "腾格里",
+      "大漠孤烟",
+      "黄河"
+    ],
+    "colors": "腾格里金沙 · 黄河水褐 · 羊皮筏木色",
+    "output": "images/scenic_spots/48_宁夏沙坡头.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Shapotou (Tengger Desert and Yellow River) in Zhongwei, Ningxia. Rolling golden desert sand dunes sloping dramatically toward the sweeping bend of the Yellow River, with a camel caravan walking along the ridge and green oasis vegetation. Traditional Chinese linocut woodblock style, 2-3 spot colors: desert dune gold, river silt brown, and oasis green. Aged paper with rough dry stamp texture. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 49,
+    "name": "雁荡山",
+    "title": "东南名山 · 雁荡龙湫",
+    "region": "华东",
+    "province": "浙江",
+    "features": "灵峰夜景剪影、灵岩飞渡、大龙湫飞瀑凌虚直下千仞",
+    "keywords": [
+      "雁荡山",
+      "大龙湫",
+      "灵峰",
+      "灵岩"
+    ],
+    "colors": "丹崖墨青 · 龙湫飞白 · 奇峰赭",
+    "output": "images/scenic_spots/49_雁荡山.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Mount Yandang (Dalongqiu Waterfall) in Zhejiang. Sheer vertical volcanic rock pillars and towering cliff faces with a slender misty waterfall plunging down into a deep rocky gorge with mountain pines. Traditional Chinese woodblock relief aesthetic, 2-3 spot colors: volcanic rock slate grey, pine forest green, and cascade white relief. Fibrous Xuan paper with dry stamp impression. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  },
+  {
+    "id": 50,
+    "name": "呼伦贝尔草原",
+    "title": "呼伦贝尔 · 莫日格勒河",
+    "region": "东北",
+    "province": "内蒙古",
+    "features": "莫日格勒河九曲十八弯流淌绿毯、蒙古包星罗棋布牛羊成群",
+    "keywords": [
+      "呼伦贝尔",
+      "大草原",
+      "莫日格勒河",
+      "蒙古包"
+    ],
+    "colors": "草原嫩绿 · 弯河天蓝 · 蒙古包毡白",
+    "output": "images/scenic_spots/50_呼伦贝尔草原.png",
+    "prompt": "4:5 vertical vintage handmade multi-color rubber stamp print artwork on warm textured off-white aged Xuan paper. Theme: Hulunbuir Grassland and Mergel River in Inner Mongolia. Serpentine river curving gracefully in intricate ribbons across endless lush green prairie rolling hills, dotted with traditional white yurt tents and grazing horses under vast sky clouds. Chinese woodcut linocut aesthetic, 2-3 spot colors: meadow pasture green, river sky blue, and yurt white relief. Natural deckle paper with dry rubber stamp texture. Pure graphic stamp art, absolutely NO text, NO letters, NO words, NO characters, NO typography, no watermark."
+  }
+]

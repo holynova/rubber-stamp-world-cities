@@ -8,13 +8,16 @@ BASE = Path(__file__).parent
 ZODIAC_DIR = BASE / "images" / "zodiac"
 SOLAR_DIR = BASE / "images" / "solar_terms"
 SHJ_DIR = BASE / "images" / "shanhaijing"
+SCENIC_DIR = BASE / "images" / "scenic_spots"
 ZODIAC_DIR.mkdir(parents=True, exist_ok=True)
 SOLAR_DIR.mkdir(parents=True, exist_ok=True)
 SHJ_DIR.mkdir(parents=True, exist_ok=True)
+SCENIC_DIR.mkdir(parents=True, exist_ok=True)
 
 PROMPTS_ZODIAC = json.loads((BASE / "prompts_zodiac.json").read_text(encoding="utf-8")) if (BASE / "prompts_zodiac.json").exists() else []
 PROMPTS_SOLAR = json.loads((BASE / "prompts_solar_terms.json").read_text(encoding="utf-8")) if (BASE / "prompts_solar_terms.json").exists() else []
 PROMPTS_SHJ = json.loads((BASE / "prompts_shanhaijing.json").read_text(encoding="utf-8")) if (BASE / "prompts_shanhaijing.json").exists() else []
+PROMPTS_SCENIC = json.loads((BASE / "prompts_scenic_spots.json").read_text(encoding="utf-8")) if (BASE / "prompts_scenic_spots.json").exists() else []
 
 def wait_for_session_ready(timeout=60):
     start = time.time()
@@ -149,6 +152,26 @@ def run_all(task="all"):
                 manifest[item["output"]] = {
                     "name": item["name"],
                     "series": "shanhaijing",
+                    "output": item["output"],
+                    "status": "success" if ok else "failed",
+                    "time": time.strftime("%Y-%m-%d %H:%M:%S")
+                }
+                manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+    if task in ("all", "scenic", "scenic_spots", "5a"):
+        print(f"\n=== Generating China 5A Scenic Spots Series ({len(PROMPTS_SCENIC)} items) ===", flush=True)
+        while True:
+            missing = [item for item in PROMPTS_SCENIC if not (BASE / item["output"]).exists() or (BASE / item["output"]).stat().st_size <= 100_000]
+            if not missing:
+                print("\n All 50 Scenic Spots prints generated successfully!", flush=True)
+                break
+            
+            print(f"\n--- Remaining Scenic Spots to generate: {len(missing)} items ---", flush=True)
+            for idx, item in enumerate(missing, 1):
+                print(f"\n--- Scenic Spot ({idx}/{len(missing)}): {item['name']} ({item['region']}) ---", flush=True)
+                ok = generate_item(item, SCENIC_DIR)
+                manifest[item["output"]] = {
+                    "name": item["name"],
+                    "series": "scenic_spots",
                     "output": item["output"],
                     "status": "success" if ok else "failed",
                     "time": time.strftime("%Y-%m-%d %H:%M:%S")
