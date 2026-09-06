@@ -320,5 +320,75 @@
     "output": "images/kama_sutra/10_圆满曼荼罗.png",
     "status": "success",
     "time": "2026-09-06 13:00:10"
+  },
+  "images/shanhaijing/01_九尾狐.png": {
+    "name": "九尾狐",
+    "series": "shanhaijing",
+    "output": "images/shanhaijing/01_九尾狐.png",
+    "status": "success",
+    "time": "2026-09-06 17:52:57"
+  },
+  "images/shanhaijing/02_烛九阴.png": {
+    "name": "烛九阴",
+    "series": "shanhaijing",
+    "output": "images/shanhaijing/02_烛九阴.png",
+    "status": "success",
+    "time": "2026-09-06 17:54:24"
+  },
+  "images/shanhaijing/03_帝江.png": {
+    "name": "帝江",
+    "series": "shanhaijing",
+    "output": "images/shanhaijing/03_帝江.png",
+    "status": "success",
+    "time": "2026-09-06 17:55:49"
+  },
+  "images/shanhaijing/04_白泽.png": {
+    "name": "白泽",
+    "series": "shanhaijing",
+    "output": "images/shanhaijing/04_白泽.png",
+    "status": "success",
+    "time": "2026-09-06 17:56:56"
+  },
+  "images/shanhaijing/05_毕方.png": {
+    "name": "毕方",
+    "series": "shanhaijing",
+    "output": "images/shanhaijing/05_毕方.png",
+    "status": "success",
+    "time": "2026-09-06 17:58:04"
+  },
+  "images/shanhaijing/06_鲲鹏.png": {
+    "name": "鲲鹏",
+    "series": "shanhaijing",
+    "output": "images/shanhaijing/06_鲲鹏.png",
+    "status": "success",
+    "time": "2026-09-06 17:59:39"
+  },
+  "images/shanhaijing/07_饕餮.png": {
+    "name": "饕餮",
+    "series": "shanhaijing",
+    "output": "images/shanhaijing/07_饕餮.png",
+    "status": "success",
+    "time": "2026-09-06 18:00:56"
+  },
+  "images/shanhaijing/08_穷奇.png": {
+    "name": "穷奇",
+    "series": "shanhaijing",
+    "output": "images/shanhaijing/08_穷奇.png",
+    "status": "success",
+    "time": "2026-09-06 18:02:22"
+  },
+  "images/shanhaijing/09_陆吾.png": {
+    "name": "陆吾",
+    "series": "shanhaijing",
+    "output": "images/shanhaijing/09_陆吾.png",
+    "status": "success",
+    "time": "2026-09-06 18:03:35"
+  },
+  "images/shanhaijing/10_夫诸.png": {
+    "name": "夫诸",
+    "series": "shanhaijing",
+    "output": "images/shanhaijing/10_夫诸.png",
+    "status": "success",
+    "time": "2026-09-06 18:04:54"
   }
 }
