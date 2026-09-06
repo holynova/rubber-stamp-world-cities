@@ -390,5 +390,355 @@
     "output": "images/shanhaijing/10_夫诸.png",
     "status": "success",
     "time": "2026-09-06 18:04:54"
+  },
+  "images/scenic_spots/01_故宫博物院.png": {
+    "name": "故宫博物院",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/01_故宫博物院.png",
+    "status": "success",
+    "time": "2026-09-06 23:42:58"
+  },
+  "images/scenic_spots/02_八达岭长城.png": {
+    "name": "八达岭长城",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/02_八达岭长城.png",
+    "status": "success",
+    "time": "2026-09-06 23:44:17"
+  },
+  "images/scenic_spots/03_颐和园.png": {
+    "name": "颐和园",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/03_颐和园.png",
+    "status": "success",
+    "time": "2026-09-06 23:45:50"
+  },
+  "images/scenic_spots/04_天坛.png": {
+    "name": "天坛",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/04_天坛.png",
+    "status": "success",
+    "time": "2026-09-06 23:47:18"
+  },
+  "images/scenic_spots/05_兵马俑.png": {
+    "name": "兵马俑",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/05_兵马俑.png",
+    "status": "success",
+    "time": "2026-09-06 23:48:43"
+  },
+  "images/scenic_spots/06_杭州西湖.png": {
+    "name": "杭州西湖",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/06_杭州西湖.png",
+    "status": "success",
+    "time": "2026-09-06 23:50:07"
+  },
+  "images/scenic_spots/07_黄山.png": {
+    "name": "黄山",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/07_黄山.png",
+    "status": "success",
+    "time": "2026-09-06 23:51:25"
+  },
+  "images/scenic_spots/08_九寨沟.png": {
+    "name": "九寨沟",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/08_九寨沟.png",
+    "status": "success",
+    "time": "2026-09-06 23:52:32"
+  },
+  "images/scenic_spots/09_桂林漓江.png": {
+    "name": "桂林漓江",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/09_桂林漓江.png",
+    "status": "success",
+    "time": "2026-09-06 23:54:10"
+  },
+  "images/scenic_spots/10_张家界武陵源.png": {
+    "name": "张家界武陵源",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/10_张家界武陵源.png",
+    "status": "success",
+    "time": "2026-09-06 23:55:45"
+  },
+  "images/scenic_spots/11_敦煌莫高窟.png": {
+    "name": "敦煌莫高窟",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/11_敦煌莫高窟.png",
+    "status": "success",
+    "time": "2026-09-06 23:57:09"
+  },
+  "images/scenic_spots/12_泰山.png": {
+    "name": "泰山",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/12_泰山.png",
+    "status": "success",
+    "time": "2026-09-06 23:58:53"
+  },
+  "images/scenic_spots/13_华山.png": {
+    "name": "华山",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/13_华山.png",
+    "status": "success",
+    "time": "2026-09-07 00:05:36"
+  },
+  "images/scenic_spots/14_丽江古城与玉龙雪山.png": {
+    "name": "丽江古城与玉龙雪山",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/14_丽江古城与玉龙雪山.png",
+    "status": "success",
+    "time": "2026-09-07 00:06:57"
+  },
+  "images/scenic_spots/15_成都大熊猫基地.png": {
+    "name": "成都大熊猫基地",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/15_成都大熊猫基地.png",
+    "status": "success",
+    "time": "2026-09-07 00:08:21"
+  },
+  "images/scenic_spots/16_苏州拙政园.png": {
+    "name": "苏州拙政园",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/16_苏州拙政园.png",
+    "status": "success",
+    "time": "2026-09-07 00:09:49"
+  },
+  "images/scenic_spots/17_乌镇.png": {
+    "name": "乌镇",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/17_乌镇.png",
+    "status": "success",
+    "time": "2026-09-07 00:11:01"
+  },
+  "images/scenic_spots/18_武汉黄鹤楼.png": {
+    "name": "武汉黄鹤楼",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/18_武汉黄鹤楼.png",
+    "status": "success",
+    "time": "2026-09-07 00:12:13"
+  },
+  "images/scenic_spots/19_西安大雁塔.png": {
+    "name": "西安大雁塔",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/19_西安大雁塔.png",
+    "status": "success",
+    "time": "2026-09-07 00:13:30"
+  },
+  "images/scenic_spots/20_长江三峡.png": {
+    "name": "长江三峡",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/20_长江三峡.png",
+    "status": "success",
+    "time": "2026-09-07 00:14:50"
+  },
+  "images/scenic_spots/21_乐山大佛.png": {
+    "name": "乐山大佛",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/21_乐山大佛.png",
+    "status": "success",
+    "time": "2026-09-07 00:16:25"
+  },
+  "images/scenic_spots/22_峨眉山.png": {
+    "name": "峨眉山",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/22_峨眉山.png",
+    "status": "success",
+    "time": "2026-09-07 00:17:33"
+  },
+  "images/scenic_spots/23_洛阳龙门石窟.png": {
+    "name": "洛阳龙门石窟",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/23_洛阳龙门石窟.png",
+    "status": "success",
+    "time": "2026-09-07 00:19:20"
+  },
+  "images/scenic_spots/24_普陀山.png": {
+    "name": "普陀山",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/24_普陀山.png",
+    "status": "success",
+    "time": "2026-09-07 00:20:56"
+  },
+  "images/scenic_spots/25_厦门鼓浪屿.png": {
+    "name": "厦门鼓浪屿",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/25_厦门鼓浪屿.png",
+    "status": "success",
+    "time": "2026-09-07 00:22:07"
+  },
+  "images/scenic_spots/26_稻城亚丁.png": {
+    "name": "稻城亚丁",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/26_稻城亚丁.png",
+    "status": "success",
+    "time": "2026-09-07 00:23:34"
+  },
+  "images/scenic_spots/27_拉萨布达拉宫.png": {
+    "name": "拉萨布达拉宫",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/27_拉萨布达拉宫.png",
+    "status": "success",
+    "time": "2026-09-07 00:25:02"
+  },
+  "images/scenic_spots/28_青海湖.png": {
+    "name": "青海湖",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/28_青海湖.png",
+    "status": "success",
+    "time": "2026-09-07 00:26:19"
+  },
+  "images/scenic_spots/29_三亚亚龙湾.png": {
+    "name": "三亚亚龙湾",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/29_三亚亚龙湾.png",
+    "status": "success",
+    "time": "2026-09-07 00:27:41"
+  },
+  "images/scenic_spots/30_庐山.png": {
+    "name": "庐山",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/30_庐山.png",
+    "status": "success",
+    "time": "2026-09-07 00:28:50"
+  },
+  "images/scenic_spots/31_武夷山.png": {
+    "name": "武夷山",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/31_武夷山.png",
+    "status": "success",
+    "time": "2026-09-07 00:30:21"
+  },
+  "images/scenic_spots/32_承德避暑山庄.png": {
+    "name": "承德避暑山庄",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/32_承德避暑山庄.png",
+    "status": "success",
+    "time": "2026-09-07 00:31:50"
+  },
+  "images/scenic_spots/33_皖南宏村.png": {
+    "name": "皖南宏村",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/33_皖南宏村.png",
+    "status": "success",
+    "time": "2026-09-07 00:32:57"
+  },
+  "images/scenic_spots/34_平遥古城.png": {
+    "name": "平遥古城",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/34_平遥古城.png",
+    "status": "success",
+    "time": "2026-09-07 00:34:39"
+  },
+  "images/scenic_spots/35_大同云冈石窟.png": {
+    "name": "大同云冈石窟",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/35_大同云冈石窟.png",
+    "status": "success",
+    "time": "2026-09-07 00:41:41"
+  },
+  "images/scenic_spots/36_新疆喀纳斯.png": {
+    "name": "新疆喀纳斯",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/36_新疆喀纳斯.png",
+    "status": "success",
+    "time": "2026-09-07 00:43:19"
+  },
+  "images/scenic_spots/37_天山天池.png": {
+    "name": "天山天池",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/37_天山天池.png",
+    "status": "success",
+    "time": "2026-09-07 00:44:39"
+  },
+  "images/scenic_spots/38_长白山天池.png": {
+    "name": "长白山天池",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/38_长白山天池.png",
+    "status": "success",
+    "time": "2026-09-07 00:46:14"
+  },
+  "images/scenic_spots/39_壶口瀑布.png": {
+    "name": "壶口瀑布",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/39_壶口瀑布.png",
+    "status": "success",
+    "time": "2026-09-07 00:47:25"
+  },
+  "images/scenic_spots/40_贵州黄果树瀑布.png": {
+    "name": "贵州黄果树瀑布",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/40_贵州黄果树瀑布.png",
+    "status": "success",
+    "time": "2026-09-07 00:48:34"
+  },
+  "images/scenic_spots/41_荔波小七孔.png": {
+    "name": "荔波小七孔",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/41_荔波小七孔.png",
+    "status": "success",
+    "time": "2026-09-07 00:49:41"
+  },
+  "images/scenic_spots/42_湘西凤凰古城.png": {
+    "name": "湘西凤凰古城",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/42_湘西凤凰古城.png",
+    "status": "success",
+    "time": "2026-09-07 00:50:59"
+  },
+  "images/scenic_spots/43_南京中山陵.png": {
+    "name": "南京中山陵",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/43_南京中山陵.png",
+    "status": "success",
+    "time": "2026-09-07 00:52:33"
+  },
+  "images/scenic_spots/44_重庆大足石刻.png": {
+    "name": "重庆大足石刻",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/44_重庆大足石刻.png",
+    "status": "success",
+    "time": "2026-09-07 00:54:30"
+  },
+  "images/scenic_spots/45_嵩山少林寺.png": {
+    "name": "嵩山少林寺",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/45_嵩山少林寺.png",
+    "status": "success",
+    "time": "2026-09-07 00:55:43"
+  },
+  "images/scenic_spots/46_嘉峪关.png": {
+    "name": "嘉峪关",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/46_嘉峪关.png",
+    "status": "success",
+    "time": "2026-09-07 00:56:59"
+  },
+  "images/scenic_spots/47_西藏纳木错.png": {
+    "name": "西藏纳木错",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/47_西藏纳木错.png",
+    "status": "success",
+    "time": "2026-09-07 00:58:15"
+  },
+  "images/scenic_spots/48_宁夏沙坡头.png": {
+    "name": "宁夏沙坡头",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/48_宁夏沙坡头.png",
+    "status": "success",
+    "time": "2026-09-07 00:59:50"
+  },
+  "images/scenic_spots/49_雁荡山.png": {
+    "name": "雁荡山",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/49_雁荡山.png",
+    "status": "success",
+    "time": "2026-09-07 01:00:53"
+  },
+  "images/scenic_spots/50_呼伦贝尔草原.png": {
+    "name": "呼伦贝尔草原",
+    "series": "scenic_spots",
+    "output": "images/scenic_spots/50_呼伦贝尔草原.png",
+    "status": "success",
+    "time": "2026-09-07 01:02:05"
   }
 }
