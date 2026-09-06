@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>橡胶戳艺术印记 · 世界城市 / 十二生肖 / 二十四节气</title>
-  <meta name="description" content="30座世界城市、十二生肖与二十四节气的复古手工橡胶戳印艺术画廊。">
+  <title>橡胶戳艺术印记 · 世界城市 / 十二生肖 / 二十四节气 / 爱经印契</title>
+  <meta name="description" content="30座世界城市、十二生肖、二十四节气与爱经印契的复古手工橡胶戳印艺术画廊，支持声音盖章打卡、藏书票导出与多色系油墨切换。">
 
   <!-- Analytics -->
   <script
     defer
     src="https://cloud.umami.is/script.js"
     data-website-id="e01c9f78-4607-4e60-b01c-77c8190b12b4"
-    data-domains="holynova.github.io"
+    data-domains="holynova.github.io,xiaosang.cc"
     data-exclude-search="true"
     data-exclude-hash="true"
   ></script>
@@ -19,12 +19,15 @@
   <style>
     :root {
       --paper: #eee5d5;
+      --paper-card: #f8f1e5;
       --ink: #292722;
       --muted: #746d60;
       --line: #cfc2ad;
       --accent: #8d4d39;
       --tab-bg: #e6dac6;
       --card-bg: #ddd0bb;
+      --seal-red: #b83b26;
+      --seal-bg: #fff5eb;
     }
     * { box-sizing: border-box; }
     body {
@@ -36,10 +39,28 @@
       background-size: 7px 7px;
       -webkit-font-smoothing: antialiased;
     }
+
+    /* Ink Palette Filters */
+    .ink-cinnabar .stamp-img, .ink-cinnabar .modal-img-wrap img {
+      filter: sepia(0.85) saturate(3.2) hue-rotate(-52deg) contrast(1.15);
+    }
+    .ink-indigo .stamp-img, .ink-indigo .modal-img-wrap img {
+      filter: sepia(0.65) saturate(2.4) hue-rotate(168deg) contrast(1.1);
+    }
+    .ink-charcoal .stamp-img, .ink-charcoal .modal-img-wrap img {
+      filter: grayscale(1) contrast(1.3) brightness(0.92);
+    }
+    .ink-moss .stamp-img, .ink-moss .modal-img-wrap img {
+      filter: sepia(0.7) saturate(2.3) hue-rotate(58deg) contrast(1.1);
+    }
+    .ink-sepia .stamp-img, .ink-sepia .modal-img-wrap img {
+      filter: sepia(1) saturate(1.8) hue-rotate(-22deg) contrast(1.1);
+    }
+
     header {
       max-width: 1240px;
       margin: auto;
-      padding: 56px 28px 24px;
+      padding: 48px 28px 20px;
       border-bottom: 1px solid var(--line);
     }
     .header-inner {
@@ -57,20 +78,27 @@
       transition: color .2s ease;
     }
     h1 {
-      font-size: clamp(34px, 5.5vw, 68px);
+      font-size: clamp(32px, 5.2vw, 62px);
       line-height: 1.05;
       font-weight: 400;
-      margin: 14px 0 16px;
+      margin: 12px 0 14px;
       max-width: 800px;
     }
     header p {
-      max-width: 680px;
+      max-width: 720px;
       color: var(--muted);
       font-size: 15px;
       line-height: 1.7;
       margin: 0;
     }
-    .github-link {
+    .header-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .btn-top {
       display: inline-flex;
       align-items: center;
       gap: 7px;
@@ -84,26 +112,35 @@
       letter-spacing: .05em;
       transition: all .15s ease;
       box-shadow: 2px 2px 0 #c7b9a244;
-      flex-shrink: 0;
+      cursor: pointer;
     }
-    .github-link:hover {
+    .btn-top:hover {
       background: #ede3d0;
       border-color: var(--accent);
       color: var(--accent);
       transform: translateY(-1px);
       box-shadow: 3px 3px 0 #c7b9a288;
     }
-    .github-icon {
-      width: 16px;
-      height: 16px;
-      fill: currentColor;
+    .btn-top-accent {
+      background: #ede0cb;
+      border-color: var(--accent);
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .passport-badge {
+      background: var(--seal-red);
+      color: #fff;
+      font-size: 11px;
+      padding: 2px 6px;
+      border-radius: 10px;
+      margin-left: 2px;
     }
 
     /* Series Segmented Navigation */
     .series-nav-wrapper {
       max-width: 1240px;
       margin: auto;
-      padding: 18px 28px 0;
+      padding: 16px 28px 0;
     }
     .series-nav {
       display: flex;
@@ -159,11 +196,11 @@
       text-transform: uppercase;
     }
 
-    /* Toolbar */
+    /* Toolbar & Interactive Controls */
     .toolbar {
       max-width: 1240px;
       margin: auto;
-      padding: 18px 28px;
+      padding: 16px 28px;
       display: flex;
       gap: 12px;
       align-items: center;
@@ -174,7 +211,7 @@
       background: #f7f0e4;
       border: 1px solid var(--line);
       border-radius: 3px;
-      padding: 10px 13px;
+      padding: 9px 12px;
       color: var(--ink);
       font: 13px ui-monospace, monospace;
       outline: none;
@@ -183,7 +220,39 @@
     input:focus, select:focus {
       border-color: var(--accent);
     }
-    input { min-width: 250px; }
+    input { min-width: 220px; }
+    .ink-selector-wrap {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font: 12px ui-monospace, monospace;
+      color: var(--muted);
+    }
+    .ink-pill-group {
+      display: flex;
+      gap: 4px;
+      background: #ede3d0;
+      padding: 3px;
+      border-radius: 4px;
+      border: 1px solid var(--line);
+    }
+    .ink-pill {
+      border: 0;
+      background: transparent;
+      padding: 4px 8px;
+      border-radius: 3px;
+      font: 11px ui-monospace, monospace;
+      cursor: pointer;
+      color: var(--muted);
+      transition: all .15s ease;
+    }
+    .ink-pill:hover { color: var(--ink); background: #fdfaf4; }
+    .ink-pill.active {
+      background: #f7f0e4;
+      color: var(--ink);
+      font-weight: 600;
+      box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
     .count {
       margin-left: auto;
       color: var(--muted);
@@ -194,14 +263,18 @@
     .grid {
       max-width: 1240px;
       margin: auto;
-      padding: 32px 28px 80px;
+      padding: 30px 28px 80px;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-      gap: 28px;
+      grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+      gap: 26px;
     }
     .card {
-      cursor: pointer;
+      position: relative;
+      background: #f7f0e444;
+      border-radius: 4px;
       transition: transform .18s ease;
+      display: flex;
+      flex-direction: column;
     }
     .card:hover {
       transform: translateY(-3px);
@@ -213,19 +286,20 @@
       border: 1px solid #c7b9a2;
       box-shadow: 4px 5px 0 #c7b9a244;
       overflow: hidden;
+      cursor: pointer;
       transition: box-shadow .18s ease;
     }
     .card:hover .frame {
       box-shadow: 5px 7px 0 #c7b9a277;
     }
-    .frame img {
+    .stamp-img {
       width: 100%;
       height: 100%;
       object-fit: contain;
       display: block;
-      transition: transform .25s ease;
+      transition: transform .25s ease, filter .2s ease;
     }
-    .card:hover .frame img {
+    .card:hover .stamp-img {
       transform: scale(1.02);
     }
     .badge {
@@ -234,16 +308,63 @@
       left: 10px;
       background: #eee5d5ee;
       border: 1px solid var(--line);
-      padding: 4px 7px;
+      padding: 3px 6px;
       font: 11px ui-monospace, monospace;
       letter-spacing: .04em;
+      z-index: 2;
+    }
+    
+    /* Stamp Overlays */
+    .stamped-seal {
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 2px dashed var(--seal-red);
+      color: var(--seal-red);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font: 9px/1.1 ui-monospace, monospace;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      background: rgba(255, 246, 238, 0.88);
+      box-shadow: inset 0 0 0 1px rgba(184, 59, 38, 0.25), 2px 2px 5px rgba(0,0,0,0.15);
+      transform: rotate(-10deg);
+      pointer-events: none;
+      z-index: 3;
+      animation: stampPop 0.22s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    @keyframes stampPop {
+      0% { transform: scale(2.4) rotate(18deg); opacity: 0; }
+      70% { transform: scale(0.9) rotate(-12deg); opacity: 1; }
+      100% { transform: scale(1) rotate(-10deg); opacity: 1; }
+    }
+    .seal-inner-char {
+      font-size: 15px;
+      font-family: "Songti SC", "Noto Serif CJK SC", serif;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    .card-info {
+      padding: 10px 4px 4px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
     .card h2 {
-      font-size: 19px;
+      font-size: 18px;
       font-weight: 500;
-      margin: 12px 0 5px;
+      margin: 0 0 4px;
       line-height: 1.25;
+      cursor: pointer;
     }
+    .card h2:hover { color: var(--accent); }
     .meta {
       font: 11px/1.5 ui-monospace, monospace;
       color: var(--muted);
@@ -251,13 +372,50 @@
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
+      margin-bottom: 6px;
     }
     .keywords {
-      margin-top: 6px;
       color: var(--accent);
       font-size: 12px;
       line-height: 1.4;
+      margin-bottom: 10px;
     }
+    
+    /* Card bottom action bar */
+    .card-actions {
+      display: flex;
+      gap: 6px;
+      margin-top: auto;
+      padding-top: 6px;
+      border-top: 1px dashed var(--line);
+    }
+    .btn-card-action {
+      flex: 1;
+      background: #f7f0e4;
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      padding: 5px 8px;
+      font: 11px ui-monospace, monospace;
+      color: var(--ink);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      transition: all .15s ease;
+    }
+    .btn-card-action:hover {
+      background: #ede0cb;
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .btn-card-stamp.stamped {
+      background: #fbeee8;
+      border-color: var(--seal-red);
+      color: var(--seal-red);
+      font-weight: 600;
+    }
+
     .empty {
       grid-column: 1 / -1;
       text-align: center;
@@ -280,13 +438,13 @@
     }
     .lightbox.open { display: flex; }
     .modal {
-      max-width: 920px;
+      max-width: 940px;
       width: 100%;
       max-height: 94vh;
       display: grid;
-      grid-template-columns: minmax(280px, 1fr) minmax(240px, .75fr);
+      grid-template-columns: minmax(280px, 1fr) minmax(260px, .8fr);
       background: var(--paper);
-      padding: 16px;
+      padding: 18px;
       gap: 24px;
       border: 1px solid var(--line);
       box-shadow: 0 20px 40px rgba(0,0,0,.35);
@@ -307,9 +465,10 @@
       max-height: 84vh;
       object-fit: contain;
       display: block;
+      transition: filter .2s ease;
     }
     .modal aside {
-      padding: 16px 12px;
+      padding: 12px 10px;
       display: flex;
       flex-direction: column;
     }
@@ -320,9 +479,9 @@
       margin-bottom: 12px;
     }
     .modal h2 {
-      font-size: 32px;
+      font-size: 30px;
       font-weight: 400;
-      margin: 0 0 14px;
+      margin: 0 0 12px;
       line-height: 1.15;
     }
     .close {
@@ -338,32 +497,69 @@
     .modal-meta {
       font: 12px/1.6 ui-monospace, monospace;
       color: var(--muted);
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       border-bottom: 1px solid var(--line);
-      padding-bottom: 12px;
+      padding-bottom: 10px;
     }
     .modal-keywords {
       color: var(--accent);
       font-size: 14px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
     .modal-colors {
       font: 11px ui-monospace, monospace;
       color: var(--muted);
+      margin-bottom: 14px;
+    }
+    
+    .modal-interactive-btns {
+      display: flex;
+      gap: 10px;
       margin-top: auto;
-      padding-top: 12px;
-    }
-    .source {
+      padding-top: 14px;
       border-top: 1px solid var(--line);
-      margin-top: 16px;
-      padding-top: 12px;
-      font: 11px/1.6 ui-monospace, monospace;
-      color: var(--muted);
     }
+    .btn-modal-action {
+      flex: 1;
+      background: #f7f0e4;
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      padding: 9px 12px;
+      font: 13px ui-monospace, monospace;
+      color: var(--ink);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all .15s ease;
+    }
+    .btn-modal-action:hover {
+      background: #ede0cb;
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .btn-modal-stamp.stamped {
+      background: #fbeee8;
+      border-color: var(--seal-red);
+      color: var(--seal-red);
+      font-weight: 600;
+    }
+    .btn-modal-exlibris {
+      background: #e8ede3;
+      border-color: #8fa389;
+      color: #3b5a3f;
+    }
+    .btn-modal-exlibris:hover {
+      background: #dbe4d5;
+      border-color: #3b5a3f;
+      color: #2b452f;
+    }
+
     .modal-nav-btns {
       display: flex;
       gap: 8px;
-      margin-top: 14px;
+      margin-top: 12px;
     }
     .modal-btn {
       background: #f7f0e4;
@@ -380,19 +576,149 @@
       color: var(--accent);
     }
 
+    /* Modal 2: Stamp Passport Modal */
+    .passport-modal-inner {
+      max-width: 980px;
+      width: 100%;
+      max-height: 92vh;
+      background: var(--paper);
+      padding: 24px;
+      border: 1px solid var(--line);
+      box-shadow: 0 20px 40px rgba(0,0,0,.35);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .passport-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+    }
+    .passport-title {
+      font-size: 28px;
+      font-weight: 400;
+      margin: 0 0 6px;
+    }
+    .passport-stats {
+      font: 13px ui-monospace, monospace;
+      color: var(--muted);
+    }
+    .passport-toolbar {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .passport-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 14px;
+      overflow-y: auto;
+      max-height: 52vh;
+      padding: 10px;
+      background: #fdfaf4;
+      border: 1px solid var(--line);
+      border-radius: 3px;
+    }
+    .passport-item {
+      position: relative;
+      aspect-ratio: 4/5;
+      background: var(--card-bg);
+      border: 1px solid #c7b9a2;
+      border-radius: 2px;
+      overflow: hidden;
+      box-shadow: 2px 3px 0 #c7b9a244;
+      cursor: pointer;
+      transition: transform .15s ease;
+    }
+    .passport-item:hover { transform: scale(1.03); }
+    .passport-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .passport-item-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(247, 240, 228, 0.92);
+      font: 10px/1.2 ui-monospace, monospace;
+      text-align: center;
+      padding: 3px 2px;
+      border-top: 1px solid var(--line);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Modal 3: Ex-Libris Generator Modal */
+    .exlibris-modal-inner {
+      max-width: 960px;
+      width: 100%;
+      max-height: 94vh;
+      background: var(--paper);
+      padding: 24px;
+      border: 1px solid var(--line);
+      box-shadow: 0 20px 40px rgba(0,0,0,.35);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      position: relative;
+      overflow-y: auto;
+    }
+    .exlibris-preview-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #312e2b;
+      padding: 16px;
+      border-radius: 4px;
+      border: 1px solid #4a4540;
+    }
+    #exlibris-canvas {
+      max-width: 100%;
+      max-height: 64vh;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      background: #f4ecdc;
+    }
+    .exlibris-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .form-group label {
+      font: 12px ui-monospace, monospace;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
     @media(max-width: 760px) {
       header { padding: 36px 18px 20px; }
       .header-inner { flex-direction: column-reverse; gap: 16px; }
-      .github-link { align-self: flex-start; }
-      .series-nav-wrapper { padding-left: 18px; padding-right: 18px; }
-      .toolbar, .grid { padding-left: 18px; padding-right: 18px; }
-      .count { width: 100%; margin-left: 0; }
+      .header-actions { align-self: flex-start; align-items: flex-start; }
+      .series-nav-wrapper, .toolbar, .grid { padding-left: 18px; padding-right: 18px; }
       .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
-      .card h2 { font-size: 16px; }
       .modal { grid-template-columns: 1fr; max-height: 94vh; overflow-y: auto; gap: 14px; }
-      .modal img { max-height: 52vh; }
-      .modal aside { padding: 4px 6px; }
-      .modal h2 { font-size: 24px; }
+      .modal img { max-height: 48vh; }
+      .exlibris-modal-inner { grid-template-columns: 1fr; }
+      #exlibris-canvas { max-height: 40vh; }
     }
   </style>
 </head>
@@ -404,12 +730,18 @@
         <h1 id="hero-title">橡胶戳旅行实地笔记<br>世界城市</h1>
         <p id="hero-desc">30 座城市，30 枚低调的多色橡胶戳。每一张只留下一个地点最易辨认的轮廓：建筑、山脉、海岸线与城市的呼吸。</p>
       </div>
-      <a href="https://github.com/holynova/rubber-stamp-world-cities" target="_blank" rel="noopener noreferrer" class="github-link" title="GitHub 源码仓库">
-        <svg class="github-icon" viewBox="0 0 24 24">
-          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-        </svg>
-        <span>GitHub</span>
-      </a>
+      <div class="header-actions">
+        <button class="btn-top btn-top-accent" id="btn-open-passport">
+          <span>📖 印记收集册</span>
+          <span class="passport-badge" id="passport-count-badge">0</span>
+        </button>
+        <a href="https://github.com/holynova/rubber-stamp-world-cities" target="_blank" rel="noopener noreferrer" class="btn-top" title="GitHub 源码仓库">
+          <svg style="width:15px;height:15px;fill:currentColor" viewBox="0 0 24 24">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+      </div>
     </div>
   </header>
 
@@ -431,19 +763,39 @@
         <span class="tab-title">二十四节气</span>
         <span class="tab-sub">Solar Terms</span>
       </button>
+      <button class="series-tab" data-series="kama_sutra">
+        <span class="tab-badge">10</span>
+        <span class="tab-title">爱经印契</span>
+        <span class="tab-sub">Kama Sutra</span>
+      </button>
     </nav>
   </div>
 
   <div class="toolbar">
     <input id="search" placeholder="搜索名称、特征或关键词…">
     <select id="filter">
-      <!-- Populated dynamically based on series -->
+      <!-- Populated dynamically -->
     </select>
+
+    <!-- Ink Palette Switcher -->
+    <div class="ink-selector-wrap">
+      <span>🎨 油墨配色:</span>
+      <div class="ink-pill-group">
+        <button class="ink-pill active" data-ink="original" title="原版天然专色">天然原色</button>
+        <button class="ink-pill" data-ink="cinnabar" title="传统朱砂印泥 (赤红)">传统朱砂</button>
+        <button class="ink-pill" data-ink="indigo" title="复古靛青木刻 (蓝)">复古靛蓝</button>
+        <button class="ink-pill" data-ink="charcoal" title="水墨黑白炭墨 (黑)">水墨炭黑</button>
+        <button class="ink-pill" data-ink="moss" title="森系苔藓绿 (绿)">森系苔绿</button>
+        <button class="ink-pill" data-ink="sepia" title="古董十九世纪焦茶 (棕)">古董焦茶</button>
+      </div>
+    </div>
+
     <span class="count" id="count"></span>
   </div>
 
   <main class="grid" id="grid"></main>
 
+  <!-- Lightbox Modal -->
   <div class="lightbox" id="lightbox">
     <div class="modal">
       <div class="modal-img-wrap">
@@ -458,7 +810,16 @@
         <div class="modal-meta" id="details"></div>
         <div class="modal-keywords" id="desc"></div>
         <div class="modal-colors" id="colors-info"></div>
-        <div class="source">海报规格：4:5 纵向 · 温暖旧米白纸张 · 手工雕刻橡胶戳 · 2026</div>
+        
+        <div class="modal-interactive-btns">
+          <button class="btn-modal-action btn-modal-stamp" id="modal-stamp-btn">
+            <span>🏷️ 盖入收集册</span>
+          </button>
+          <button class="btn-modal-action btn-modal-exlibris" id="modal-exlibris-btn">
+            <span>🔖 制作藏书票</span>
+          </button>
+        </div>
+
         <div class="modal-nav-btns">
           <button class="modal-btn" id="btn-prev">← 上一张</button>
           <button class="modal-btn" id="btn-next">下一张 →</button>
@@ -467,28 +828,254 @@
     </div>
   </div>
 
+  <!-- Stamp Passport Modal -->
+  <div class="lightbox" id="passport-lightbox">
+    <div class="passport-modal-inner">
+      <div class="passport-header">
+        <div>
+          <h2 class="passport-title">📖 印记收集册 · Stamp Passport</h2>
+          <div class="passport-stats" id="passport-stats-text">已收集 0 枚印章</div>
+        </div>
+        <button class="close" id="passport-close" title="关闭 (Esc)">×</button>
+      </div>
+      <div class="passport-toolbar">
+        <button class="btn-top btn-top-accent" id="btn-export-postcard">📥 导出旅行打卡明信片</button>
+        <button class="btn-top" id="btn-stamp-all">✨ 一键盖章全收集</button>
+        <button class="btn-top" id="btn-reset-passport" style="color:#b83b26;">🧹 清空收集记录</button>
+      </div>
+      <div class="passport-grid" id="passport-grid">
+        <!-- Filled dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Ex-Libris Generator Modal -->
+  <div class="lightbox" id="exlibris-lightbox">
+    <div class="exlibris-modal-inner">
+      <div class="exlibris-preview-wrap">
+        <canvas id="exlibris-canvas" width="600" height="800"></canvas>
+      </div>
+      <div class="exlibris-form">
+        <div class="passport-header" style="margin-bottom:6px;padding-bottom:10px;">
+          <div>
+            <h2 class="passport-title" style="font-size:22px;">🔖 专属藏书票工坊</h2>
+            <div class="passport-stats">Ex-Libris Custom Bookplate Studio</div>
+          </div>
+          <button class="close" id="exlibris-close" title="关闭 (Esc)">×</button>
+        </div>
+
+        <div class="form-group">
+          <label>书主姓名 / 藏书人:</label>
+          <input id="ex-owner" value="HOLY NOVA" placeholder="例如：HOLY NOVA 或 林夕">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>藏书铭文 / 题头:</label>
+            <select id="ex-motto">
+              <option value="EX LIBRIS">EX LIBRIS (经典藏书票)</option>
+              <option value="私家藏书">私家藏书</option>
+              <option value="书斋珍藏">书斋珍藏</option>
+              <option value="BIBLIOTHECA">BIBLIOTHECA</option>
+              <option value="READ & CHERISH">READ & CHERISH</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>边框装饰风格:</label>
+            <select id="ex-border">
+              <option value="classical">复古双线花边 (Classical)</option>
+              <option value="oriental">东方回纹印框 (Oriental)</option>
+              <option value="minimal">极简典雅方框 (Minimal)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>底纸材质色泽:</label>
+            <select id="ex-paper">
+              <option value="#f5eddc">暖旧米黄 (Antique Cream)</option>
+              <option value="#eee2cb">羊皮纸褐 (Parchment Ochre)</option>
+              <option value="#f8f4ea">冷白雪棉 (White Cotton)</option>
+              <option value="#e6dac3">茶染复古 (Tea-Stained)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>印章油墨配色:</label>
+            <select id="ex-ink">
+              <option value="current">跟随当前页面油墨</option>
+              <option value="original">天然原版专色</option>
+              <option value="cinnabar">传统朱砂印泥</option>
+              <option value="indigo">复古靛蓝木刻</option>
+              <option value="charcoal">水墨黑白炭黑</option>
+              <option value="moss">森系苔藓绿</option>
+              <option value="sepia">古董焦茶色</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="btn-top btn-top-accent" id="btn-download-exlibris" style="margin-top:10px;padding:12px;font-size:14px;justify-content:center;">
+          📥 下载高清藏书票 (PNG 1200×1600)
+        </button>
+      </div>
+    </div>
+  </div>
+
   <script src="data.js"></script>
   <script>
-    let currentSeriesKey = 'cities';
+    /* -------------------------------------------------------------
+       1. Web Audio API Tactile Stamp Press Synthesizer
+       ------------------------------------------------------------- */
+    let audioCtx = null;
+    function playStampSound() {
+      try {
+        if (!audioCtx) {
+          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        if (audioCtx.state === "suspended") {
+          audioCtx.resume();
+        }
+        const t = audioCtx.currentTime;
+
+        // 1. Low Thump (Rubber cushion hitting thick deckle paper)
+        const osc = audioCtx.createOscillator();
+        const oscGain = audioCtx.createGain();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(140, t);
+        osc.frequency.exponentialRampToValueAtTime(32, t + 0.075);
+        oscGain.gain.setValueAtTime(0.75, t);
+        oscGain.gain.exponentialRampToValueAtTime(0.001, t + 0.08);
+        osc.connect(oscGain);
+        oscGain.connect(audioCtx.destination);
+        osc.start(t);
+        osc.stop(t + 0.08);
+
+        // 2. High Mechanical Click (Handle pressure transient)
+        const clickOsc = audioCtx.createOscillator();
+        const clickGain = audioCtx.createGain();
+        clickOsc.type = "triangle";
+        clickOsc.frequency.setValueAtTime(880, t);
+        clickOsc.frequency.exponentialRampToValueAtTime(90, t + 0.02);
+        clickGain.gain.setValueAtTime(0.4, t);
+        clickGain.gain.exponentialRampToValueAtTime(0.001, t + 0.02);
+        clickOsc.connect(clickGain);
+        clickGain.connect(audioCtx.destination);
+        clickOsc.start(t);
+        clickOsc.stop(t + 0.02);
+
+        // 3. Tactile Paper Friction Burst
+        const bufferSize = Math.floor(audioCtx.sampleRate * 0.04);
+        const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+        const data = buffer.getChannelData(0);
+        for (let i = 0; i < bufferSize; i++) data[i] = Math.random() * 2 - 1;
+        const noise = audioCtx.createBufferSource();
+        noise.buffer = buffer;
+        const filter = audioCtx.createBiquadFilter();
+        filter.type = "bandpass";
+        filter.frequency.setValueAtTime(550, t);
+        filter.Q.setValueAtTime(1.5, t);
+        const noiseGain = audioCtx.createGain();
+        noiseGain.gain.setValueAtTime(0.3, t);
+        noiseGain.gain.exponentialRampToValueAtTime(0.001, t + 0.035);
+        noise.connect(filter);
+        filter.connect(noiseGain);
+        noiseGain.connect(audioCtx.destination);
+        noise.start(t);
+        noise.stop(t + 0.035);
+      } catch (err) {
+        console.warn("Audio unavailable", err);
+      }
+    }
+
+    /* -------------------------------------------------------------
+       2. State & Storage Management
+       ------------------------------------------------------------- */
+    const STORAGE_KEY = "rubber_stamp_passport_v2";
+    let collectedMap = {};
+    try {
+      collectedMap = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+    } catch (e) {
+      collectedMap = {};
+    }
+
+    function saveCollected() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(collectedMap));
+      } catch (e) {}
+      updatePassportBadge();
+    }
+
+    function isStamped(seriesKey, id) {
+      return !!collectedMap[`${seriesKey}_${id}`];
+    }
+
+    function toggleStamp(seriesKey, id) {
+      const key = `${seriesKey}_${id}`;
+      if (collectedMap[key]) {
+        delete collectedMap[key];
+      } else {
+        collectedMap[key] = {
+          time: new Date().toISOString(),
+          dateStr: new Date().toLocaleDateString("zh-CN")
+        };
+        playStampSound();
+      }
+      saveCollected();
+      render();
+      if (document.querySelector("#lightbox").classList.contains("open")) {
+        updateModalStampBtn();
+      }
+    }
+
+    function getTotalCollectedCount() {
+      return Object.keys(collectedMap).length;
+    }
+
+    function updatePassportBadge() {
+      const count = getTotalCollectedCount();
+      document.querySelector("#passport-count-badge").textContent = count;
+    }
+
+    /* -------------------------------------------------------------
+       3. Ink Palette Management
+       ------------------------------------------------------------- */
+    let currentInk = "original";
+    const inkPills = document.querySelectorAll(".ink-pill");
+    inkPills.forEach(pill => {
+      pill.addEventListener("click", () => {
+        setInkPalette(pill.dataset.ink);
+      });
+    });
+
+    function setInkPalette(inkName) {
+      currentInk = inkName;
+      inkPills.forEach(p => p.classList.toggle("active", p.dataset.ink === inkName));
+      document.body.className = inkName === "original" ? "" : `ink-${inkName}`;
+    }
+
+    /* -------------------------------------------------------------
+       4. Gallery Navigation & Rendering
+       ------------------------------------------------------------- */
+    let currentSeriesKey = "cities";
     let currentModalIndex = 0;
     let currentFilteredRows = [];
-    const existsMap = new Map(); // seriesKey -> Set of item ids
 
-    const grid = document.querySelector('#grid');
-    const search = document.querySelector('#search');
-    const filter = document.querySelector('#filter');
-    const count = document.querySelector('#count');
-    const heroKicker = document.querySelector('#hero-kicker');
-    const heroTitle = document.querySelector('#hero-title');
-    const heroDesc = document.querySelector('#hero-desc');
-    const tabs = document.querySelectorAll('.series-tab');
+    const grid = document.querySelector("#grid");
+    const search = document.querySelector("#search");
+    const filter = document.querySelector("#filter");
+    const count = document.querySelector("#count");
+    const heroKicker = document.querySelector("#hero-kicker");
+    const heroTitle = document.querySelector("#hero-title");
+    const heroDesc = document.querySelector("#hero-desc");
+    const tabs = document.querySelectorAll(".series-tab");
 
     function getCollection() {
-      return window.COLLECTIONS[currentSeriesKey];
+      return window.COLLECTIONS[currentSeriesKey] || window.COLLECTIONS.cities;
     }
 
     function initFilterOptions() {
-      if (currentSeriesKey === 'solar_terms') {
+      if (currentSeriesKey === "solar_terms") {
+        filter.style.display = "";
         filter.innerHTML = `
           <option value="all">全部节气 (24)</option>
           <option value="season-春">春季物候 (6)</option>
@@ -496,13 +1083,20 @@
           <option value="season-秋">秋季物候 (6)</option>
           <option value="season-冬">冬季物候 (6)</option>
         `;
-      } else if (currentSeriesKey === 'zodiac') {
+      } else if (currentSeriesKey === "kama_sutra") {
+        filter.style.display = "";
         filter.innerHTML = `
-          <option value="all">全部生肖 (12)</option>
+          <option value="all">全部爱经印契 (10)</option>
+        `;
+      } else if (currentSeriesKey === "zodiac") {
+        filter.style.display = "";
+        filter.innerHTML = `
+          <option value="all">全部生肖瑞兽 (12)</option>
         `;
       } else {
+        filter.style.display = "";
         filter.innerHTML = `
-          <option value="all">全部城市 (30)</option>
+          <option value="all">全部世界城市 (30)</option>
         `;
       }
     }
@@ -521,17 +1115,17 @@
       const f = filter.value;
 
       currentFilteredRows = col.items.filter(x => {
-        const titleStr = (x.city || x.title || x.name || '') + ' ' + (x.animal || '') + ' ' + (x.season || '');
-        const textToMatch = (titleStr + ' ' + (x.features || '') + ' ' + (x.keywords || []).join(' ')).toLowerCase();
+        const titleStr = (x.city || x.title || x.name || "") + " " + (x.animal || "") + " " + (x.season || "");
+        const textToMatch = (titleStr + " " + (x.features || "") + " " + (x.keywords || []).join(" ")).toLowerCase();
         const matchesQuery = !q || textToMatch.includes(q);
         
         let matchesFilter = true;
-        if (f && f.startsWith('season-')) matchesFilter = (x.season === f.replace('season-', ''));
+        if (f && f.startsWith("season-")) matchesFilter = (x.season === f.replace("season-", ""));
 
         return matchesQuery && matchesFilter;
       });
 
-      count.textContent = `${currentFilteredRows.length} / ${col.items.length} ${col.title} · 全部已就绪`;
+      count.textContent = `${currentFilteredRows.length} / ${col.items.length} ${col.title}`;
 
       if (!currentFilteredRows.length) {
         grid.innerHTML = '<div class="empty">没有找到匹配的橡胶戳印记。</div>';
@@ -540,38 +1134,55 @@
 
       grid.innerHTML = currentFilteredRows.map((x, idx) => {
         const displayName = x.city || x.title || x.name;
-        const badgeLabel = col.badgeFormat ? col.badgeFormat.replace('{id}', String(x.id).padStart(2, '0')) : `NO. ${String(x.id).padStart(2, '0')}`;
+        const badgeLabel = col.badgeFormat ? col.badgeFormat.replace("{id}", String(x.id).padStart(2, "0")) : `NO. ${String(x.id).padStart(2, "0")}`;
+        const stamped = isStamped(currentSeriesKey, x.id);
+
         return `
           <article class="card" data-id="${x.id}" data-index="${idx}">
-            <div class="frame">
-              <img src="${x.output}" alt="${displayName} 橡胶戳海报" onerror="this.src='placeholder.svg'">
+            <div class="frame" onclick="openModal(${idx})">
+              <img class="stamp-img" src="${x.output}" alt="${displayName} 橡胶戳海报" onerror="this.src='placeholder.svg'">
               <span class="badge">${badgeLabel}</span>
+              ${stamped ? `
+                <div class="stamped-seal">
+                  <span class="seal-inner-char">印</span>
+                  <span>COLLECTED</span>
+                </div>
+              ` : ""}
             </div>
-            <h2>${displayName}</h2>
-            <div class="meta">${x.features || ''}</div>
-            <div class="keywords">${(x.keywords || []).join(' · ')}</div>
+            <div class="card-info">
+              <h2 onclick="openModal(${idx})">${displayName}</h2>
+              <div class="meta">${x.features || ""}</div>
+              <div class="keywords">${(x.keywords || []).join(" · ")}</div>
+              <div class="card-actions">
+                <button class="btn-card-action btn-card-stamp ${stamped ? "stamped" : ""}" onclick="toggleStamp('${currentSeriesKey}', ${x.id})">
+                  ${stamped ? "✓ 已盖印" : "🏷️ 盖章"}
+                </button>
+                <button class="btn-card-action" onclick="openExLibrisFor(${idx})">
+                  🔖 藏书票
+                </button>
+              </div>
+            </div>
           </article>
         `;
-      }).join('');
+      }).join("");
     }
 
     function switchSeries(key) {
       if (currentSeriesKey === key) return;
       currentSeriesKey = key;
-      tabs.forEach(t => t.classList.toggle('active', t.dataset.series === key));
+      tabs.forEach(t => t.classList.toggle("active", t.dataset.series === key));
       window.location.hash = key;
       updateHeader();
       initFilterOptions();
-      search.value = '';
+      search.value = "";
       render();
     }
 
     tabs.forEach(t => {
-      t.addEventListener('click', () => switchSeries(t.dataset.series));
+      t.addEventListener("click", () => switchSeries(t.dataset.series));
     });
 
-    // Hash routing
-    const hash = window.location.hash.replace('#', '');
+    const hash = window.location.hash.replace("#", "");
     if (hash && window.COLLECTIONS[hash]) {
       switchSeries(hash);
     } else {
@@ -582,8 +1193,20 @@
 
     search.oninput = render;
     filter.onchange = render;
+    updatePassportBadge();
 
-    // Lightbox modal logic
+    /* -------------------------------------------------------------
+       5. Lightbox Modal
+       ------------------------------------------------------------- */
+    function updateModalStampBtn() {
+      if (currentModalIndex < 0 || currentModalIndex >= currentFilteredRows.length) return;
+      const x = currentFilteredRows[currentModalIndex];
+      const stamped = isStamped(currentSeriesKey, x.id);
+      const btn = document.querySelector("#modal-stamp-btn");
+      btn.className = `btn-modal-action btn-modal-stamp ${stamped ? "stamped" : ""}`;
+      btn.innerHTML = stamped ? "<span>✓ 已盖入收集册</span>" : "<span>🏷️ 盖入收集册</span>";
+    }
+
     function openModal(index) {
       if (index < 0 || index >= currentFilteredRows.length) return;
       currentModalIndex = index;
@@ -591,44 +1214,501 @@
       const col = getCollection();
       const displayName = x.city || x.title || x.name;
 
-      document.querySelector('#big').src = x.output;
-      document.querySelector('#big').alt = displayName;
-      document.querySelector('#number').textContent = `${col.titleEn.toUpperCase()} ${String(x.id).padStart(2, '0')} / ${col.items.length}`;
-      document.querySelector('#title').textContent = displayName;
-      document.querySelector('#details').textContent = x.features || '';
-      document.querySelector('#desc').textContent = (x.keywords || []).join(' · ');
-      document.querySelector('#colors-info').textContent = x.colors ? `印层配色：${x.colors}` : '';
-      document.querySelector('#lightbox').classList.add('open');
+      document.querySelector("#big").src = x.output;
+      document.querySelector("#big").alt = displayName;
+      document.querySelector("#number").textContent = `${col.titleEn.toUpperCase()} ${String(x.id).padStart(2, "0")} / ${col.items.length}`;
+      document.querySelector("#title").textContent = displayName;
+      document.querySelector("#details").textContent = x.features || "";
+      document.querySelector("#desc").textContent = (x.keywords || []).join(" · ");
+      document.querySelector("#colors-info").textContent = x.colors ? `印层配色：${x.colors}` : "";
+      
+      updateModalStampBtn();
+      document.querySelector("#lightbox").classList.add("open");
     }
 
-    grid.onclick = e => {
-      const c = e.target.closest('.card');
-      if (!c) return;
-      const idx = parseInt(c.dataset.index, 10);
-      openModal(idx);
+    document.querySelector("#modal-stamp-btn").onclick = () => {
+      const x = currentFilteredRows[currentModalIndex];
+      toggleStamp(currentSeriesKey, x.id);
     };
 
-    document.querySelector('#close').onclick = () => document.querySelector('#lightbox').classList.remove('open');
-    document.querySelector('#lightbox').onclick = e => {
-      if (e.target.id === 'lightbox') e.currentTarget.classList.remove('open');
+    document.querySelector("#modal-exlibris-btn").onclick = () => {
+      document.querySelector("#lightbox").classList.remove("open");
+      openExLibrisFor(currentModalIndex);
     };
 
-    document.querySelector('#btn-prev').onclick = () => {
+    document.querySelector("#close").onclick = () => document.querySelector("#lightbox").classList.remove("open");
+    document.querySelector("#lightbox").onclick = e => {
+      if (e.target.id === "lightbox") e.currentTarget.classList.remove("open");
+    };
+
+    document.querySelector("#btn-prev").onclick = () => {
       if (currentModalIndex > 0) openModal(currentModalIndex - 1);
       else openModal(currentFilteredRows.length - 1);
     };
 
-    document.querySelector('#btn-next').onclick = () => {
+    document.querySelector("#btn-next").onclick = () => {
       if (currentModalIndex < currentFilteredRows.length - 1) openModal(currentModalIndex + 1);
       else openModal(0);
     };
 
-    window.addEventListener('keydown', e => {
-      const lb = document.querySelector('#lightbox');
-      if (!lb.classList.contains('open')) return;
-      if (e.key === 'Escape') lb.classList.remove('open');
-      if (e.key === 'ArrowLeft') document.querySelector('#btn-prev').click();
-      if (e.key === 'ArrowRight') document.querySelector('#btn-next').click();
+    /* -------------------------------------------------------------
+       6. Stamp Passport Modal & Postcard Canvas Exporter
+       ------------------------------------------------------------- */
+    const passportLightbox = document.querySelector("#passport-lightbox");
+    document.querySelector("#btn-open-passport").onclick = openPassportModal;
+    document.querySelector("#passport-close").onclick = () => passportLightbox.classList.remove("open");
+    passportLightbox.onclick = e => {
+      if (e.target.id === "passport-lightbox") passportLightbox.classList.remove("open");
+    };
+
+    function openPassportModal() {
+      renderPassportGrid();
+      passportLightbox.classList.add("open");
+    }
+
+    function renderPassportGrid() {
+      const pGrid = document.querySelector("#passport-grid");
+      const totalCount = getTotalCollectedCount();
+      document.querySelector("#passport-stats-text").textContent = `已盖章收集 ${totalCount} 枚印记`;
+
+      const collectedKeys = Object.keys(collectedMap);
+      if (!collectedKeys.length) {
+        pGrid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:50px 20px;color:var(--muted);">您的收集册还是空的。在画廊中点击任意印章下方的【盖章】即可在此收录！</div>`;
+        return;
+      }
+
+      pGrid.innerHTML = collectedKeys.map(key => {
+        const [sKey, idStr] = key.split("_");
+        const id = parseInt(idStr, 10);
+        const col = window.COLLECTIONS[sKey];
+        if (!col) return "";
+        const item = col.items.find(x => x.id === id);
+        if (!item) return "";
+        const displayName = item.city || item.title || item.name;
+
+        return `
+          <div class="passport-item" onclick="switchSeries('${sKey}'); passportLightbox.classList.remove('open');">
+            <img class="stamp-img" src="${item.output}" alt="${displayName}">
+            <div class="passport-item-title">${displayName}</div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    document.querySelector("#btn-stamp-all").onclick = () => {
+      Object.keys(window.COLLECTIONS).forEach(sKey => {
+        window.COLLECTIONS[sKey].items.forEach(x => {
+          collectedMap[`${sKey}_${x.id}`] = {
+            time: new Date().toISOString(),
+            dateStr: new Date().toLocaleDateString("zh-CN")
+          };
+        });
+      });
+      playStampSound();
+      saveCollected();
+      render();
+      renderPassportGrid();
+    };
+
+    document.querySelector("#btn-reset-passport").onclick = () => {
+      if (confirm("确定要清空所有已收集的印章记录吗？")) {
+        collectedMap = {};
+        saveCollected();
+        render();
+        renderPassportGrid();
+      }
+    };
+
+    // Canvas Postcard Exporter
+    document.querySelector("#btn-export-postcard").onclick = () => {
+      const keys = Object.keys(collectedMap);
+      if (!keys.length) {
+        alert("收集册中还没有印章，请先在画廊中点击【盖章】收集！");
+        return;
+      }
+
+      const canvas = document.createElement("canvas");
+      const ctx = canvas.getContext("2d");
+      const w = 1200;
+      const h = 800;
+      canvas.width = w;
+      canvas.height = h;
+
+      // Draw postcard paper
+      ctx.fillStyle = "#f5eddc";
+      ctx.fillRect(0, 0, w, h);
+
+      // Postcard deckle border
+      ctx.strokeStyle = "#cfc2ad";
+      ctx.lineWidth = 4;
+      ctx.strokeRect(20, 20, w - 40, h - 40);
+
+      ctx.strokeStyle = "#b83b26";
+      ctx.lineWidth = 1;
+      ctx.strokeRect(28, 28, w - 56, h - 56);
+
+      // Postcard Airmail top stripes
+      ctx.fillStyle = "#8d4d39";
+      ctx.font = "bold 26px Georgia, serif";
+      ctx.fillText("RUBBER STAMP TRAVEL PASSPORT", 50, 75);
+
+      ctx.fillStyle = "#746d60";
+      ctx.font = "14px ui-monospace, monospace";
+      ctx.fillText("OFFICIAL TRAVEL FIELD-NOTE ARCHIVE • COLLECTOR'S SHEET", 50, 100);
+
+      // Postmark stamp circle
+      ctx.save();
+      ctx.translate(w - 140, 100);
+      ctx.rotate(-0.15);
+      ctx.strokeStyle = "#b83b26";
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.arc(0, 0, 48, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.arc(0, 0, 42, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.fillStyle = "#b83b26";
+      ctx.font = "bold 9px ui-monospace, monospace";
+      ctx.textAlign = "center";
+      ctx.fillText("RUBBER STAMP ARCHIVE", 0, -22);
+      ctx.font = "bold 13px ui-monospace, monospace";
+      ctx.fillText(new Date().toISOString().slice(0, 10), 0, 4);
+      ctx.font = "bold 9px ui-monospace, monospace";
+      ctx.fillText("★ CERTIFIED ★", 0, 26);
+      ctx.restore();
+
+      // Draw collected stamps collage
+      const maxStamps = Math.min(keys.length, 12);
+      const cols = 6;
+      const rows = 2;
+      const stampW = 145;
+      const stampH = 180;
+      const startX = 60;
+      const startY = 160;
+      const gapX = 35;
+      const gapY = 40;
+
+      let loadedImages = 0;
+      const itemsToDraw = [];
+
+      for (let i = 0; i < maxStamps; i++) {
+        const [sKey, idStr] = keys[i].split("_");
+        const col = window.COLLECTIONS[sKey];
+        if (!col) continue;
+        const item = col.items.find(x => x.id === parseInt(idStr, 10));
+        if (item) itemsToDraw.push({ item, sKey });
+      }
+
+      if (!itemsToDraw.length) return;
+
+      itemsToDraw.forEach((entry, idx) => {
+        const img = new Image();
+        img.crossOrigin = "anonymous";
+        img.src = entry.item.output;
+        img.onload = () => {
+          loadedImages++;
+          const colIdx = idx % cols;
+          const rowIdx = Math.floor(idx / cols);
+          const x = startX + colIdx * (stampW + gapX);
+          const y = startY + rowIdx * (stampH + gapY);
+
+          // Stamp frame
+          ctx.save();
+          ctx.fillStyle = "#ebdcc7";
+          ctx.fillRect(x - 6, y - 6, stampW + 12, stampH + 30);
+          ctx.strokeStyle = "#c2b39c";
+          ctx.lineWidth = 1;
+          ctx.strokeRect(x - 6, y - 6, stampW + 12, stampH + 30);
+
+          // Apply current ink filter if needed
+          if (currentInk === "cinnabar") ctx.filter = "sepia(0.85) saturate(3.2) hue-rotate(-52deg)";
+          else if (currentInk === "indigo") ctx.filter = "sepia(0.65) saturate(2.4) hue-rotate(168deg)";
+          else if (currentInk === "charcoal") ctx.filter = "grayscale(1)";
+          else if (currentInk === "moss") ctx.filter = "sepia(0.7) saturate(2.3) hue-rotate(58deg)";
+          else if (currentInk === "sepia") ctx.filter = "sepia(1) saturate(1.8) hue-rotate(-22deg)";
+
+          ctx.drawImage(img, x, y, stampW, stampH);
+          ctx.restore();
+
+          // Title
+          ctx.fillStyle = "#292722";
+          ctx.font = "12px 'Songti SC', serif";
+          ctx.textAlign = "center";
+          const title = entry.item.city || entry.item.title || entry.item.name;
+          ctx.fillText(title, x + stampW / 2, y + stampH + 16);
+
+          if (loadedImages === itemsToDraw.length) {
+            // Footer text
+            ctx.fillStyle = "#746d60";
+            ctx.font = "12px ui-monospace, monospace";
+            ctx.textAlign = "left";
+            ctx.fillText(`TOTAL COLLECTED: ${keys.length} STAMPS • CREATED ON XIAOSANG.CC`, 50, h - 45);
+
+            // Download
+            const link = document.createElement("a");
+            link.download = `Stamp_Passport_Postcard_${new Date().toISOString().slice(0,10)}.png`;
+            link.href = canvas.toDataURL("image/png");
+            link.click();
+          }
+        };
+        img.onerror = () => {
+          loadedImages++;
+        };
+      });
+    };
+
+    /* -------------------------------------------------------------
+       7. Ex-Libris Custom Bookplate Studio
+       ------------------------------------------------------------- */
+    const exlibrisLightbox = document.querySelector("#exlibris-lightbox");
+    const exCanvas = document.querySelector("#exlibris-canvas");
+    const exCtx = exCanvas.getContext("2d");
+    let exlibrisTargetItem = null;
+
+    document.querySelector("#exlibris-close").onclick = () => exlibrisLightbox.classList.remove("open");
+    exlibrisLightbox.onclick = e => {
+      if (e.target.id === "exlibris-lightbox") exlibrisLightbox.classList.remove("open");
+    };
+
+    function openExLibrisFor(index) {
+      if (index < 0 || index >= currentFilteredRows.length) return;
+      exlibrisTargetItem = currentFilteredRows[index];
+      exlibrisLightbox.classList.add("open");
+      drawExLibris();
+    }
+
+    const exInputs = ["#ex-owner", "#ex-motto", "#ex-border", "#ex-paper", "#ex-ink"];
+    exInputs.forEach(sel => {
+      document.querySelector(sel).oninput = () => drawExLibris();
+      document.querySelector(sel).onchange = () => drawExLibris();
+    });
+
+    function drawExLibris(exportMode = false) {
+      if (!exlibrisTargetItem) return;
+
+      const cw = exportMode ? 1200 : 600;
+      const ch = exportMode ? 1600 : 800;
+      const scale = exportMode ? 2 : 1;
+
+      exCanvas.width = cw;
+      exCanvas.height = ch;
+
+      const owner = document.querySelector("#ex-owner").value.trim() || "HOLY NOVA";
+      const motto = document.querySelector("#ex-motto").value;
+      const borderStyle = document.querySelector("#ex-border").value;
+      const paperColor = document.querySelector("#ex-paper").value;
+      const inkSetting = document.querySelector("#ex-ink").value;
+
+      // 1. Paper Background
+      exCtx.fillStyle = paperColor;
+      exCtx.fillRect(0, 0, cw, ch);
+
+      // Subtle paper texture speckles
+      exCtx.fillStyle = "rgba(100, 80, 60, 0.03)";
+      for (let i = 0; i < 800 * scale; i++) {
+        exCtx.fillRect(Math.random() * cw, Math.random() * ch, 1.5, 1.5);
+      }
+
+      // 2. Borders
+      const margin = 28 * scale;
+      exCtx.strokeStyle = "#292722";
+      if (borderStyle === "classical") {
+        exCtx.lineWidth = 3 * scale;
+        exCtx.strokeRect(margin, margin, cw - margin * 2, ch - margin * 2);
+        exCtx.lineWidth = 1 * scale;
+        exCtx.strokeRect(margin + 6 * scale, margin + 6 * scale, cw - (margin + 6 * scale) * 2, ch - (margin + 6 * scale) * 2);
+        
+        // Corner rosettes
+        const cs = 14 * scale;
+        [
+          [margin, margin], [cw - margin, margin],
+          [margin, ch - margin], [cw - margin, ch - margin]
+        ].forEach(([cx, cy]) => {
+          exCtx.fillStyle = "#b83b26";
+          exCtx.fillRect(cx - cs / 2, cy - cs / 2, cs, cs);
+        });
+      } else if (borderStyle === "oriental") {
+        exCtx.lineWidth = 4 * scale;
+        exCtx.strokeRect(margin, margin, cw - margin * 2, ch - margin * 2);
+        exCtx.strokeStyle = "#b83b26";
+        exCtx.lineWidth = 1.5 * scale;
+        exCtx.strokeRect(margin + 8 * scale, margin + 8 * scale, cw - (margin + 8 * scale) * 2, ch - (margin + 8 * scale) * 2);
+      } else {
+        exCtx.lineWidth = 1.5 * scale;
+        exCtx.strokeRect(margin, margin, cw - margin * 2, ch - margin * 2);
+      }
+
+      // 3. Top Motto (EX LIBRIS)
+      exCtx.fillStyle = "#8d4d39";
+      exCtx.font = `bold ${28 * scale}px Georgia, serif`;
+      exCtx.textAlign = "center";
+      exCtx.fillText(motto, cw / 2, 85 * scale);
+
+      // 4. Center Stamp Artwork
+      const img = new Image();
+      img.crossOrigin = "anonymous";
+      img.src = exlibrisTargetItem.output;
+      img.onload = () => {
+        const stampW = 360 * scale;
+        const stampH = 450 * scale;
+        const stampX = (cw - stampW) / 2;
+        const stampY = 120 * scale;
+
+        exCtx.save();
+        // Inner photo mount frame
+        exCtx.fillStyle = "#ebdcc7";
+        exCtx.fillRect(stampX - 8 * scale, stampY - 8 * scale, stampW + 16 * scale, stampH + 16 * scale);
+        exCtx.strokeStyle = "#cfc2ad";
+        exCtx.lineWidth = 1 * scale;
+        exCtx.strokeRect(stampX - 8 * scale, stampY - 8 * scale, stampW + 16 * scale, stampH + 16 * scale);
+
+        // Apply Ink Filter to Canvas
+        let effectiveInk = inkSetting === "current" ? currentInk : inkSetting;
+        if (effectiveInk === "cinnabar") exCtx.filter = "sepia(0.85) saturate(3.2) hue-rotate(-52deg)";
+        else if (effectiveInk === "indigo") exCtx.filter = "sepia(0.65) saturate(2.4) hue-rotate(168deg)";
+        else if (effectiveInk === "charcoal") exCtx.filter = "grayscale(1)";
+        else if (effectiveInk === "moss") exCtx.filter = "sepia(0.7) saturate(2.3) hue-rotate(58deg)";
+        else if (effectiveInk === "sepia") exCtx.filter = "sepia(1) saturate(1.8) hue-rotate(-22deg)";
+
+        exCtx.drawImage(img, stampX, stampY, stampW, stampH);
+        exCtx.restore();
+
+        // 5. Subject Title Banner
+        const displayName = exlibrisTargetItem.city || exlibrisTargetItem.title || exlibrisTargetItem.name;
+        exCtx.fillStyle = "#292722";
+        exCtx.font = `${18 * scale}px "Songti SC", Georgia, serif`;
+        exCtx.textAlign = "center";
+        exCtx.fillText(`— ${displayName} —`, cw / 2, 620 * scale);
+
+        // 6. Owner Name Box
+        const boxY = 660 * scale;
+        const boxW = 380 * scale;
+        const boxH = 55 * scale;
+        const boxX = (cw - boxW) / 2;
+
+        exCtx.fillStyle = "#fffaf2";
+        exCtx.fillRect(boxX, boxY, boxW, boxH);
+        exCtx.strokeStyle = "#8d4d39";
+        exCtx.lineWidth = 1.5 * scale;
+        exCtx.strokeRect(boxX, boxY, boxW, boxH);
+
+        exCtx.fillStyle = "#8d4d39";
+        exCtx.font = `bold ${20 * scale}px "Songti SC", Georgia, serif`;
+        exCtx.textAlign = "center";
+        exCtx.fillText(owner, cw / 2, boxY + 36 * scale);
+
+        // 7. Micro footer
+        exCtx.fillStyle = "#746d60";
+        exCtx.font = `${11 * scale}px ui-monospace, monospace`;
+        exCtx.fillText("RUBBER STAMP EX-LIBRIS • EDITION 2026", cw / 2, ch - 40 * scale);
+      };
+    }
+
+    document.querySelector("#btn-download-exlibris").onclick = () => {
+      const exportCanvas = document.createElement("canvas");
+      exportCanvas.width = 1200;
+      exportCanvas.height = 1600;
+      const exportCtx = exportCanvas.getContext("2d");
+
+      const owner = document.querySelector("#ex-owner").value.trim() || "HOLY NOVA";
+      const motto = document.querySelector("#ex-motto").value;
+      const borderStyle = document.querySelector("#ex-border").value;
+      const paperColor = document.querySelector("#ex-paper").value;
+      const inkSetting = document.querySelector("#ex-ink").value;
+      const scale = 2;
+
+      exportCtx.fillStyle = paperColor;
+      exportCtx.fillRect(0, 0, 1200, 1600);
+
+      const margin = 28 * scale;
+      exportCtx.strokeStyle = "#292722";
+      if (borderStyle === "classical") {
+        exportCtx.lineWidth = 3 * scale;
+        exportCtx.strokeRect(margin, margin, 1200 - margin * 2, 1600 - margin * 2);
+        exportCtx.lineWidth = 1 * scale;
+        exportCtx.strokeRect(margin + 6 * scale, margin + 6 * scale, 1200 - (margin + 6 * scale) * 2, 1600 - (margin + 6 * scale) * 2);
+      } else {
+        exportCtx.lineWidth = 2 * scale;
+        exportCtx.strokeRect(margin, margin, 1200 - margin * 2, 1600 - margin * 2);
+      }
+
+      exportCtx.fillStyle = "#8d4d39";
+      exportCtx.font = "bold 56px Georgia, serif";
+      exportCtx.textAlign = "center";
+      exportCtx.fillText(motto, 600, 170);
+
+      const img = new Image();
+      img.crossOrigin = "anonymous";
+      img.src = exlibrisTargetItem.output;
+      img.onload = () => {
+        const stampW = 720;
+        const stampH = 900;
+        const stampX = (1200 - stampW) / 2;
+        const stampY = 240;
+
+        exportCtx.save();
+        exportCtx.fillStyle = "#ebdcc7";
+        exportCtx.fillRect(stampX - 16, stampY - 16, stampW + 32, stampH + 32);
+        exportCtx.strokeStyle = "#cfc2ad";
+        exportCtx.strokeRect(stampX - 16, stampY - 16, stampW + 32, stampH + 32);
+
+        let effectiveInk = inkSetting === "current" ? currentInk : inkSetting;
+        if (effectiveInk === "cinnabar") exportCtx.filter = "sepia(0.85) saturate(3.2) hue-rotate(-52deg)";
+        else if (effectiveInk === "indigo") exportCtx.filter = "sepia(0.65) saturate(2.4) hue-rotate(168deg)";
+        else if (effectiveInk === "charcoal") exportCtx.filter = "grayscale(1)";
+        else if (effectiveInk === "moss") exportCtx.filter = "sepia(0.7) saturate(2.3) hue-rotate(58deg)";
+        else if (effectiveInk === "sepia") exportCtx.filter = "sepia(1) saturate(1.8) hue-rotate(-22deg)";
+
+        exportCtx.drawImage(img, stampX, stampY, stampW, stampH);
+        exportCtx.restore();
+
+        const displayName = exlibrisTargetItem.city || exlibrisTargetItem.title || exlibrisTargetItem.name;
+        exportCtx.fillStyle = "#292722";
+        exportCtx.font = "36px 'Songti SC', Georgia, serif";
+        exportCtx.textAlign = "center";
+        exportCtx.fillText(`— ${displayName} —`, 600, 1240);
+
+        const boxY = 1320;
+        const boxW = 760;
+        const boxH = 110;
+        const boxX = (1200 - boxW) / 2;
+
+        exportCtx.fillStyle = "#fffaf2";
+        exportCtx.fillRect(boxX, boxY, boxW, boxH);
+        exportCtx.strokeStyle = "#8d4d39";
+        exportCtx.lineWidth = 3;
+        exportCtx.strokeRect(boxX, boxY, boxW, boxH);
+
+        exportCtx.fillStyle = "#8d4d39";
+        exportCtx.font = "bold 42px 'Songti SC', Georgia, serif";
+        exportCtx.fillText(owner, 600, boxY + 70);
+
+        exportCtx.fillStyle = "#746d60";
+        exportCtx.font = "22px ui-monospace, monospace";
+        exportCtx.fillText("RUBBER STAMP EX-LIBRIS • EDITION 2026", 600, 1530);
+
+        const link = document.createElement("a");
+        link.download = `ExLibris_${owner}_${displayName}.png`;
+        link.href = exportCanvas.toDataURL("image/png");
+        link.click();
+      };
+    };
+
+    window.addEventListener("keydown", e => {
+      const lb = document.querySelector("#lightbox");
+      const pb = document.querySelector("#passport-lightbox");
+      const eb = document.querySelector("#exlibris-lightbox");
+
+      if (e.key === "Escape") {
+        if (eb.classList.contains("open")) eb.classList.remove("open");
+        else if (pb.classList.contains("open")) pb.classList.remove("open");
+        else if (lb.classList.contains("open")) lb.classList.remove("open");
+      }
+      if (lb.classList.contains("open")) {
+        if (e.key === "ArrowLeft") document.querySelector("#btn-prev").click();
+        if (e.key === "ArrowRight") document.querySelector("#btn-next").click();
+      }
     });
   </script>
 </body>

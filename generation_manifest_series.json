@@ -250,5 +250,75 @@
     "output": "images/solar_terms/24_大寒.png",
     "status": "success",
     "time": "2026-09-05 21:15:52"
+  },
+  "images/kama_sutra/01_莲华合一.png": {
+    "name": "莲华合一",
+    "series": "kama_sutra",
+    "output": "images/kama_sutra/01_莲华合一.png",
+    "status": "success",
+    "time": "2026-09-06 12:42:39"
+  },
+  "images/kama_sutra/02_繁枝相依.png": {
+    "name": "繁枝相依",
+    "series": "kama_sutra",
+    "output": "images/kama_sutra/02_繁枝相依.png",
+    "status": "success",
+    "time": "2026-09-06 12:43:59"
+  },
+  "images/kama_sutra/03_月影共舞.png": {
+    "name": "月影共舞",
+    "series": "kama_sutra",
+    "output": "images/kama_sutra/03_月影共舞.png",
+    "status": "success",
+    "time": "2026-09-06 12:45:07"
+  },
+  "images/kama_sutra/04_孔雀灵犀.png": {
+    "name": "孔雀灵犀",
+    "series": "kama_sutra",
+    "output": "images/kama_sutra/04_孔雀灵犀.png",
+    "status": "success",
+    "time": "2026-09-06 12:46:31"
+  },
+  "images/kama_sutra/05_天籁和鸣.png": {
+    "name": "天籁和鸣",
+    "series": "kama_sutra",
+    "output": "images/kama_sutra/05_天籁和鸣.png",
+    "status": "success",
+    "time": "2026-09-06 12:47:58"
+  },
+  "images/kama_sutra/06_合掌印契.png": {
+    "name": "合掌印契",
+    "series": "kama_sutra",
+    "output": "images/kama_sutra/06_合掌印契.png",
+    "status": "success",
+    "time": "2026-09-06 12:49:22"
+  },
+  "images/kama_sutra/07_晨曦相望.png": {
+    "name": "晨曦相望",
+    "series": "kama_sutra",
+    "output": "images/kama_sutra/07_晨曦相望.png",
+    "status": "success",
+    "time": "2026-09-06 12:50:38"
+  },
+  "images/kama_sutra/08_浮云双栖.png": {
+    "name": "浮云双栖",
+    "series": "kama_sutra",
+    "output": "images/kama_sutra/08_浮云双栖.png",
+    "status": "success",
+    "time": "2026-09-06 12:51:47"
+  },
+  "images/kama_sutra/09_同心花环.png": {
+    "name": "同心花环",
+    "series": "kama_sutra",
+    "output": "images/kama_sutra/09_同心花环.png",
+    "status": "success",
+    "time": "2026-09-06 12:58:18"
+  },
+  "images/kama_sutra/10_圆满曼荼罗.png": {
+    "name": "圆满曼荼罗",
+    "series": "kama_sutra",
+    "output": "images/kama_sutra/10_圆满曼荼罗.png",
+    "status": "success",
+    "time": "2026-09-06 13:00:10"
   }
 }
