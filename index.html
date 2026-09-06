@@ -817,6 +817,334 @@
       gap: 8px;
     }
 
+    .btn-top-puzzle {
+      background: #f5eedd;
+      border-color: #8d4d39;
+      color: #8d4d39;
+      font-weight: 600;
+    }
+    .btn-top-puzzle:hover {
+      background: #ebdcc7;
+      border-color: #b83b26;
+      color: #b83b26;
+    }
+
+    /* Floating Toast Notification */
+    .toast {
+      position: fixed;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-24px);
+      background: rgba(41, 39, 34, 0.94);
+      color: #fffaf2;
+      padding: 10px 20px;
+      border-radius: 24px;
+      font: 13px ui-monospace, SFMono-Regular, Menlo, monospace;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+      pointer-events: none;
+      opacity: 0;
+      transition: all .25s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+      z-index: 99999;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Modal 4: Stamp Journal & Collage Book Modal */
+    .journal-modal-inner {
+      max-width: 1240px;
+      width: 96vw;
+      max-height: 94vh;
+      background: var(--paper);
+      padding: 22px;
+      border: 1px solid var(--line);
+      box-shadow: 0 24px 50px rgba(0,0,0,.45);
+      display: grid;
+      grid-template-columns: 1.25fr 0.95fr;
+      gap: 20px;
+      position: relative;
+      overflow-y: auto;
+      border-radius: 6px;
+    }
+    #journal-close {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      z-index: 30;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      background: rgba(0,0,0,0.06);
+      border-radius: 50%;
+    }
+    #journal-close:hover {
+      background: rgba(0,0,0,0.12);
+      color: var(--accent);
+    }
+    .journal-preview-pane {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: #2b2724;
+      padding: 16px;
+      border-radius: 6px;
+      border: 1px solid #453f3a;
+      box-shadow: inset 0 2px 8px rgba(0,0,0,0.4);
+    }
+    .journal-toolbar-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #453f3a;
+    }
+    .journal-toolbar-title {
+      font: bold 12.5px ui-monospace, monospace;
+      color: #ebdcc7;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .journal-quick-actions {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .btn-journal-tool {
+      background: #3d3732;
+      border: 1px solid #5a524a;
+      color: #e6dac3;
+      padding: 5px 9px;
+      border-radius: 3px;
+      font: 11.5px ui-monospace, monospace;
+      cursor: pointer;
+      transition: all .15s ease;
+    }
+    .btn-journal-tool:hover {
+      background: #504842;
+      color: #fff;
+      border-color: #8d4d39;
+    }
+    .journal-canvas-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 320px;
+      padding: 8px;
+      background: #211e1b;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    #journal-canvas {
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 3/2;
+      box-shadow: 0 16px 36px rgba(0,0,0,0.6);
+      border-radius: 4px;
+      background: #f4ecdc;
+      display: block;
+      cursor: pointer;
+    }
+    .journal-export-bar {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 4px;
+    }
+    .btn-journal-export {
+      flex: 2;
+      padding: 12px 14px;
+      font-size: 13.5px;
+      font-weight: 600;
+      justify-content: center;
+    }
+    .btn-journal-print {
+      flex: 1;
+      padding: 12px 10px;
+      font-size: 12.5px;
+      justify-content: center;
+    }
+
+    /* Right: Sidebar & Picker */
+    .journal-sidebar-pane {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      min-width: 0;
+    }
+    .journal-sidebar-header h2 {
+      font-size: 21px;
+      color: var(--ink);
+      margin: 0 0 4px 0;
+      font-family: "Songti SC", Georgia, serif;
+    }
+    .journal-sidebar-header p {
+      font: 12px/1.4 ui-monospace, monospace;
+      color: var(--muted);
+      margin: 0;
+    }
+    .journal-config-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: #fdfaf4;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+    }
+    .stamp-picker-section {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+      min-height: 220px;
+      background: #fdfaf4;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+    }
+    .stamp-picker-header {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .stamp-picker-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font: 12px ui-monospace, monospace;
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .stamp-slot-counter {
+      color: var(--accent);
+      background: #f4ecdc;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 11px;
+    }
+    .picker-tabs {
+      display: flex;
+      gap: 4px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding: 2px 0;
+    }
+    .picker-tabs::-webkit-scrollbar { display: none; }
+    .picker-tab {
+      background: #f0e6d6;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      font: 11px ui-monospace, monospace;
+      padding: 4px 8px;
+      border-radius: 3px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all .15s ease;
+    }
+    .picker-tab.active {
+      background: var(--ink);
+      color: #fffaf2;
+      border-color: var(--ink);
+    }
+    .stamp-picker-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      max-height: 200px;
+      overflow-y: auto;
+      padding: 6px;
+      background: #f5eedd;
+      border: 1px solid var(--line);
+      border-radius: 3px;
+    }
+    .picker-stamp-item {
+      position: relative;
+      height: 110px;
+      background: var(--card-bg);
+      border: 1.5px solid #c7b9a2;
+      border-radius: 3px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all .15s ease;
+      box-shadow: 1px 2px 0 #c7b9a244;
+      display: block;
+    }
+    .picker-stamp-item:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    .picker-stamp-item.in-journal {
+      border-color: #2b7a4b;
+      box-shadow: 0 0 0 2px #2b7a4b;
+    }
+    .picker-stamp-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .picker-stamp-item-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(247, 240, 228, 0.95);
+      font: 10px/1.2 ui-monospace, monospace;
+      text-align: center;
+      padding: 3px 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      border-top: 1px solid var(--line);
+      z-index: 2;
+    }
+    .picker-stamp-item-badge {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      background: #2b7a4b;
+      color: #fff;
+      font-size: 8px;
+      padding: 1px 4px;
+      border-radius: 8px;
+      font-weight: bold;
+      z-index: 3;
+    }
+    .journal-checkbox-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      font-size: 12px;
+      color: var(--ink);
+      user-select: none;
+      margin: 2px 0;
+    }
+    .journal-checkbox-wrap input {
+      width: 16px !important;
+      height: 16px !important;
+      min-width: 16px !important;
+      flex: 0 0 16px !important;
+      margin: 0 !important;
+      cursor: pointer;
+      accent-color: #b83b26;
+    }
+
     /* Mobile Responsive Breakpoints */
     @media(max-width: 768px) {
       header { padding: 24px 16px 14px; }
@@ -984,6 +1312,44 @@
         display: block;
         margin: 0 auto;
       }
+
+      /* Journal Modal Mobile */
+      .journal-modal-inner {
+        grid-template-columns: 1fr;
+        padding: 14px 10px;
+        max-height: 92vh;
+        gap: 12px;
+        border-radius: 6px;
+        width: 100%;
+        max-width: 100%;
+      }
+      .journal-preview-pane {
+        padding: 10px;
+      }
+      .journal-canvas-container {
+        min-height: auto;
+        padding: 4px;
+      }
+      #journal-canvas {
+        max-height: 30vh;
+        width: 100%;
+      }
+      .journal-export-bar {
+        flex-direction: column;
+      }
+      .btn-journal-export, .btn-journal-print {
+        width: 100%;
+        min-height: 42px;
+      }
+      .stamp-picker-grid {
+        grid-template-columns: repeat(4, 1fr);
+        max-height: 160px;
+      }
+      .journal-config-form input, .journal-config-form select {
+        font-size: 16px; /* iOS Safari zoom prevention */
+        height: 40px;
+      }
+
       .form-row {
         grid-template-columns: 1fr;
         gap: 8px;
@@ -1015,6 +1381,10 @@
         <p id="hero-desc">30 座城市，30 枚低调的多色橡胶戳。每一张只留下一个地点最易辨认的轮廓：建筑、山脉、海岸线与城市的呼吸。</p>
       </div>
       <div class="header-actions">
+        <button class="btn-top btn-top-puzzle" id="btn-open-journal">
+          <span>🧩 盖章手账本</span>
+          <span class="passport-badge" id="journal-count-badge">0</span>
+        </button>
         <button class="btn-top btn-top-accent" id="btn-open-passport">
           <span>📖 印记收集册</span>
           <span class="passport-badge" id="passport-count-badge">0</span>
@@ -1101,6 +1471,9 @@
           <button class="btn-modal-action btn-modal-stamp" id="modal-stamp-btn">
             <span>🏷️ 盖入收集册</span>
           </button>
+          <button class="btn-modal-action" id="modal-journal-btn" style="background:#ede0cb;border-color:var(--accent);color:var(--accent);">
+            <span>🧩 贴入手账本</span>
+          </button>
           <button class="btn-modal-action btn-modal-exlibris" id="modal-exlibris-btn">
             <span>🔖 制作藏书票</span>
           </button>
@@ -1126,11 +1499,144 @@
       </div>
       <div class="passport-toolbar">
         <button class="btn-top btn-top-accent" id="btn-export-postcard">📥 导出旅行打卡明信片</button>
+        <button class="btn-top" id="btn-passport-to-journal">🧩 拼入盖章手账本</button>
         <button class="btn-top" id="btn-stamp-all">✨ 一键盖章全收集</button>
         <button class="btn-top" id="btn-reset-passport" style="color:#b83b26;">🧹 清空收集记录</button>
       </div>
       <div class="passport-grid" id="passport-grid">
         <!-- Filled dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Stamp Journal & Collage Book Modal (手账拼图本) -->
+  <div class="lightbox" id="journal-lightbox">
+    <div class="journal-modal-inner">
+      <button class="close" id="journal-close" title="关闭 (Esc)">×</button>
+
+      <!-- Left: Interactive Journal Preview Pane -->
+      <div class="journal-preview-pane">
+        <div class="journal-toolbar-top">
+          <span class="journal-toolbar-title">📖 手账跨页预览 (Live Stamped Page)</span>
+          <div class="journal-quick-actions">
+            <button class="btn-journal-tool" id="btn-fill-collected" title="将已盖章的作品自动拼贴排版入本">
+              🌟 填入已盖章
+            </button>
+            <button class="btn-journal-tool" id="btn-random-journal" title="从全部 76 款印章中随机挑选">
+              🎲 随机一页
+            </button>
+            <button class="btn-journal-tool" id="btn-clear-journal" title="清空当前手账页中的印章">
+              🗑️ 清空
+            </button>
+          </div>
+        </div>
+
+        <div class="journal-canvas-container" id="journal-container">
+          <canvas id="journal-canvas" width="1200" height="800"></canvas>
+        </div>
+
+        <div class="journal-export-bar">
+          <button class="btn-top btn-top-accent btn-journal-export" id="btn-download-journal">
+            📥 下载高清手账跨页 (PNG 2400×1600 超清版)
+          </button>
+          <button class="btn-top btn-journal-print" id="btn-print-journal">
+            🖨️ 打印 / 存 PDF
+          </button>
+        </div>
+      </div>
+
+      <!-- Right: Settings & Stamp Picker Drawer -->
+      <div class="journal-sidebar-pane">
+        <div class="journal-sidebar-header">
+          <h2>🧩 盖章手账工坊</h2>
+          <p>将心仪的印章盖入同一本手账跨页，支持自由版式、纸张质感与自然手作微倾角。</p>
+        </div>
+
+        <!-- Configuration Form -->
+        <div class="journal-config-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>📐 排版版式:</label>
+              <select id="journal-layout">
+                <option value="grid2x2">2 × 2 四宫格 (4 印章 · 经典对开)</option>
+                <option value="grid2x3" selected>2 × 3 六宫格 (6 印章 · 游历手账)</option>
+                <option value="grid3x3">3 × 3 八宫格 (8 印章 · 密集集锦)</option>
+                <option value="featured1p4">1 大 + 4 小 (5 印章 · 杂志版式)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>📜 手账纸张:</label>
+              <select id="journal-paper">
+                <option value="warm_xuan" selected>暖米宣纸 (手工纤维质感)</option>
+                <option value="kraft">复古牛皮纸 (陈旧棕褐)</option>
+                <option value="dot_grid">点阵手账笺 (微黄浅点阵)</option>
+                <option value="sage_parchment">青墨水纹笺 (水墨淡青)</option>
+                <option value="clean_cream">象牙白笺 (极简典雅)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>📖 手账主标题:</label>
+              <input id="journal-title-input" value="《四时风物 · 游历手账》" maxlength="24" placeholder="例如：游历实地手账">
+            </div>
+            <div class="form-group">
+              <label>✍️ 手账主人 / 印记人:</label>
+              <input id="journal-author-input" value="COLLECTED BY HOLY NOVA" maxlength="28" placeholder="你的署名">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>📅 手账副标 / 日期:</label>
+              <input id="journal-subtitle-input" value="FIELD NOTES & SEALS • EDITION 2026" maxlength="40">
+            </div>
+            <div class="form-group">
+              <label>🎨 印泥色彩:</label>
+              <select id="journal-ink">
+                <option value="current" selected>跟随当前页面配色</option>
+                <option value="original">天然原色专色</option>
+                <option value="cinnabar">传统朱砂赤红</option>
+                <option value="indigo">复古木刻靛蓝</option>
+                <option value="charcoal">水墨黑白炭黑</option>
+                <option value="moss">森系自然苔绿</option>
+                <option value="sepia">十九世纪古董焦茶</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row" style="margin-top:2px;">
+            <div class="form-group" style="grid-column: span 2;">
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--ink);text-transform:none;">
+                <input type="checkbox" id="journal-natural-tilt" checked style="width:auto;height:auto;margin:0;">
+                <span>✨ 启用自然手盖微倾角（模拟真实盖章落在纸上的微抖动与手作感）</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stamp Picker Drawer -->
+        <div class="stamp-picker-section">
+          <div class="stamp-picker-header">
+            <div class="stamp-picker-title-row">
+              <span>🖼️ 挑选印章盖入本页:</span>
+              <span class="stamp-slot-counter" id="stamp-slot-counter">已贴 0 / 6</span>
+            </div>
+            <div class="picker-tabs" id="picker-tabs">
+              <button class="picker-tab active" data-filter="all">全部 (76)</button>
+              <button class="picker-tab" data-filter="cities">城市 (30)</button>
+              <button class="picker-tab" data-filter="zodiac">生肖 (12)</button>
+              <button class="picker-tab" data-filter="solar_terms">节气 (24)</button>
+              <button class="picker-tab" data-filter="shanhaijing">山海 (10)</button>
+              <button class="picker-tab" data-filter="collected">已盖章 (<span id="picker-collected-count">0</span>)</button>
+            </div>
+          </div>
+
+          <div class="stamp-picker-grid" id="stamp-picker-grid">
+            <!-- Populated dynamically with stamps -->
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1206,6 +1712,9 @@
       </div>
     </div>
   </div>
+
+  <!-- Toast Notification Element -->
+  <div id="toast" class="toast"></div>
 
   <script src="data.js"></script>
   <script>
@@ -1453,10 +1962,13 @@
               <div class="meta">${x.features || ""}</div>
               <div class="keywords">${(x.keywords || []).join(" · ")}</div>
               <div class="card-actions">
-                <button class="btn-card-action btn-card-stamp ${stamped ? "stamped" : ""}" onclick="toggleStamp('${currentSeriesKey}', ${x.id})">
+                <button class="btn-card-action btn-card-stamp ${stamped ? "stamped" : ""}" onclick="toggleStamp('${currentSeriesKey}', ${x.id})" title="在印记收集册中盖章">
                   ${stamped ? "✓ 已盖印" : "🏷️ 盖章"}
                 </button>
-                <button class="btn-card-action" onclick="openExLibrisFor(${idx})">
+                <button class="btn-card-action" onclick="addToJournalDirect('${currentSeriesKey}', ${x.id})" title="将此印章贴入盖章手账本">
+                  🧩 贴手账
+                </button>
+                <button class="btn-card-action" onclick="openExLibrisFor(${idx})" title="制作专属藏书票">
                   🔖 藏书票
                 </button>
               </div>
@@ -1489,18 +2001,8 @@
       t.addEventListener("click", () => switchSeries(t.dataset.series));
     });
 
-    const hash = window.location.hash.replace("#", "");
-    if (hash && window.COLLECTIONS[hash]) {
-      switchSeries(hash);
-    } else {
-      updateHeader();
-      initFilterOptions();
-      render();
-    }
-
     search.oninput = render;
     filter.onchange = render;
-    updatePassportBadge();
 
     /* -------------------------------------------------------------
        5. Lightbox Modal
@@ -2036,17 +2538,718 @@
       };
     };
 
+    /* -------------------------------------------------------------
+       8. Toast Notification Utility
+       ------------------------------------------------------------- */
+    function showToast(msg, icon = "✨") {
+      const toast = document.getElementById("toast");
+      if (!toast) return;
+      toast.innerHTML = `<span style="font-size:16px;">${icon}</span> <span>${msg}</span>`;
+      toast.classList.add("show");
+      clearTimeout(toast._timer);
+      toast._timer = setTimeout(() => {
+        toast.classList.remove("show");
+      }, 2400);
+    }
+
+    /* -------------------------------------------------------------
+       9. Stamp Journal & Collage Book Studio (盖章手账拼图本)
+       ------------------------------------------------------------- */
+    const journalLightbox = document.querySelector("#journal-lightbox");
+    const journalCanvas = document.querySelector("#journal-canvas");
+    const journalCtx = journalCanvas.getContext("2d");
+    let journalStamps = []; // Items in current journal page
+    let activeSlotIndex = 0; // Currently focused slot for insertion / swap
+    let journalPickerCategory = "all";
+
+    const stampImgCache = new Map();
+    function getCachedStampImage(url) {
+      if (!url) return Promise.resolve(null);
+      if (stampImgCache.has(url)) {
+        const cached = stampImgCache.get(url);
+        if (cached && cached.complete && cached.naturalWidth > 0) return Promise.resolve(cached);
+      }
+      return new Promise((resolve) => {
+        const img = new Image();
+        if (url.startsWith("http://") || url.startsWith("https://")) {
+          img.crossOrigin = "anonymous";
+        }
+        img.src = url;
+        img.onload = () => {
+          stampImgCache.set(url, img);
+          resolve(img);
+        };
+        img.onerror = () => {
+          console.warn("Failed to load image:", url);
+          resolve(null);
+        };
+      });
+    }
+
+    function getAllStampsList() {
+      const list = [];
+      if (!window.COLLECTIONS) return list;
+      Object.keys(window.COLLECTIONS).forEach(seriesKey => {
+        const col = window.COLLECTIONS[seriesKey];
+        (col.items || []).forEach(item => {
+          list.push({
+            ...item,
+            seriesKey: seriesKey,
+            seriesTitle: col.title,
+            badgeLabel: col.badgeFormat ? col.badgeFormat.replace("{id}", String(item.id).padStart(2, "0")) : `NO. ${String(item.id).padStart(2, "0")}`
+          });
+        });
+      });
+      return list;
+    }
+
+    function getLayoutCapacity(layoutKey) {
+      switch (layoutKey) {
+        case "grid2x2": return 4;
+        case "grid2x3": return 6;
+        case "grid3x3": return 8;
+        case "featured1p4": return 5;
+        default: return 6;
+      }
+    }
+
+    function updateJournalBadge() {
+      const badge = document.querySelector("#journal-count-badge");
+      if (badge) badge.textContent = journalStamps.length;
+      const counter = document.querySelector("#stamp-slot-counter");
+      const cap = getLayoutCapacity(document.querySelector("#journal-layout").value);
+      if (counter) counter.textContent = `已贴 ${journalStamps.length} / ${cap}`;
+      const pickerCollCount = document.querySelector("#picker-collected-count");
+      if (pickerCollCount) pickerCollCount.textContent = getTotalCollectedCount();
+    }
+
+    function openJournalModal() {
+      // If journal is empty and user has collected stamps, prefill with collected stamps!
+      if (journalStamps.length === 0) {
+        const all = getAllStampsList();
+        const collected = all.filter(x => isStamped(x.seriesKey, x.id));
+        const cap = getLayoutCapacity(document.querySelector("#journal-layout").value);
+        if (collected.length > 0) {
+          journalStamps = collected.slice(0, cap);
+        } else {
+          // Default prefill with 6 iconic prints (Shanghai, Rat, Lichun, Jiuweihu, Beijing, Dragon)
+          const defaults = [
+            all.find(x => x.name === "上海" || x.city === "上海") || all[0],
+            all.find(x => x.name === "子鼠") || all[30],
+            all.find(x => x.name === "立春") || all[42],
+            all.find(x => x.name === "九尾狐") || all[66],
+            all.find(x => x.name === "北京" || x.city === "北京") || all[1],
+            all.find(x => x.name === "辰龙") || all[34],
+          ].filter(Boolean);
+          journalStamps = defaults.slice(0, cap);
+        }
+      }
+
+      journalLightbox.classList.add("open");
+      updateJournalBadge();
+      renderPickerGrid();
+      drawJournal();
+    }
+
+    document.querySelector("#btn-open-journal").onclick = openJournalModal;
+    document.querySelector("#journal-close").onclick = () => journalLightbox.classList.remove("open");
+    journalLightbox.onclick = e => {
+      if (e.target.id === "journal-lightbox") journalLightbox.classList.remove("open");
+    };
+
+    // Modal Action inside Lightbox
+    document.querySelector("#modal-journal-btn").onclick = () => {
+      if (currentModalIndex < 0 || currentModalIndex >= currentFilteredRows.length) return;
+      const item = currentFilteredRows[currentModalIndex];
+      addToJournalDirect(currentSeriesKey, item.id);
+      document.querySelector("#lightbox").classList.remove("open");
+      openJournalModal();
+    };
+
+    // Passport Action
+    document.querySelector("#btn-passport-to-journal").onclick = () => {
+      document.querySelector("#passport-lightbox").classList.remove("open");
+      fillWithCollectedStamps();
+      openJournalModal();
+    };
+
+    window.addToJournalDirect = function(seriesKey, id) {
+      const all = getAllStampsList();
+      const target = all.find(x => x.seriesKey === seriesKey && x.id === id);
+      if (!target) return;
+
+      const cap = getLayoutCapacity(document.querySelector("#journal-layout").value);
+      const existingIdx = journalStamps.findIndex(x => x.output === target.output);
+
+      if (existingIdx >= 0) {
+        journalStamps.splice(existingIdx, 1);
+        showToast(`已从手账本移除【${target.city || target.title || target.name}】`, "🗑️");
+      } else {
+        if (journalStamps.length < cap) {
+          journalStamps.push(target);
+          activeSlotIndex = journalStamps.length % cap;
+        } else {
+          journalStamps[activeSlotIndex] = target;
+          activeSlotIndex = (activeSlotIndex + 1) % cap;
+        }
+        playStampSound();
+        showToast(`已将【${target.city || target.title || target.name}】盖入手账本！`, "🏷️");
+      }
+
+      updateJournalBadge();
+      renderPickerGrid();
+      if (journalLightbox.classList.contains("open")) {
+        drawJournal();
+      }
+    };
+
+    function renderPickerGrid() {
+      const gridEl = document.querySelector("#stamp-picker-grid");
+      if (!gridEl) return;
+      const all = getAllStampsList();
+      let filtered = all;
+
+      if (journalPickerCategory === "cities") filtered = all.filter(x => x.seriesKey === "cities");
+      else if (journalPickerCategory === "zodiac") filtered = all.filter(x => x.seriesKey === "zodiac");
+      else if (journalPickerCategory === "solar_terms") filtered = all.filter(x => x.seriesKey === "solar_terms");
+      else if (journalPickerCategory === "shanhaijing") filtered = all.filter(x => x.seriesKey === "shanhaijing");
+      else if (journalPickerCategory === "collected") filtered = all.filter(x => isStamped(x.seriesKey, x.id));
+
+      if (!filtered.length) {
+        gridEl.innerHTML = '<div style="grid-column:span 4;text-align:center;padding:24px 8px;font-size:12px;color:var(--muted);">暂无符合条件的印章</div>';
+        return;
+      }
+
+      gridEl.innerHTML = filtered.map(item => {
+        const inJournal = journalStamps.some(x => x.output === item.output);
+        const displayName = item.city || item.title || item.name;
+        return `
+          <div class="picker-stamp-item ${inJournal ? "in-journal" : ""}" data-output="${item.output}" title="点击贴入或移除手账本">
+            <img src="${item.output}" alt="${displayName}" loading="lazy">
+            <div class="picker-stamp-item-label">${displayName}</div>
+            ${inJournal ? '<span class="picker-stamp-item-badge">✓ 已贴</span>' : ""}
+          </div>
+        `;
+      }).join("");
+
+      gridEl.querySelectorAll(".picker-stamp-item").forEach(el => {
+        el.onclick = () => {
+          const out = el.dataset.output;
+          const target = all.find(x => x.output === out);
+          if (!target) return;
+          addToJournalDirect(target.seriesKey, target.id);
+        };
+      });
+    }
+
+    // Picker Category Tabs
+    document.querySelectorAll(".picker-tab").forEach(tab => {
+      tab.onclick = () => {
+        document.querySelectorAll(".picker-tab").forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+        journalPickerCategory = tab.dataset.filter;
+        renderPickerGrid();
+      };
+    });
+
+    // Quick Action: Fill with collected stamps
+    function fillWithCollectedStamps() {
+      const all = getAllStampsList();
+      const collected = all.filter(x => isStamped(x.seriesKey, x.id));
+      const cap = getLayoutCapacity(document.querySelector("#journal-layout").value);
+      if (collected.length === 0) {
+        showToast("收集册暂无印章，已为你随机挑选！", "💡");
+        randomJournalPage();
+        return;
+      }
+      journalStamps = collected.slice(0, cap);
+      activeSlotIndex = 0;
+      playStampSound();
+      updateJournalBadge();
+      renderPickerGrid();
+      drawJournal();
+      showToast(`已自动将 ${journalStamps.length} 枚盖章填入手账本！`, "📖");
+    }
+
+    function randomJournalPage() {
+      const all = getAllStampsList();
+      const cap = getLayoutCapacity(document.querySelector("#journal-layout").value);
+      const shuffled = [...all].sort(() => 0.5 - Math.random());
+      journalStamps = shuffled.slice(0, cap);
+      activeSlotIndex = 0;
+      playStampSound();
+      updateJournalBadge();
+      renderPickerGrid();
+      drawJournal();
+      showToast(`已随机生成一页 ${journalStamps.length} 款风物印章手账！`, "🎲");
+    }
+
+    function clearJournalPage() {
+      journalStamps = [];
+      activeSlotIndex = 0;
+      updateJournalBadge();
+      renderPickerGrid();
+      drawJournal();
+      showToast("已清空当前手账页", "🗑️");
+    }
+
+    document.querySelector("#btn-fill-collected").onclick = fillWithCollectedStamps;
+    document.querySelector("#btn-random-journal").onclick = randomJournalPage;
+    document.querySelector("#btn-clear-journal").onclick = clearJournalPage;
+
+    // Canvas click to select slot
+    journalCanvas.onclick = (e) => {
+      const rect = journalCanvas.getBoundingClientRect();
+      const scaleX = journalCanvas.width / rect.width;
+      const scaleY = journalCanvas.height / rect.height;
+      const clickX = (e.clientX - rect.left) * scaleX;
+      const clickY = (e.clientY - rect.top) * scaleY;
+
+      const layoutKey = document.querySelector("#journal-layout").value;
+      const slots = computeSlotRects(layoutKey, 1, 1200, 800);
+
+      slots.forEach((slot, idx) => {
+        if (clickX >= slot.x - 10 && clickX <= slot.x + slot.w + 10 &&
+            clickY >= slot.y - 10 && clickY <= slot.y + slot.h + 30) {
+          activeSlotIndex = idx;
+          drawJournal();
+          showToast(`当前选中第 ${idx + 1} 个印章位，点击右侧印章即可填入`, "🎯");
+        }
+      });
+    };
+
+    // Form inputs triggers
+    const journalInputs = ["#journal-layout", "#journal-paper", "#journal-title-input", "#journal-author-input", "#journal-subtitle-input", "#journal-ink", "#journal-natural-tilt"];
+    journalInputs.forEach(sel => {
+      const el = document.querySelector(sel);
+      if (el) {
+        el.oninput = () => {
+          if (sel === "#journal-layout") {
+            const cap = getLayoutCapacity(el.value);
+            if (journalStamps.length > cap) journalStamps = journalStamps.slice(0, cap);
+            updateJournalBadge();
+          }
+          drawJournal();
+        };
+        el.onchange = () => {
+          if (sel === "#journal-layout") {
+            const cap = getLayoutCapacity(el.value);
+            if (journalStamps.length > cap) journalStamps = journalStamps.slice(0, cap);
+            updateJournalBadge();
+          }
+          drawJournal();
+        };
+      }
+    });
+
+    // Slot Coordinate Engine
+    function computeSlotRects(layoutKey, scale, cw, ch) {
+      const margin = 28 * scale;
+      const spineX = cw / 2;
+      const topY = 95 * scale;
+      const leftX = margin + 28 * scale;
+      const rightX = spineX + 24 * scale;
+
+      const slots = [];
+
+      if (layoutKey === "grid2x2") {
+        // 4 slots: 2 on Left Page, 2 on Right Page
+        const w = 210 * scale;
+        const h = 262 * scale;
+        const y = topY + 115 * scale;
+        // Left Page
+        slots.push({ x: leftX + 25 * scale, y: y, w: w, h: h });
+        slots.push({ x: leftX + 265 * scale, y: y, w: w, h: h });
+        // Right Page
+        slots.push({ x: rightX + 25 * scale, y: y, w: w, h: h });
+        slots.push({ x: rightX + 265 * scale, y: y, w: w, h: h });
+      } else if (layoutKey === "grid2x3") {
+        // 6 slots: 3 on Left, 3 on Right (Staggered artistic balance)
+        const w = 200 * scale;
+        const h = 250 * scale;
+        // Left Page
+        slots.push({ x: leftX + 145 * scale, y: topY + 10 * scale, w: w, h: h });
+        slots.push({ x: leftX + 25 * scale, y: topY + 310 * scale, w: w, h: h });
+        slots.push({ x: leftX + 265 * scale, y: topY + 310 * scale, w: w, h: h });
+        // Right Page
+        slots.push({ x: rightX + 25 * scale, y: topY + 10 * scale, w: w, h: h });
+        slots.push({ x: rightX + 265 * scale, y: topY + 10 * scale, w: w, h: h });
+        slots.push({ x: rightX + 145 * scale, y: topY + 310 * scale, w: w, h: h });
+      } else if (layoutKey === "grid3x3") {
+        // 8 slots: 4 on Left (2x2), 4 on Right (2x2)
+        const w = 200 * scale;
+        const h = 250 * scale;
+        // Left Page
+        slots.push({ x: leftX + 25 * scale, y: topY + 10 * scale, w: w, h: h });
+        slots.push({ x: leftX + 265 * scale, y: topY + 10 * scale, w: w, h: h });
+        slots.push({ x: leftX + 25 * scale, y: topY + 310 * scale, w: w, h: h });
+        slots.push({ x: leftX + 265 * scale, y: topY + 310 * scale, w: w, h: h });
+        // Right Page
+        slots.push({ x: rightX + 25 * scale, y: topY + 10 * scale, w: w, h: h });
+        slots.push({ x: rightX + 265 * scale, y: topY + 10 * scale, w: w, h: h });
+        slots.push({ x: rightX + 25 * scale, y: topY + 310 * scale, w: w, h: h });
+        slots.push({ x: rightX + 265 * scale, y: topY + 310 * scale, w: w, h: h });
+      } else if (layoutKey === "featured1p4") {
+        // 5 slots: 1 Feature Hero on Left + 4 on Right (2x2)
+        const heroW = 360 * scale;
+        const heroH = 450 * scale;
+        slots.push({ x: leftX + 70 * scale, y: topY + 60 * scale, w: heroW, h: heroH, isHero: true });
+
+        const w = 200 * scale;
+        const h = 250 * scale;
+        slots.push({ x: rightX + 25 * scale, y: topY + 10 * scale, w: w, h: h });
+        slots.push({ x: rightX + 265 * scale, y: topY + 10 * scale, w: w, h: h });
+        slots.push({ x: rightX + 25 * scale, y: topY + 310 * scale, w: w, h: h });
+        slots.push({ x: rightX + 265 * scale, y: topY + 310 * scale, w: w, h: h });
+      }
+
+      return slots;
+    }
+
+    // Canvas Journal Renderer
+    const FIXED_TILT_ANGLES = [-1.8, 1.4, -1.1, 1.7, -1.5, 0.9, -1.2, 1.6];
+
+    async function drawJournal(exportMode = false, targetCanvas = null) {
+      const cvs = targetCanvas || journalCanvas;
+      const ctx = cvs.getContext("2d");
+
+      const cw = exportMode ? 2400 : 1200;
+      const ch = exportMode ? 1600 : 800;
+      const scale = exportMode ? 2 : 1;
+
+      cvs.width = cw;
+      cvs.height = ch;
+
+      const layoutKey = document.querySelector("#journal-layout").value;
+      const paperKey = document.querySelector("#journal-paper").value;
+      const titleText = document.querySelector("#journal-title-input").value.trim() || "《四时风物 · 游历手账》";
+      const authorText = document.querySelector("#journal-author-input").value.trim() || "COLLECTED BY HOLY NOVA";
+      const subtitleText = document.querySelector("#journal-subtitle-input").value.trim() || "FIELD NOTES & SEALS • EDITION 2026";
+      const inkSetting = document.querySelector("#journal-ink").value;
+      const naturalTilt = document.querySelector("#journal-natural-tilt").checked;
+
+      // 1. Desk Background
+      ctx.fillStyle = "#1e1b18";
+      ctx.fillRect(0, 0, cw, ch);
+
+      // 2. Open Book Spread
+      const margin = 24 * scale;
+      const bw = cw - margin * 2;
+      const bh = ch - margin * 2;
+      const radius = 10 * scale;
+
+      // Soft Book Shadow
+      ctx.save();
+      ctx.shadowColor = "rgba(0,0,0,0.55)";
+      ctx.shadowBlur = 28 * scale;
+      ctx.shadowOffsetY = 14 * scale;
+
+      // Paper Background Base
+      let paperBg = "#f5eedd";
+      if (paperKey === "kraft") paperBg = "#d8ba8b";
+      else if (paperKey === "dot_grid") paperBg = "#f8f5eb";
+      else if (paperKey === "sage_parchment") paperBg = "#e1e9e2";
+      else if (paperKey === "clean_cream") paperBg = "#fffef9";
+
+      ctx.fillStyle = paperBg;
+      ctx.beginPath();
+      ctx.roundRect(margin, margin, bw, bh, radius);
+      ctx.fill();
+      ctx.restore();
+
+      // Subtle Paper Texture Specks
+      ctx.fillStyle = paperKey === "kraft" ? "rgba(70, 45, 20, 0.04)" : "rgba(100, 80, 50, 0.035)";
+      for (let i = 0; i < 1500 * scale; i++) {
+        const px = margin + Math.random() * bw;
+        const py = margin + Math.random() * bh;
+        ctx.fillRect(px, py, 1.5 * scale, 1.5 * scale);
+      }
+
+      // If Dot Grid Paper: draw dot matrix
+      if (paperKey === "dot_grid") {
+        ctx.fillStyle = "rgba(160, 140, 110, 0.28)";
+        const step = 24 * scale;
+        for (let x = margin + 30 * scale; x < cw - margin - 30 * scale; x += step) {
+          if (Math.abs(x - cw / 2) < 25 * scale) continue; // skip center fold
+          for (let y = margin + 70 * scale; y < ch - margin - 50 * scale; y += step) {
+            ctx.beginPath();
+            ctx.arc(x, y, 1.2 * scale, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        }
+      }
+
+      // 3. Center Spine Fold & Book Depth
+      const spineX = cw / 2;
+
+      // Spine shadow gradient
+      const spineGrad = ctx.createLinearGradient(spineX - 35 * scale, 0, spineX + 35 * scale, 0);
+      spineGrad.addColorStop(0, "rgba(0,0,0,0)");
+      spineGrad.addColorStop(0.35, "rgba(0,0,0,0.06)");
+      spineGrad.addColorStop(0.5, "rgba(0,0,0,0.18)");
+      spineGrad.addColorStop(0.65, "rgba(0,0,0,0.06)");
+      spineGrad.addColorStop(1, "rgba(0,0,0,0)");
+      ctx.fillStyle = spineGrad;
+      ctx.fillRect(spineX - 35 * scale, margin, 70 * scale, bh);
+
+      // Spine Center Crease Line
+      ctx.strokeStyle = "rgba(120, 100, 75, 0.4)";
+      ctx.lineWidth = 1 * scale;
+      ctx.beginPath();
+      ctx.moveTo(spineX, margin);
+      ctx.lineTo(spineX, ch - margin);
+      ctx.stroke();
+
+      // Stitch Thread / Hole Marks along spine
+      const stitchY = [65, 180, 310, 440, 570, 700, 750];
+      stitchY.forEach(sy => {
+        const y = sy * scale;
+        ctx.fillStyle = "#3a3229";
+        ctx.beginPath();
+        ctx.arc(spineX, y, 2.5 * scale, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.strokeStyle = "#8d7962";
+        ctx.lineWidth = 1 * scale;
+        ctx.beginPath();
+        ctx.moveTo(spineX - 4 * scale, y);
+        ctx.lineTo(spineX + 4 * scale, y);
+        ctx.stroke();
+      });
+
+      // 4. Inner Margins & Border Ornaments
+      ctx.strokeStyle = "rgba(140, 120, 95, 0.35)";
+      ctx.lineWidth = 1 * scale;
+
+      // Left Page inner frame
+      const leftInnerX = margin + 18 * scale;
+      const leftInnerW = spineX - leftInnerX - 18 * scale;
+      const innerY = margin + 18 * scale;
+      const innerH = bh - 36 * scale;
+      ctx.strokeRect(leftInnerX, innerY, leftInnerW, innerH);
+
+      // Right Page inner frame
+      const rightInnerX = spineX + 18 * scale;
+      const rightInnerW = cw - margin - 18 * scale - rightInnerX;
+      ctx.strokeRect(rightInnerX, innerY, rightInnerW, innerH);
+
+      // 5. Header Typography & Book Title
+      // Left Header: Book Title
+      ctx.fillStyle = "#292722";
+      ctx.font = `bold ${21 * scale}px "Songti SC", Georgia, serif`;
+      ctx.textAlign = "left";
+      ctx.fillText(titleText, leftInnerX + 16 * scale, innerY + 32 * scale);
+
+      // Subtitle under Title
+      ctx.fillStyle = "#7c7263";
+      ctx.font = `${10 * scale}px ui-monospace, SFMono-Regular, Menlo, monospace`;
+      ctx.fillText(subtitleText, leftInnerX + 16 * scale, innerY + 48 * scale);
+
+      // Right Header: Author Signature & Stamp Seal
+      ctx.textAlign = "right";
+      ctx.fillStyle = "#5c5346";
+      ctx.font = `bold ${12 * scale}px "Songti SC", Georgia, serif`;
+      ctx.fillText(authorText, rightInnerX + rightInnerW - 48 * scale, innerY + 34 * scale);
+
+      // Decorative Seal Stamp in Top-Right
+      const sealX = rightInnerX + rightInnerW - 36 * scale;
+      const sealY = innerY + 18 * scale;
+      const sealS = 24 * scale;
+      ctx.strokeStyle = "#b83b26";
+      ctx.lineWidth = 1.5 * scale;
+      ctx.strokeRect(sealX, sealY, sealS, sealS);
+      ctx.fillStyle = "rgba(184, 59, 38, 0.08)";
+      ctx.fillRect(sealX, sealY, sealS, sealS);
+      ctx.fillStyle = "#b83b26";
+      ctx.font = `bold ${13 * scale}px "Songti SC", serif`;
+      ctx.textAlign = "center";
+      ctx.fillText("印", sealX + sealS / 2, sealY + sealS / 2 + 5 * scale);
+
+      // 6. Footer Information
+      ctx.fillStyle = "#8a7f70";
+      ctx.font = `${9.5 * scale}px ui-monospace, SFMono-Regular, monospace`;
+      ctx.textAlign = "left";
+      ctx.fillText("RUBBER STAMP FIELD JOURNAL • PAGE 01", leftInnerX + 16 * scale, innerY + innerH - 12 * scale);
+
+      ctx.textAlign = "right";
+      ctx.fillText("HAND-CARVED WOODBLOCK PRINTS • EDITION 2026", rightInnerX + rightInnerW - 16 * scale, innerY + innerH - 12 * scale);
+
+      // 7. Calculate Slots & Preload Images
+      const slots = computeSlotRects(layoutKey, scale, cw, ch);
+      const cap = slots.length;
+
+      // Preload images for current items
+      const loadPromises = journalStamps.slice(0, cap).map(item => item ? getCachedStampImage(item.output) : Promise.resolve(null));
+      const loadedImgs = await Promise.all(loadPromises);
+
+      // 8. Render Each Slot
+      slots.forEach((slot, idx) => {
+        const item = journalStamps[idx];
+        const img = loadedImgs[idx];
+        const isOccupied = !!(item && img);
+
+        const cx = slot.x + slot.w / 2;
+        const cy = slot.y + slot.h / 2;
+        const tilt = (naturalTilt ? (FIXED_TILT_ANGLES[idx % FIXED_TILT_ANGLES.length] || 0) : 0) * (Math.PI / 180);
+
+        ctx.save();
+        ctx.translate(cx, cy);
+        ctx.rotate(tilt);
+
+        if (isOccupied) {
+          // Soft Stamp Drop Shadow
+          ctx.shadowColor = "rgba(45, 35, 25, 0.22)";
+          ctx.shadowBlur = 8 * scale;
+          ctx.shadowOffsetY = 4 * scale;
+
+          // Backing Deckle Mount
+          const pad = 4 * scale;
+          ctx.fillStyle = "#fffdf7";
+          ctx.fillRect(-slot.w / 2 - pad, -slot.h / 2 - pad, slot.w + pad * 2, slot.h + pad * 2);
+          ctx.strokeStyle = "rgba(180, 160, 130, 0.5)";
+          ctx.lineWidth = 1 * scale;
+          ctx.strokeRect(-slot.w / 2 - pad, -slot.h / 2 - pad, slot.w + pad * 2, slot.h + pad * 2);
+
+          // Apply Ink Filter to Canvas
+          let effectiveInk = inkSetting === "current" ? currentInk : inkSetting;
+          if (effectiveInk === "cinnabar") ctx.filter = "sepia(0.85) saturate(3.2) hue-rotate(-52deg)";
+          else if (effectiveInk === "indigo") ctx.filter = "sepia(0.65) saturate(2.4) hue-rotate(168deg)";
+          else if (effectiveInk === "charcoal") ctx.filter = "grayscale(1)";
+          else if (effectiveInk === "moss") ctx.filter = "sepia(0.7) saturate(2.3) hue-rotate(58deg)";
+          else if (effectiveInk === "sepia") ctx.filter = "sepia(1) saturate(1.8) hue-rotate(-22deg)";
+
+          // Draw Stamp Art
+          ctx.drawImage(img, -slot.w / 2, -slot.h / 2, slot.w, slot.h);
+
+          // Reset Filter & Shadow for Captions
+          ctx.filter = "none";
+          ctx.shadowColor = "transparent";
+
+          // Stamp Caption Underneath
+          const displayName = item.city || item.title || item.name;
+          const badge = item.badgeLabel || `NO. ${String(item.id).padStart(2, "0")}`;
+
+          ctx.fillStyle = "#292722";
+          ctx.font = `bold ${slot.isHero ? 15 * scale : 11 * scale}px "Songti SC", Georgia, serif`;
+          ctx.textAlign = "center";
+          ctx.fillText(displayName, 0, slot.h / 2 + (slot.isHero ? 20 * scale : 14 * scale));
+
+          ctx.fillStyle = "#7c7263";
+          ctx.font = `${slot.isHero ? 10 * scale : 8.5 * scale}px ui-monospace, monospace`;
+          ctx.fillText(badge, 0, slot.h / 2 + (slot.isHero ? 34 * scale : 24 * scale));
+        } else {
+          // Empty Slot: Dashed Stamp Frame + Prompt
+          ctx.strokeStyle = (idx === activeSlotIndex && !exportMode) ? "#8d4d39" : "rgba(160, 140, 110, 0.5)";
+          ctx.lineWidth = (idx === activeSlotIndex && !exportMode) ? 2 * scale : 1.5 * scale;
+          ctx.setLineDash([5 * scale, 4 * scale]);
+          ctx.strokeRect(-slot.w / 2, -slot.h / 2, slot.w, slot.h);
+          ctx.setLineDash([]);
+
+          ctx.fillStyle = (idx === activeSlotIndex && !exportMode) ? "rgba(141, 77, 57, 0.06)" : "rgba(160, 140, 110, 0.04)";
+          ctx.fillRect(-slot.w / 2, -slot.h / 2, slot.w, slot.h);
+
+          ctx.fillStyle = (idx === activeSlotIndex && !exportMode) ? "#8d4d39" : "rgba(140, 120, 95, 0.65)";
+          ctx.font = `${24 * scale}px sans-serif`;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillText("🏷️", 0, -10 * scale);
+
+          ctx.font = `bold ${10 * scale}px ui-monospace, monospace`;
+          ctx.fillText(idx === activeSlotIndex && !exportMode ? "【当前填入位】" : "+ 盖章留痕", 0, 16 * scale);
+        }
+
+        // Highlight Active Slot with golden focus indicator
+        if (idx === activeSlotIndex && !exportMode) {
+          ctx.strokeStyle = "#b83b26";
+          ctx.lineWidth = 2 * scale;
+          ctx.strokeRect(-slot.w / 2 - 6 * scale, -slot.h / 2 - 6 * scale, slot.w + 12 * scale, slot.h + 12 * scale);
+        }
+
+        ctx.restore();
+      });
+    }
+
+    // High-Resolution Export
+    document.querySelector("#btn-download-journal").onclick = async () => {
+      showToast("正在渲染 2400×1600 超清手账跨页……", "🎨");
+      const exportCanvas = document.createElement("canvas");
+      await drawJournal(true, exportCanvas);
+
+      const titleText = document.querySelector("#journal-title-input").value.trim() || "四时风物手账";
+      const cleanTitle = titleText.replace(/[《》\s]/g, "_");
+      const link = document.createElement("a");
+      link.download = `Stamp_Journal_${cleanTitle}_${Date.now()}.png`;
+      link.href = exportCanvas.toDataURL("image/png");
+      link.click();
+      showToast("手账跨页导出成功！", "📥");
+    };
+
+    // Print / PDF
+    document.querySelector("#btn-print-journal").onclick = async () => {
+      const exportCanvas = document.createElement("canvas");
+      await drawJournal(true, exportCanvas);
+      const imgData = exportCanvas.toDataURL("image/png");
+      const printWin = window.open("", "_blank");
+      if (!printWin) {
+        alert("请允许弹出窗口以打印手账页");
+        return;
+      }
+      printWin.document.write(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>打印印章手账页</title>
+          <style>
+            @page { size: landscape; margin: 0; }
+            body { margin: 0; display: flex; align-items: center; justify-content: center; background: #fff; height: 100vh; }
+            img { width: 100vw; height: auto; max-height: 100vh; object-fit: contain; }
+          </style>
+        </head>
+        <body>
+          <img src="${imgData}" onload="window.print();">
+        </body>
+        </html>
+      `);
+      printWin.document.close();
+    };
+
+    /* -------------------------------------------------------------
+       10. Initial Application Bootstrap & Hash Routing
+       ------------------------------------------------------------- */
+    const hash = window.location.hash.replace("#", "");
+    if (hash === "journal" || hash === "puzzle") {
+      updateHeader();
+      initFilterOptions();
+      render();
+      setTimeout(() => openJournalModal(), 80);
+    } else if (hash === "passport") {
+      updateHeader();
+      initFilterOptions();
+      render();
+      setTimeout(() => document.querySelector("#btn-open-passport").click(), 80);
+    } else if (hash && window.COLLECTIONS[hash]) {
+      switchSeries(hash);
+    } else {
+      updateHeader();
+      initFilterOptions();
+      render();
+    }
+
+    updatePassportBadge();
+    updateJournalBadge();
+
     window.addEventListener("keydown", e => {
       const lb = document.querySelector("#lightbox");
       const pb = document.querySelector("#passport-lightbox");
       const eb = document.querySelector("#exlibris-lightbox");
+      const jb = document.querySelector("#journal-lightbox");
 
       if (e.key === "Escape") {
-        if (eb.classList.contains("open")) eb.classList.remove("open");
+        if (jb && jb.classList.contains("open")) jb.classList.remove("open");
+        else if (eb.classList.contains("open")) eb.classList.remove("open");
         else if (pb.classList.contains("open")) pb.classList.remove("open");
         else if (lb.classList.contains("open")) lb.classList.remove("open");
       }
-      if (lb.classList.contains("open")) {
+      if (lb && lb.classList.contains("open")) {
         if (e.key === "ArrowLeft") document.querySelector("#btn-prev").click();
         if (e.key === "ArrowRight") document.querySelector("#btn-next").click();
       }

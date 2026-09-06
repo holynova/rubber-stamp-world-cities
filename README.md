@@ -4,12 +4,15 @@
 
 ## ✨ 核心互动功能
 
-1. **📖 声音盖章与印记收集册（Stamp Passport）**：
+1. **🧩 盖章手账本与拼贴工坊（Stamp Journal & Collage Studio）**：
+   - 将心仪或已收集的印章自动拼排入同一张**对开手账书笺**，支持 4 套经典版式（四宫格、游历六宫格、八宫格、1+4 杂志焦点版）。
+   - 宣纸纤维、复古牛皮纸、点阵手账、青墨水纹笺 4 种纸张，支持自然手作微倾角、自定义主副题头与藏印落款，一键导出 2400×1600 超清跨页或一键打印/PDF。
+2. **📖 声音盖章与印记收集册（Stamp Passport）**：
    - 浏览时可一键“盖戳”，内置基于 Web Audio API 的逼真手工印章按压敲击音效。
-   - 本地自动记录收集进度，支持一键生成并导出专属“旅行打卡明信片/手账页（PNG）”。
-2. **🔖 专属藏书票工坊（Ex-Libris Studio）**：
+   - 本地自动记录收集进度，支持一键将已收集印章填入手账本或导出专属明信片。
+3. **🔖 专属藏书票工坊（Ex-Libris Studio）**：
    - 任意印章均可一键制作藏书票，自定义书主姓名、拉丁语/中文铭文（如 `EX LIBRIS`、`私家藏书`）、复古花边与底纸材质，生成 1200×1600 高清藏书票。
-3. **🎨 多色系油墨调色盘（Ink Palette Filters）**：
+4. **🎨 多色系油墨调色盘（Ink Palette Filters）**：
    - 支持实时切换 6 种经典版画油墨风格：天然原色、传统朱砂（赤红）、复古靛蓝（木刻蓝）、水墨炭黑（黑白）、森系苔绿、古董焦茶。
 
 ## 🌐 在线体验
@@ -18,7 +21,9 @@
 - **GitHub Pages 演示**：<https://holynova.github.io/rubber-stamp-world-cities/>
 - **GitHub 源码仓库**：<https://github.com/holynova/rubber-stamp-world-cities>
 
-![项目截图](./screenshot.png)
+![画廊截图](./screenshot.png)
+
+![手账拼贴工坊](./screenshot_journal.png)
 
 ### 手机扫码体验
 
