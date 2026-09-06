@@ -61,17 +61,17 @@ solar_items = [
     {"id": 24, "name": "大寒", "title": "大寒 · 鸡始乳", "features": "岁暮坚冰、迎春松柏红梅与瑞雪待迎新春", "keywords": ["坚冰", "瑞雪", "除旧迎新"], "season": "冬", "colors": "炭黑 · 朱红 · 松绿", "output": "images/solar_terms/24_大寒.png"},
 ]
 
-kama_items = [
-    {"id": 1, "name": "莲华合一", "title": "莲华合一 · 跏趺相依", "features": "双人跏趺莲花座相依、盛开千瓣莲华、静谧水波与灵性圆融", "keywords": ["莲华", "跏趺", "静谧", "圆融"], "colors": "印度陶土红 · 荷花朱粉 · 苔绿", "output": "images/kama_sutra/01_莲华合一.png"},
-    {"id": 2, "name": "繁枝相依", "title": "繁枝相依 · 菩提庇佑", "features": "古老菩提树冠下相拥、繁花垂落、飘拂纱丽与自然庇佑", "keywords": ["菩提", "相拥", "繁花", "庇佑"], "colors": "姜黄 · 焦茶树皮褐 · 柔米黄", "output": "images/kama_sutra/02_繁枝相依.png"},
-    {"id": 3, "name": "月影共舞", "title": "月影共舞 · 新月流波", "features": "新月清辉下双人古典舞姿、飘逸丝带、星芒与律动之美", "keywords": ["新月", "舞姿", "飘逸", "律动"], "colors": "靛蓝夜色 · 砂金色 · 月白", "output": "images/kama_sutra/03_月影共舞.png"},
-    {"id": 4, "name": "孔雀灵犀", "title": "孔雀灵犀 · 羽翎相顾", "features": "孔雀开屏羽翎环绕、相顾凝眸、典雅羽纹与深情眷恋", "keywords": ["孔雀", "羽翎", "相顾", "深情"], "colors": "孔雀青 · 暖赭 · 朱红", "output": "images/kama_sutra/04_孔雀灵犀.png"},
-    {"id": 5, "name": "天籁和鸣", "title": "天籁和鸣 · 琴笛共振", "features": "共抚维纳琴与竹笛、音律流动、仙乐和弦与心灵共振", "keywords": ["维纳琴", "竹笛", "和鸣", "共振"], "colors": "檀木褐 · 姜金黄 · 赤红", "output": "images/kama_sutra/05_天籁和鸣.png"},
-    {"id": 6, "name": "合掌印契", "title": "合掌印契 · 曼海蒂誓约", "features": "执手合十相扣、曼海蒂手绘藤蔓、婚戒与誓约印记", "keywords": ["执手", "印契", "曼海蒂", "誓约"], "colors": "指甲花红 · 陶土橙 · 宣纸米色", "output": "images/kama_sutra/06_合掌印契.png"},
-    {"id": 7, "name": "晨曦相望", "title": "晨曦相望 · 霞光微拂", "features": "旭日东升金光微曦、侧影依偎、万道霞光与晨风初醒", "keywords": ["旭日", "晨曦", "依偎", "霞光"], "colors": "晨曦赤金 · 茜草红 · 焦褐", "output": "images/kama_sutra/07_晨曦相望.png"},
-    {"id": 8, "name": "浮云双栖", "title": "浮云双栖 · 梵天祥云", "features": "祥云流波之上并肩倚卧、繁星点点、如梦似幻与天外飞仙", "keywords": ["祥云", "双栖", "繁星", "飞仙"], "colors": "普鲁士蓝 · 柔砂金 · 炭黑", "output": "images/kama_sutra/08_浮云双栖.png"},
-    {"id": 9, "name": "同心花环", "title": "同心花环 · 茉莉良缘", "features": "互赠茉莉万寿菊花环、枝叶缠绕、温情满溢与良缘缔结", "keywords": ["花环", "茉莉", "万寿菊", "良缘"], "colors": "万寿菊橙 · 茉莉白 · 橄榄绿", "output": "images/kama_sutra/09_同心花环.png"},
-    {"id": 10, "name": "圆满曼荼罗", "title": "圆满曼荼罗 · 日月同辉", "features": "日月神圣曼荼罗圆环、阴阳交融、宇宙和谐与永恒圆满", "keywords": ["曼荼罗", "日月", "交融", "圆满"], "colors": "庙宇赭红 · 暗夜靛蓝 · 古金黄", "output": "images/kama_sutra/10_圆满曼荼罗.png"},
+shanhaijing_items = [
+    {"id": 1, "name": "九尾狐", "title": "九尾狐 · 青丘瑞影", "features": "青丘九尾灵狐、摇曳祥云、仙雾缭绕、祥瑞灵动", "keywords": ["青丘", "九尾", "灵狐", "祥瑞"], "colors": "朱砂赤红 · 杏黄 · 宣纸暖米", "output": "images/shanhaijing/01_九尾狐.png"},
+    {"id": 2, "name": "烛九阴", "title": "烛九阴 · 钟山昼夜", "features": "钟山之神烛龙、衔烛照幽、口吹冬夏、日月交错", "keywords": ["烛龙", "钟山", "昼夜", "神祇"], "colors": "赤红 · 宇宙靛蓝 · 砂金", "output": "images/shanhaijing/02_烛九阴.png"},
+    {"id": 3, "name": "帝江", "title": "帝江 · 天山神舞", "features": "天山六足四翼神鸟、浑敦无面、知晓歌舞、浑然天成", "keywords": ["天山", "六足四翼", "歌舞", "浑敦"], "colors": "丹火红 · 姜黄 · 焦茶褐", "output": "images/shanhaijing/03_帝江.png"},
+    {"id": 4, "name": "白泽", "title": "白泽 · 昆仑祥知", "features": "昆仑通万物神兽、避凶趋吉、仙松古石、浩然正气", "keywords": ["昆仑", "白泽", "辟邪", "知万物"], "colors": "石绿 · 翡翠青 · 暖赭", "output": "images/shanhaijing/04_白泽.png"},
+    {"id": 5, "name": "毕方", "title": "毕方 · 丹水烈羽", "features": "独足神鹤、赤文青羽、衔火掠风、灵动不羁", "keywords": ["毕方", "独足", "神火", "青鹤"], "colors": "青金蓝 · 烈焰朱红 · 炭黑", "output": "images/shanhaijing/05_毕方.png"},
+    {"id": 6, "name": "鲲鹏", "title": "鲲鹏 · 绝云扶摇", "features": "北冥巨鲲化鹏、翼若垂天、击水三千、扶摇直上", "keywords": ["北冥", "化鹏", "垂天之翼", "扶摇"], "colors": "普鲁士深蓝 · 浪花米白 · 暖金", "output": "images/shanhaijing/06_鲲鹏.png"},
+    {"id": 7, "name": "饕餮", "title": "饕餮 · 青铜兽纹", "features": "商周青铜饕餮、威严兽面、双目如炬、吞天纳地", "keywords": ["饕餮", "青铜纹", "神威", "图腾"], "colors": "古青铜绿 · 赭石 · 炭墨", "output": "images/shanhaijing/07_饕餮.png"},
+    {"id": 8, "name": "穷奇", "title": "穷奇 · 邽山风翼", "features": "飞翼神虎、凶猛矫健、御风疾行、啸傲崇山", "keywords": ["穷奇", "翼虎", "御风", "神煞"], "colors": "焦茶虎赤 · 墨黑 · 苍石灰", "output": "images/shanhaijing/08_穷奇.png"},
+    {"id": 9, "name": "陆吾", "title": "陆吾 · 昆仑天守", "features": "昆仑山守宫神、虎身九尾、神圣威仪、镇守天门", "keywords": ["陆吾", "天守", "昆仑之丘", "九尾虎神"], "colors": "宫廷赭金 · 陶土朱红 · 翠玉", "output": "images/shanhaijing/09_陆吾.png"},
+    {"id": 10, "name": "夫诸", "title": "夫诸 · 敖岸踏水", "features": "四角白鹿、凌波微步、引水润物、清灵绝尘", "keywords": ["夫诸", "四角白鹿", "踏水", "灵鹿"], "colors": "宣纸素白 · 远山淡黛 · 水蓝", "output": "images/shanhaijing/10_夫诸.png"},
 ]
 
 collections = {
@@ -111,29 +111,29 @@ collections = {
         "badgeFormat": "节气 {id}",
         "items": solar_items
     },
-    "kama_sutra": {
-        "id": "kama_sutra",
-        "title": "爱经印契",
-        "titleEn": "Kama Sutra",
-        "count": len(kama_items),
-        "kicker": "kama sutra / classical intimate postures / 2026",
-        "headline": "橡胶戳古典浪漫<br>爱经印契",
-        "desc": "10 帧东方古典情爱与身心圆融的艺术版画。取材于古印度石雕造像、飞天壁画与莲华曼荼罗，以纯粹无文字的木刻印章质感诠释神圣亲密之美。",
-        "tagPrefix": "印契",
-        "badgeFormat": "印契 {id}",
-        "items": kama_items
+    "shanhaijing": {
+        "id": "shanhaijing",
+        "title": "山海神异",
+        "titleEn": "Classic of Mountains & Seas",
+        "count": len(shanhaijing_items),
+        "kicker": "classic of mountains and seas / mythical beasts / 2026",
+        "headline": "橡胶戳上古神祇<br>山海神异",
+        "desc": "10 尊中国上古神话异兽与司天神祇。取材于《山海经》大荒经与海内经，以纯粹无文字的多色木刻雕版印章，重现九尾狐、烛九阴、帝江、白泽等上古神灵的奇崛神韵。",
+        "tagPrefix": "神兽",
+        "badgeFormat": "山海 {id}",
+        "items": shanhaijing_items
     }
 }
 
-output_js = f"""// 橡胶戳艺术画廊数据集：世界城市 (30) · 十二生肖 (12) · 二十四节气 (24) · 爱经印契 (10)
+output_js = f"""// 橡胶戳艺术画廊数据集：世界城市 (30) · 十二生肖 (12) · 二十四节气 (24) · 山海神异 (10)
 window.COLLECTIONS = {json.dumps(collections, ensure_ascii=False, indent=2)};
 
 // 兼容旧版引用
 window.CITIES = window.COLLECTIONS.cities.items;
 window.ZODIAC = window.COLLECTIONS.zodiac.items;
 window.SOLAR_TERMS = window.COLLECTIONS.solar_terms.items;
-window.KAMA_SUTRA = window.COLLECTIONS.kama_sutra.items;
+window.SHANHAIJING = window.COLLECTIONS.shanhaijing.items;
 """
 
 (BASE / "data.js").write_text(output_js, encoding="utf-8")
-print(f"data.js updated successfully! Collections: cities({len(cities_items)}), zodiac({len(zodiac_items)}), solar_terms({len(solar_items)}), kama_sutra({len(kama_items)})")
+print(f"data.js updated successfully! Collections: cities({len(cities_items)}), zodiac({len(zodiac_items)}), solar_terms({len(solar_items)}), shanhaijing({len(shanhaijing_items)})")

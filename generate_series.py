@@ -7,14 +7,14 @@ import json, os, re, shutil, subprocess, time
 BASE = Path(__file__).parent
 ZODIAC_DIR = BASE / "images" / "zodiac"
 SOLAR_DIR = BASE / "images" / "solar_terms"
-KAMA_DIR = BASE / "images" / "kama_sutra"
+SHJ_DIR = BASE / "images" / "shanhaijing"
 ZODIAC_DIR.mkdir(parents=True, exist_ok=True)
 SOLAR_DIR.mkdir(parents=True, exist_ok=True)
-KAMA_DIR.mkdir(parents=True, exist_ok=True)
+SHJ_DIR.mkdir(parents=True, exist_ok=True)
 
 PROMPTS_ZODIAC = json.loads((BASE / "prompts_zodiac.json").read_text(encoding="utf-8")) if (BASE / "prompts_zodiac.json").exists() else []
 PROMPTS_SOLAR = json.loads((BASE / "prompts_solar_terms.json").read_text(encoding="utf-8")) if (BASE / "prompts_solar_terms.json").exists() else []
-PROMPTS_KAMA = json.loads((BASE / "prompts_kama_sutra.json").read_text(encoding="utf-8")) if (BASE / "prompts_kama_sutra.json").exists() else []
+PROMPTS_SHJ = json.loads((BASE / "prompts_shanhaijing.json").read_text(encoding="utf-8")) if (BASE / "prompts_shanhaijing.json").exists() else []
 
 def wait_for_session_ready(timeout=60):
     start = time.time()
@@ -134,21 +134,21 @@ def run_all(task="all"):
                 manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
                 time.sleep(6)
 
-    if task in ("all", "kama", "kama_sutra"):
-        print(f"\n=== Generating Kama Sutra Series ({len(PROMPTS_KAMA)} items) ===", flush=True)
+    if task in ("all", "shanhaijing", "shj"):
+        print(f"\n=== Generating Shan Hai Jing Series ({len(PROMPTS_SHJ)} items) ===", flush=True)
         while True:
-            missing = [item for item in PROMPTS_KAMA if not (BASE / item["output"]).exists() or (BASE / item["output"]).stat().st_size <= 100_000]
+            missing = [item for item in PROMPTS_SHJ if not (BASE / item["output"]).exists() or (BASE / item["output"]).stat().st_size <= 100_000]
             if not missing:
-                print("\n All 10 Kama Sutra prints generated successfully!", flush=True)
+                print("\n All 10 Shan Hai Jing prints generated successfully!", flush=True)
                 break
             
-            print(f"\n--- Remaining Kama Sutra prints to generate: {len(missing)} items ---", flush=True)
+            print(f"\n--- Remaining Shan Hai Jing prints to generate: {len(missing)} items ---", flush=True)
             for idx, item in enumerate(missing, 1):
-                print(f"\n--- Kama Sutra ({idx}/{len(missing)}): {item['name']} ---", flush=True)
-                ok = generate_item(item, KAMA_DIR)
+                print(f"\n--- Shan Hai Jing ({idx}/{len(missing)}): {item['name']} ---", flush=True)
+                ok = generate_item(item, SHJ_DIR)
                 manifest[item["output"]] = {
                     "name": item["name"],
-                    "series": "kama_sutra",
+                    "series": "shanhaijing",
                     "output": item["output"],
                     "status": "success" if ok else "failed",
                     "time": time.strftime("%Y-%m-%d %H:%M:%S")
