@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0,viewport-fit=cover">
-  <title>橡胶戳艺术印记 · 世界城市 / 十二生肖 / 二十四节气 / 山海神异</title>
-  <meta name="description" content="30座世界城市、十二生肖、二十四节气与山海神异的复古手工橡胶戳印艺术画廊，支持声音盖章打卡、藏书票导出与多色系油墨切换。">
+  <title>橡胶戳艺术印记 · 世界城市 / 名胜风景 / 古诗名句 / 十二生肖 / 二十四节气 / 山海神异</title>
+  <meta name="description" content="30座世界城市、50处名胜风景、50句古诗名句、十二生肖、二十四节气与山海神异的复古手工橡胶戳印艺术画廊，支持声音盖章打卡、手账拼图、藏书票导出与多色系油墨切换。">
 
   <!-- Analytics -->
   <script
@@ -1403,6 +1403,11 @@
         <span class="tab-title">名胜风景</span>
         <span class="tab-sub">5A Scenic</span>
       </button>
+      <button class="series-tab" data-series="poetry">
+        <span class="tab-badge">50</span>
+        <span class="tab-title">古诗名句</span>
+        <span class="tab-sub">Poetry</span>
+      </button>
       <button class="series-tab" data-series="zodiac">
         <span class="tab-badge">12</span>
         <span class="tab-title">十二生肖</span>
@@ -1614,7 +1619,8 @@
               <span class="stamp-slot-counter" id="stamp-slot-counter">已选 0 / 6</span>
             </div>
             <div class="picker-tabs" id="picker-tabs">
-              <button class="picker-tab active" data-filter="all">全部 (126)</button>
+              <button class="picker-tab active" data-filter="all">全部 (176)</button>
+              <button class="picker-tab" data-filter="poetry">诗词 (50)</button>
               <button class="picker-tab" data-filter="scenic_spots">胜景 (50)</button>
               <button class="picker-tab" data-filter="cities">城市 (30)</button>
               <button class="picker-tab" data-filter="zodiac">生肖 (12)</button>
@@ -1882,6 +1888,16 @@
           <option value="region-华南">华南名胜 (2)</option>
           <option value="region-东北">东北名胜 (3)</option>
         `;
+      } else if (currentSeriesKey === "poetry") {
+        filter.style.display = "";
+        filter.innerHTML = `
+          <option value="all">全部古诗名句 (50)</option>
+          <option value="category-春生·花木">春生·花木 (10)</option>
+          <option value="category-夏盛·清荷">夏盛·清荷 (10)</option>
+          <option value="category-秋思·枫江">秋思·枫江 (10)</option>
+          <option value="category-冬藏·飞雪">冬藏·飞雪 (10)</option>
+          <option value="category-天地·旷野">天地·旷野 (10)</option>
+        `;
       } else if (currentSeriesKey === "solar_terms") {
         filter.style.display = "";
         filter.innerHTML = `
@@ -1923,11 +1939,12 @@
       const f = filter.value;
 
       currentFilteredRows = col.items.filter(x => {
-        const titleStr = (x.city || x.title || x.name || "") + " " + (x.animal || "") + " " + (x.season || "") + " " + (x.region || "") + " " + (x.province || "");
+        const titleStr = (x.city || x.title || x.name || "") + " " + (x.animal || "") + " " + (x.season || "") + " " + (x.region || "") + " " + (x.province || "") + " " + (x.author || "") + " " + (x.work || "") + " " + (x.category || "");
         const textToMatch = (titleStr + " " + (x.features || "") + " " + (x.keywords || []).join(" ")).toLowerCase();
         const matchesQuery = !q || textToMatch.includes(q);
         
         let matchesFilter = true;
+        if (f && f.startsWith("category-")) matchesFilter = (x.category === f.replace("category-", ""));
         if (f && f.startsWith("season-")) matchesFilter = (x.season === f.replace("season-", ""));
         if (f && f.startsWith("region-")) matchesFilter = (x.region && x.region.includes(f.replace("region-", "")));
 
@@ -2704,7 +2721,8 @@
       const all = getAllStampsList();
       let filtered = all;
 
-      if (journalPickerCategory === "scenic_spots") filtered = all.filter(x => x.seriesKey === "scenic_spots");
+      if (journalPickerCategory === "poetry") filtered = all.filter(x => x.seriesKey === "poetry");
+      else if (journalPickerCategory === "scenic_spots") filtered = all.filter(x => x.seriesKey === "scenic_spots");
       else if (journalPickerCategory === "cities") filtered = all.filter(x => x.seriesKey === "cities");
       else if (journalPickerCategory === "zodiac") filtered = all.filter(x => x.seriesKey === "zodiac");
       else if (journalPickerCategory === "solar_terms") filtered = all.filter(x => x.seriesKey === "solar_terms");

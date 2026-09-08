@@ -1,24 +1,28 @@
 import json
 from pathlib import Path
 
-BASE = Path(__file__).parent
+BASE = Path("/Users/sym/code/rubber-stamp-world-cities")
 
-# Load existing cities
-cities_text = (BASE / "data.js").read_text(encoding="utf-8")
-# Extract existing cities array
-cities_json_str = cities_text.replace("window.CITIES =", "").strip()
-if cities_json_str.endswith(";"):
-    cities_json_str = cities_json_str[:-1].strip()
-
-# If data.js is already in new format, try loading prompts.json
+# 1. World Cities (30)
 try:
     cities_items = json.loads((BASE / "prompts.json").read_text(encoding="utf-8"))
     for c in cities_items:
         if "prompt" in c:
             del c["prompt"]
 except Exception:
-    cities_items = json.loads(cities_json_str)
+    cities_items = []
 
+# 2. Scenic Spots (50)
+try:
+    scenic_raw = json.loads((BASE / "prompts_scenic_spots.json").read_text(encoding="utf-8"))
+    scenic_items = []
+    for s in scenic_raw:
+        item = {k: v for k, v in s.items() if k != "prompt"}
+        scenic_items.append(item)
+except Exception:
+    scenic_items = []
+
+# 3. Zodiac (12)
 zodiac_items = [
     {"id": 1, "name": "子鼠", "title": "鼠 · 灵鼠", "features": "机敏灵动的小鼠轮廓、捧着松果、灵巧胡须与尾巴线条", "keywords": ["灵动", "机敏", "丰裕"], "colors": "炭黑 · 砖红 · 赭石黄", "output": "images/zodiac/01_鼠.png"},
     {"id": 2, "name": "丑牛", "title": "牛 · 拓荒牛", "features": "沉稳雄浑的水牛轮廓、弯曲有力的双角、俯首耕耘与简练草甸线条", "keywords": ["沉稳", "耕耘", "坚韧"], "colors": "炭黑 · 砖红 · 深青灰", "output": "images/zodiac/02_牛.png"},
@@ -34,6 +38,7 @@ zodiac_items = [
     {"id": 12, "name": "亥猪", "title": "猪 · 福猪", "features": "富足祥和的福猪轮廓、圆润健硕的身躯、谷仓与麦穗稻禾", "keywords": ["富足", "安详", "丰收"], "colors": "炭黑 · 砖红 · 土黄", "output": "images/zodiac/12_猪.png"},
 ]
 
+# 4. Solar Terms (24)
 solar_items = [
     {"id": 1, "name": "立春", "title": "立春 · 东风解冻", "features": "迎春花初绽、东风解冻与嫩绿柳芽吐露新枝", "keywords": ["东风", "初绿", "万物苏"], "season": "春", "colors": "炭黑 · 嫩绿 · 朱红", "output": "images/solar_terms/01_立春.png"},
     {"id": 2, "name": "雨水", "title": "雨水 · 獭祭鱼", "features": "细雨霏霏、春水初生微泛涟漪与初润草木", "keywords": ["润物", "微雨", "春水"], "season": "春", "colors": "炭黑 · 石板蓝 · 草绿", "output": "images/solar_terms/02_雨水.png"},
@@ -61,6 +66,7 @@ solar_items = [
     {"id": 24, "name": "大寒", "title": "大寒 · 鸡始乳", "features": "岁暮坚冰、迎春松柏红梅与瑞雪待迎新春", "keywords": ["坚冰", "瑞雪", "除旧迎新"], "season": "冬", "colors": "炭黑 · 朱红 · 松绿", "output": "images/solar_terms/24_大寒.png"},
 ]
 
+# 5. Shan Hai Jing (10)
 shanhaijing_items = [
     {"id": 1, "name": "九尾狐", "title": "九尾狐 · 青丘瑞影", "features": "青丘九尾灵狐、摇曳祥云、仙雾缭绕、祥瑞灵动", "keywords": ["青丘", "九尾", "灵狐", "祥瑞"], "colors": "朱砂赤红 · 杏黄 · 宣纸暖米", "output": "images/shanhaijing/01_九尾狐.png"},
     {"id": 2, "name": "烛九阴", "title": "烛九阴 · 钟山昼夜", "features": "钟山之神烛龙、衔烛照幽、口吹冬夏、日月交错", "keywords": ["烛龙", "钟山", "昼夜", "神祇"], "colors": "赤红 · 宇宙靛蓝 · 砂金", "output": "images/shanhaijing/02_烛九阴.png"},
@@ -74,6 +80,30 @@ shanhaijing_items = [
     {"id": 10, "name": "夫诸", "title": "夫诸 · 敖岸踏水", "features": "四角白鹿、凌波微步、引水润物、清灵绝尘", "keywords": ["夫诸", "四角白鹿", "踏水", "灵鹿"], "colors": "宣纸素白 · 远山淡黛 · 水蓝", "output": "images/shanhaijing/10_夫诸.png"},
 ]
 
+# 6. Classical Chinese Poetry (50)
+try:
+    poetry_raw = json.loads((BASE / "prompts_poetry.json").read_text(encoding="utf-8"))
+    poetry_items = []
+    for p in poetry_raw:
+        item = {
+            "id": p["id"],
+            "name": p["name"],
+            "title": f"「{p['name']}」· {p['author']}{p['work']}",
+            "verse": p["verse"],
+            "author": p["author"],
+            "dynasty": p["dynasty"],
+            "work": p["work"],
+            "category": p["category"],
+            "features": f"「{p['verse']}」 {p['features']}",
+            "keywords": p["keywords"],
+            "colors": p["colors"],
+            "output": p["output"]
+        }
+        poetry_items.append(item)
+except Exception as e:
+    print(f"Error loading poetry prompts: {e}")
+    poetry_items = []
+
 collections = {
     "cities": {
         "id": "cities",
@@ -86,6 +116,30 @@ collections = {
         "tagPrefix": "NO.",
         "badgeFormat": "NO. {id}",
         "items": cities_items
+    },
+    "scenic_spots": {
+        "id": "scenic_spots",
+        "title": "名胜风景",
+        "titleEn": "China 5A Scenic Spots",
+        "count": len(scenic_items),
+        "kicker": "china national scenic heritage / rubber stamp collection / 2026",
+        "headline": "橡胶戳华夏胜景<br>中国 5A 级景区名胜",
+        "desc": "精选 50 处中国最具代表性的 5A 级风景名胜与世界文化遗产。以极简手工线刻橡胶印章凝固华夏山河的壮丽画卷。",
+        "tagPrefix": "胜景",
+        "badgeFormat": "胜景 {id}",
+        "items": scenic_items
+    },
+    "poetry": {
+        "id": "poetry",
+        "title": "古诗名句",
+        "titleEn": "Classical Poetry",
+        "count": len(poetry_items),
+        "kicker": "classical chinese poetry / visual stamp prints / 2026",
+        "headline": "橡胶戳诗意画境<br>古诗名句",
+        "desc": "50 句极具画面感的中国经典古诗词，50 帧纯粹的手工多色线刻橡胶印章。以意入境、留白成趣，图章之下铭刻千古名句。",
+        "tagPrefix": "诗词",
+        "badgeFormat": "诗词 {id}",
+        "items": poetry_items
     },
     "zodiac": {
         "id": "zodiac",
@@ -125,15 +179,17 @@ collections = {
     }
 }
 
-output_js = f"""// 橡胶戳艺术画廊数据集：世界城市 (30) · 十二生肖 (12) · 二十四节气 (24) · 山海神异 (10)
+output_js = f"""// 橡胶戳艺术画廊数据集：世界城市 (30) · 名胜风景 (50) · 古诗名句 (50) · 十二生肖 (12) · 二十四节气 (24) · 山海神异 (10)
 window.COLLECTIONS = {json.dumps(collections, ensure_ascii=False, indent=2)};
 
 // 兼容旧版引用
 window.CITIES = window.COLLECTIONS.cities.items;
+window.SCENIC_SPOTS = window.COLLECTIONS.scenic_spots.items;
+window.POETRY = window.COLLECTIONS.poetry.items;
 window.ZODIAC = window.COLLECTIONS.zodiac.items;
 window.SOLAR_TERMS = window.COLLECTIONS.solar_terms.items;
 window.SHANHAIJING = window.COLLECTIONS.shanhaijing.items;
 """
 
 (BASE / "data.js").write_text(output_js, encoding="utf-8")
-print(f"data.js updated successfully! Collections: cities({len(cities_items)}), zodiac({len(zodiac_items)}), solar_terms({len(solar_items)}), shanhaijing({len(shanhaijing_items)})")
+print(f"data.js updated successfully! Total 6 collections: cities({len(cities_items)}), scenic({len(scenic_items)}), poetry({len(poetry_items)}), zodiac({len(zodiac_items)}), solar({len(solar_items)}), shj({len(shanhaijing_items)}) -> Total {len(cities_items) + len(scenic_items) + len(poetry_items) + len(zodiac_items) + len(solar_items) + len(shanhaijing_items)} stamps.")
