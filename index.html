@@ -1520,7 +1520,7 @@
             <button class="btn-journal-tool" id="btn-fill-collected" title="将已收集的作品自动排版入本">
               填入已收集
             </button>
-            <button class="btn-journal-tool" id="btn-random-journal" title="从全部 76 款印章中随机挑选">
+            <button class="btn-journal-tool" id="btn-random-journal" title="从全部 176 款印章中随机挑选">
               随机排版
             </button>
             <button class="btn-journal-tool" id="btn-clear-journal" title="清空当前手账页中的印章">
@@ -2343,15 +2343,18 @@
       document.querySelector(sel).onchange = () => drawExLibris();
     });
 
-    function drawExLibris(exportMode = false) {
+    async function drawExLibris(exportMode = false, targetCanvas = null) {
       if (!exlibrisTargetItem) return;
+
+      const cvs = targetCanvas || exCanvas;
+      const ctx = cvs.getContext("2d");
 
       const cw = exportMode ? 1200 : 600;
       const ch = exportMode ? 1600 : 800;
       const scale = exportMode ? 2 : 1;
 
-      exCanvas.width = cw;
-      exCanvas.height = ch;
+      cvs.width = cw;
+      cvs.height = ch;
 
       const owner = document.querySelector("#ex-owner").value.trim() || "HOLY NOVA";
       const motto = document.querySelector("#ex-motto").value;
@@ -2360,23 +2363,23 @@
       const inkSetting = document.querySelector("#ex-ink").value;
 
       // 1. Paper Background
-      exCtx.fillStyle = paperColor;
-      exCtx.fillRect(0, 0, cw, ch);
+      ctx.fillStyle = paperColor;
+      ctx.fillRect(0, 0, cw, ch);
 
       // Subtle paper texture speckles
-      exCtx.fillStyle = "rgba(100, 80, 60, 0.03)";
+      ctx.fillStyle = "rgba(100, 80, 60, 0.03)";
       for (let i = 0; i < 800 * scale; i++) {
-        exCtx.fillRect(Math.random() * cw, Math.random() * ch, 1.5, 1.5);
+        ctx.fillRect(Math.random() * cw, Math.random() * ch, 1.5 * scale, 1.5 * scale);
       }
 
       // 2. Borders
       const margin = 28 * scale;
-      exCtx.strokeStyle = "#292722";
+      ctx.strokeStyle = "#292722";
       if (borderStyle === "classical") {
-        exCtx.lineWidth = 3 * scale;
-        exCtx.strokeRect(margin, margin, cw - margin * 2, ch - margin * 2);
-        exCtx.lineWidth = 1 * scale;
-        exCtx.strokeRect(margin + 6 * scale, margin + 6 * scale, cw - (margin + 6 * scale) * 2, ch - (margin + 6 * scale) * 2);
+        ctx.lineWidth = 3 * scale;
+        ctx.strokeRect(margin, margin, cw - margin * 2, ch - margin * 2);
+        ctx.lineWidth = 1 * scale;
+        ctx.strokeRect(margin + 6 * scale, margin + 6 * scale, cw - (margin + 6 * scale) * 2, ch - (margin + 6 * scale) * 2);
         
         // Corner rosettes
         const cs = 14 * scale;
@@ -2384,170 +2387,90 @@
           [margin, margin], [cw - margin, margin],
           [margin, ch - margin], [cw - margin, ch - margin]
         ].forEach(([cx, cy]) => {
-          exCtx.fillStyle = "#b83b26";
-          exCtx.fillRect(cx - cs / 2, cy - cs / 2, cs, cs);
+          ctx.fillStyle = "#b83b26";
+          ctx.fillRect(cx - cs / 2, cy - cs / 2, cs, cs);
         });
       } else if (borderStyle === "oriental") {
-        exCtx.lineWidth = 4 * scale;
-        exCtx.strokeRect(margin, margin, cw - margin * 2, ch - margin * 2);
-        exCtx.strokeStyle = "#b83b26";
-        exCtx.lineWidth = 1.5 * scale;
-        exCtx.strokeRect(margin + 8 * scale, margin + 8 * scale, cw - (margin + 8 * scale) * 2, ch - (margin + 8 * scale) * 2);
+        ctx.lineWidth = 4 * scale;
+        ctx.strokeRect(margin, margin, cw - margin * 2, ch - margin * 2);
+        ctx.strokeStyle = "#b83b26";
+        ctx.lineWidth = 1.5 * scale;
+        ctx.strokeRect(margin + 8 * scale, margin + 8 * scale, cw - (margin + 8 * scale) * 2, ch - (margin + 8 * scale) * 2);
       } else {
-        exCtx.lineWidth = 1.5 * scale;
-        exCtx.strokeRect(margin, margin, cw - margin * 2, ch - margin * 2);
+        ctx.lineWidth = 1.5 * scale;
+        ctx.strokeRect(margin, margin, cw - margin * 2, ch - margin * 2);
       }
 
       // 3. Top Motto (EX LIBRIS)
-      exCtx.fillStyle = "#8d4d39";
-      exCtx.font = `bold ${28 * scale}px Georgia, serif`;
-      exCtx.textAlign = "center";
-      exCtx.fillText(motto, cw / 2, 85 * scale);
+      ctx.fillStyle = "#8d4d39";
+      ctx.font = `bold ${28 * scale}px Georgia, serif`;
+      ctx.textAlign = "center";
+      ctx.fillText(motto, cw / 2, 85 * scale);
 
       // 4. Center Stamp Artwork
-      const img = new Image();
-      img.crossOrigin = "anonymous";
-      img.src = exlibrisTargetItem.output;
-      img.onload = () => {
+      const img = await getCachedStampImage(exlibrisTargetItem.output);
+      if (img) {
         const stampW = 360 * scale;
         const stampH = 450 * scale;
         const stampX = (cw - stampW) / 2;
         const stampY = 120 * scale;
 
-        exCtx.save();
-        // Inner photo mount frame
-        exCtx.fillStyle = "#ebdcc7";
-        exCtx.fillRect(stampX - 8 * scale, stampY - 8 * scale, stampW + 16 * scale, stampH + 16 * scale);
-        exCtx.strokeStyle = "#cfc2ad";
-        exCtx.lineWidth = 1 * scale;
-        exCtx.strokeRect(stampX - 8 * scale, stampY - 8 * scale, stampW + 16 * scale, stampH + 16 * scale);
+        ctx.save();
+        ctx.fillStyle = "#ebdcc7";
+        ctx.fillRect(stampX - 8 * scale, stampY - 8 * scale, stampW + 16 * scale, stampH + 16 * scale);
+        ctx.strokeStyle = "#cfc2ad";
+        ctx.lineWidth = 1 * scale;
+        ctx.strokeRect(stampX - 8 * scale, stampY - 8 * scale, stampW + 16 * scale, stampH + 16 * scale);
 
-        // Apply Ink Filter to Canvas
         let effectiveInk = inkSetting === "current" ? currentInk : inkSetting;
-        if (effectiveInk === "cinnabar") exCtx.filter = "sepia(0.9) saturate(3.5) hue-rotate(-52deg) contrast(1.2)";
-        else if (effectiveInk === "charcoal") exCtx.filter = "grayscale(1) contrast(1.25) brightness(0.95)";
-        else exCtx.filter = "none";
+        if (effectiveInk === "cinnabar") ctx.filter = "sepia(0.9) saturate(3.5) hue-rotate(-52deg) contrast(1.2)";
+        else if (effectiveInk === "charcoal") ctx.filter = "grayscale(1) contrast(1.25) brightness(0.95)";
+        else ctx.filter = "none";
 
-        exCtx.drawImage(img, stampX, stampY, stampW, stampH);
-        exCtx.restore();
-
-        // 5. Subject Title Banner
-        const displayName = exlibrisTargetItem.city || exlibrisTargetItem.title || exlibrisTargetItem.name;
-        exCtx.fillStyle = "#292722";
-        exCtx.font = `${18 * scale}px "Songti SC", Georgia, serif`;
-        exCtx.textAlign = "center";
-        exCtx.fillText(`— ${displayName} —`, cw / 2, 620 * scale);
-
-        // 6. Owner Name Box
-        const boxY = 660 * scale;
-        const boxW = 380 * scale;
-        const boxH = 55 * scale;
-        const boxX = (cw - boxW) / 2;
-
-        exCtx.fillStyle = "#fffaf2";
-        exCtx.fillRect(boxX, boxY, boxW, boxH);
-        exCtx.strokeStyle = "#8d4d39";
-        exCtx.lineWidth = 1.5 * scale;
-        exCtx.strokeRect(boxX, boxY, boxW, boxH);
-
-        exCtx.fillStyle = "#8d4d39";
-        exCtx.font = `bold ${20 * scale}px "Songti SC", Georgia, serif`;
-        exCtx.textAlign = "center";
-        exCtx.fillText(owner, cw / 2, boxY + 36 * scale);
-
-        // 7. Micro footer
-        exCtx.fillStyle = "#746d60";
-        exCtx.font = `${11 * scale}px ui-monospace, monospace`;
-        exCtx.fillText("RUBBER STAMP EX-LIBRIS • EDITION 2026", cw / 2, ch - 40 * scale);
-      };
-    }
-
-    document.querySelector("#btn-download-exlibris").onclick = () => {
-      const exportCanvas = document.createElement("canvas");
-      exportCanvas.width = 1200;
-      exportCanvas.height = 1600;
-      const exportCtx = exportCanvas.getContext("2d");
-
-      const owner = document.querySelector("#ex-owner").value.trim() || "HOLY NOVA";
-      const motto = document.querySelector("#ex-motto").value;
-      const borderStyle = document.querySelector("#ex-border").value;
-      const paperColor = document.querySelector("#ex-paper").value;
-      const inkSetting = document.querySelector("#ex-ink").value;
-      const scale = 2;
-
-      exportCtx.fillStyle = paperColor;
-      exportCtx.fillRect(0, 0, 1200, 1600);
-
-      const margin = 28 * scale;
-      exportCtx.strokeStyle = "#292722";
-      if (borderStyle === "classical") {
-        exportCtx.lineWidth = 3 * scale;
-        exportCtx.strokeRect(margin, margin, 1200 - margin * 2, 1600 - margin * 2);
-        exportCtx.lineWidth = 1 * scale;
-        exportCtx.strokeRect(margin + 6 * scale, margin + 6 * scale, 1200 - (margin + 6 * scale) * 2, 1600 - (margin + 6 * scale) * 2);
-      } else {
-        exportCtx.lineWidth = 2 * scale;
-        exportCtx.strokeRect(margin, margin, 1200 - margin * 2, 1600 - margin * 2);
+        ctx.drawImage(img, stampX, stampY, stampW, stampH);
+        ctx.restore();
       }
 
-      exportCtx.fillStyle = "#8d4d39";
-      exportCtx.font = "bold 56px Georgia, serif";
-      exportCtx.textAlign = "center";
-      exportCtx.fillText(motto, 600, 170);
+      // 5. Subject Title Banner
+      const displayName = exlibrisTargetItem.city || exlibrisTargetItem.title || exlibrisTargetItem.name;
+      ctx.fillStyle = "#292722";
+      ctx.font = `${18 * scale}px "Songti SC", Georgia, serif`;
+      ctx.textAlign = "center";
+      ctx.fillText(`— ${displayName} —`, cw / 2, 620 * scale);
 
-      const img = new Image();
-      img.crossOrigin = "anonymous";
-      img.src = exlibrisTargetItem.output;
-      img.onload = () => {
-        const stampW = 720;
-        const stampH = 900;
-        const stampX = (1200 - stampW) / 2;
-        const stampY = 240;
+      // 6. Owner Name Box
+      const boxY = 660 * scale;
+      const boxW = 380 * scale;
+      const boxH = 55 * scale;
+      const boxX = (cw - boxW) / 2;
 
-        exportCtx.save();
-        exportCtx.fillStyle = "#ebdcc7";
-        exportCtx.fillRect(stampX - 16, stampY - 16, stampW + 32, stampH + 32);
-        exportCtx.strokeStyle = "#cfc2ad";
-        exportCtx.strokeRect(stampX - 16, stampY - 16, stampW + 32, stampH + 32);
+      ctx.fillStyle = "#fffaf2";
+      ctx.fillRect(boxX, boxY, boxW, boxH);
+      ctx.strokeStyle = "#8d4d39";
+      ctx.lineWidth = 1.5 * scale;
+      ctx.strokeRect(boxX, boxY, boxW, boxH);
 
-        let effectiveInk = inkSetting === "current" ? currentInk : inkSetting;
-        if (effectiveInk === "cinnabar") exportCtx.filter = "sepia(0.9) saturate(3.5) hue-rotate(-52deg) contrast(1.2)";
-        else if (effectiveInk === "charcoal") exportCtx.filter = "grayscale(1) contrast(1.25) brightness(0.95)";
-        else exportCtx.filter = "none";
+      ctx.fillStyle = "#8d4d39";
+      ctx.font = `bold ${20 * scale}px "Songti SC", Georgia, serif`;
+      ctx.textAlign = "center";
+      ctx.fillText(owner, cw / 2, boxY + 36 * scale);
 
-        exportCtx.drawImage(img, stampX, stampY, stampW, stampH);
-        exportCtx.restore();
+      // 7. Micro footer
+      ctx.fillStyle = "#746d60";
+      ctx.font = `${11 * scale}px ui-monospace, monospace`;
+      ctx.fillText("RUBBER STAMP EX-LIBRIS • EDITION 2026", cw / 2, ch - 40 * scale);
+    }
 
-        const displayName = exlibrisTargetItem.city || exlibrisTargetItem.title || exlibrisTargetItem.name;
-        exportCtx.fillStyle = "#292722";
-        exportCtx.font = "36px 'Songti SC', Georgia, serif";
-        exportCtx.textAlign = "center";
-        exportCtx.fillText(`— ${displayName} —`, 600, 1240);
-
-        const boxY = 1320;
-        const boxW = 760;
-        const boxH = 110;
-        const boxX = (1200 - boxW) / 2;
-
-        exportCtx.fillStyle = "#fffaf2";
-        exportCtx.fillRect(boxX, boxY, boxW, boxH);
-        exportCtx.strokeStyle = "#8d4d39";
-        exportCtx.lineWidth = 3;
-        exportCtx.strokeRect(boxX, boxY, boxW, boxH);
-
-        exportCtx.fillStyle = "#8d4d39";
-        exportCtx.font = "bold 42px 'Songti SC', Georgia, serif";
-        exportCtx.fillText(owner, 600, boxY + 70);
-
-        exportCtx.fillStyle = "#746d60";
-        exportCtx.font = "22px ui-monospace, monospace";
-        exportCtx.fillText("RUBBER STAMP EX-LIBRIS • EDITION 2026", 600, 1530);
-
-        const link = document.createElement("a");
-        link.download = `ExLibris_${owner}_${displayName}.png`;
-        link.href = exportCanvas.toDataURL("image/png");
-        link.click();
-      };
+    document.querySelector("#btn-download-exlibris").onclick = async () => {
+      const exportCanvas = document.createElement("canvas");
+      await drawExLibris(true, exportCanvas);
+      const owner = (document.querySelector("#ex-owner").value.trim() || "HOLY_NOVA").replace(/\s+/g, "_");
+      const displayName = exlibrisTargetItem.city || exlibrisTargetItem.title || exlibrisTargetItem.name;
+      const link = document.createElement("a");
+      link.download = `ExLibris_${owner}_${displayName}.png`;
+      link.href = exportCanvas.toDataURL("image/png");
+      link.click();
+      showToast("藏书票导出成功");
     };
 
     /* -------------------------------------------------------------
