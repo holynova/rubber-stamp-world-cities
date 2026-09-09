@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0,viewport-fit=cover">
-  <title>橡胶戳艺术印记 · 世界城市 / 名胜风景 / 古诗名句 / 十二生肖 / 二十四节气 / 山海神异</title>
-  <meta name="description" content="30座世界城市、50处名胜风景、50句古诗名句、十二生肖、二十四节气与山海神异的复古手工橡胶戳印艺术画廊，支持声音盖章打卡、手账拼图、藏书票导出与多色系油墨切换。">
+  <title>橡胶戳艺术印记 · 世界城市 / 名胜风景 / 古诗名句 / 珍稀动物 / 海洋生物 / 大气现象 / 十二生肖 / 二十四节气 / 山海神异</title>
+  <meta name="description" content="30座世界城市、50处名胜风景、50句古诗名句、20种珍稀动物、20尊海洋生物、20种大气现象、十二生肖、二十四节气与山海神异的复古手工橡胶戳印艺术画廊，共236枚艺术印章。">
 
   <!-- Analytics -->
   <script
@@ -1408,6 +1408,21 @@
         <span class="tab-title">古诗名句</span>
         <span class="tab-sub">Poetry</span>
       </button>
+      <button class="series-tab" data-series="wildlife">
+        <span class="tab-badge">20</span>
+        <span class="tab-title">珍稀动物</span>
+        <span class="tab-sub">Wildlife</span>
+      </button>
+      <button class="series-tab" data-series="marine">
+        <span class="tab-badge">20</span>
+        <span class="tab-title">海洋生物</span>
+        <span class="tab-sub">Marine</span>
+      </button>
+      <button class="series-tab" data-series="atmosphere">
+        <span class="tab-badge">20</span>
+        <span class="tab-title">大气现象</span>
+        <span class="tab-sub">Atmosphere</span>
+      </button>
       <button class="series-tab" data-series="zodiac">
         <span class="tab-badge">12</span>
         <span class="tab-title">十二生肖</span>
@@ -1619,10 +1634,13 @@
               <span class="stamp-slot-counter" id="stamp-slot-counter">已选 0 / 6</span>
             </div>
             <div class="picker-tabs" id="picker-tabs">
-              <button class="picker-tab active" data-filter="all">全部 (176)</button>
+              <button class="picker-tab active" data-filter="all">全部 (236)</button>
               <button class="picker-tab" data-filter="poetry">诗词 (50)</button>
               <button class="picker-tab" data-filter="scenic_spots">胜景 (50)</button>
               <button class="picker-tab" data-filter="cities">城市 (30)</button>
+              <button class="picker-tab" data-filter="wildlife">动物 (20)</button>
+              <button class="picker-tab" data-filter="marine">海洋 (20)</button>
+              <button class="picker-tab" data-filter="atmosphere">天象 (20)</button>
               <button class="picker-tab" data-filter="zodiac">生肖 (12)</button>
               <button class="picker-tab" data-filter="solar_terms">节气 (24)</button>
               <button class="picker-tab" data-filter="shanhaijing">山海 (10)</button>
@@ -1916,6 +1934,21 @@
         filter.style.display = "";
         filter.innerHTML = `
           <option value="all">全部生肖瑞兽 (12)</option>
+        `;
+      } else if (currentSeriesKey === "wildlife") {
+        filter.style.display = "";
+        filter.innerHTML = `
+          <option value="all">全部珍稀动物 (20)</option>
+        `;
+      } else if (currentSeriesKey === "marine") {
+        filter.style.display = "";
+        filter.innerHTML = `
+          <option value="all">全部海洋生物 (20)</option>
+        `;
+      } else if (currentSeriesKey === "atmosphere") {
+        filter.style.display = "";
+        filter.innerHTML = `
+          <option value="all">全部大气现象 (20)</option>
         `;
       } else {
         filter.style.display = "";
@@ -2647,6 +2680,9 @@
       if (journalPickerCategory === "poetry") filtered = all.filter(x => x.seriesKey === "poetry");
       else if (journalPickerCategory === "scenic_spots") filtered = all.filter(x => x.seriesKey === "scenic_spots");
       else if (journalPickerCategory === "cities") filtered = all.filter(x => x.seriesKey === "cities");
+      else if (journalPickerCategory === "wildlife") filtered = all.filter(x => x.seriesKey === "wildlife");
+      else if (journalPickerCategory === "marine") filtered = all.filter(x => x.seriesKey === "marine");
+      else if (journalPickerCategory === "atmosphere") filtered = all.filter(x => x.seriesKey === "atmosphere");
       else if (journalPickerCategory === "zodiac") filtered = all.filter(x => x.seriesKey === "zodiac");
       else if (journalPickerCategory === "solar_terms") filtered = all.filter(x => x.seriesKey === "solar_terms");
       else if (journalPickerCategory === "shanhaijing") filtered = all.filter(x => x.seriesKey === "shanhaijing");

@@ -104,6 +104,39 @@ except Exception as e:
     print(f"Error loading poetry prompts: {e}")
     poetry_items = []
 
+# 7. Rare Wildlife (20)
+try:
+    wildlife_raw = json.loads((BASE / "prompts_wildlife.json").read_text(encoding="utf-8"))
+    wildlife_items = []
+    for w in wildlife_raw:
+        item = {k: v for k, v in w.items() if k != "prompt"}
+        wildlife_items.append(item)
+except Exception as e:
+    print(f"Error loading wildlife prompts: {e}")
+    wildlife_items = []
+
+# 8. Marine Life (20)
+try:
+    marine_raw = json.loads((BASE / "prompts_marine.json").read_text(encoding="utf-8"))
+    marine_items = []
+    for m in marine_raw:
+        item = {k: v for k, v in m.items() if k != "prompt"}
+        marine_items.append(item)
+except Exception as e:
+    print(f"Error loading marine prompts: {e}")
+    marine_items = []
+
+# 9. Atmospheric Phenomena (20)
+try:
+    atmosphere_raw = json.loads((BASE / "prompts_atmosphere.json").read_text(encoding="utf-8"))
+    atmosphere_items = []
+    for a in atmosphere_raw:
+        item = {k: v for k, v in a.items() if k != "prompt"}
+        atmosphere_items.append(item)
+except Exception as e:
+    print(f"Error loading atmosphere prompts: {e}")
+    atmosphere_items = []
+
 collections = {
     "cities": {
         "id": "cities",
@@ -140,6 +173,42 @@ collections = {
         "tagPrefix": "诗词",
         "badgeFormat": "诗词 {id}",
         "items": poetry_items
+    },
+    "wildlife": {
+        "id": "wildlife",
+        "title": "珍稀动物",
+        "titleEn": "Rare Wildlife",
+        "count": len(wildlife_items),
+        "kicker": "endangered wildlife heritage / stamp prints / 2026",
+        "headline": "橡胶戳生灵之境<br>珍稀动物",
+        "desc": "20 种珍稀物种与大自然生灵。以极简多色手工版画印章捕捉国宝大熊猫、金丝猴、雪豹、朱鹮等野生动物的灵性神韵。",
+        "tagPrefix": "物种",
+        "badgeFormat": "物种 {id}",
+        "items": wildlife_items
+    },
+    "marine": {
+        "id": "marine",
+        "title": "海洋生物",
+        "titleEn": "Marine Life",
+        "count": len(marine_items),
+        "kicker": "ocean creatures / marine biodiversity prints / 2026",
+        "headline": "橡胶戳深蓝幻境<br>海洋生物",
+        "desc": "20 尊深海巨灵与蔚蓝生灵。从万顷碧波的蓝鲸、虎鲸、蝠鲼，到发光水母与鹦鹉螺，以手工套印印章呈现深海的空灵与壮阔。",
+        "tagPrefix": "海灵",
+        "badgeFormat": "海灵 {id}",
+        "items": marine_items
+    },
+    "atmosphere": {
+        "id": "atmosphere",
+        "title": "大气现象",
+        "titleEn": "Atmospheric Phenomena",
+        "count": len(atmosphere_items),
+        "kicker": "celestial wonders / atmospheric optics & weather / 2026",
+        "headline": "橡胶戳穹苍奇观<br>大气现象",
+        "desc": "20 种壮丽奇绝的大气与天象奇观。极光、双彩虹、日全食、龙卷风、海市蜃楼、丁达尔光……以极简木刻橡胶印章凝固天空的神奇时刻。",
+        "tagPrefix": "天象",
+        "badgeFormat": "天象 {id}",
+        "items": atmosphere_items
     },
     "zodiac": {
         "id": "zodiac",
@@ -179,17 +248,22 @@ collections = {
     }
 }
 
-output_js = f"""// 橡胶戳艺术画廊数据集：世界城市 (30) · 名胜风景 (50) · 古诗名句 (50) · 十二生肖 (12) · 二十四节气 (24) · 山海神异 (10)
+total_count = sum(len(c["items"]) for c in collections.values())
+
+output_js = f"""// 橡胶戳艺术画廊数据集：世界城市 (30) · 名胜风景 (50) · 古诗名句 (50) · 珍稀动物 (20) · 海洋生物 (20) · 大气现象 (20) · 十二生肖 (12) · 二十四节气 (24) · 山海神异 (10) -> 共 {total_count} 枚
 window.COLLECTIONS = {json.dumps(collections, ensure_ascii=False, indent=2)};
 
 // 兼容旧版引用
 window.CITIES = window.COLLECTIONS.cities.items;
 window.SCENIC_SPOTS = window.COLLECTIONS.scenic_spots.items;
 window.POETRY = window.COLLECTIONS.poetry.items;
+window.WILDLIFE = window.COLLECTIONS.wildlife.items;
+window.MARINE = window.COLLECTIONS.marine.items;
+window.ATMOSPHERE = window.COLLECTIONS.atmosphere.items;
 window.ZODIAC = window.COLLECTIONS.zodiac.items;
 window.SOLAR_TERMS = window.COLLECTIONS.solar_terms.items;
 window.SHANHAIJING = window.COLLECTIONS.shanhaijing.items;
 """
 
 (BASE / "data.js").write_text(output_js, encoding="utf-8")
-print(f"data.js updated successfully! Total 6 collections: cities({len(cities_items)}), scenic({len(scenic_items)}), poetry({len(poetry_items)}), zodiac({len(zodiac_items)}), solar({len(solar_items)}), shj({len(shanhaijing_items)}) -> Total {len(cities_items) + len(scenic_items) + len(poetry_items) + len(zodiac_items) + len(solar_items) + len(shanhaijing_items)} stamps.")
+print(f"data.js updated successfully! Total {len(collections)} collections -> Total {total_count} stamps.")
