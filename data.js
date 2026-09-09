@@ -1,4 +1,4 @@
-// 橡胶戳艺术画廊数据集：世界城市 (30) · 名胜风景 (50) · 古诗名句 (50) · 十二生肖 (12) · 二十四节气 (24) · 山海神异 (10)
+// 橡胶戳艺术画廊数据集：世界城市 (30) · 名胜风景 (50) · 古诗名句 (50) · 珍稀动物 (20) · 海洋生物 (20) · 大气现象 (20) · 十二生肖 (12) · 二十四节气 (24) · 山海神异 (10) -> 共 236 枚
 window.COLLECTIONS = {
   "cities": {
     "id": "cities",
@@ -2119,6 +2119,1185 @@ window.COLLECTIONS = {
       }
     ]
   },
+  "wildlife": {
+    "id": "wildlife",
+    "title": "珍稀动物",
+    "titleEn": "Rare Wildlife",
+    "count": 20,
+    "kicker": "endangered wildlife heritage / stamp prints / 2026",
+    "headline": "橡胶戳生灵之境<br>珍稀动物",
+    "desc": "20 种珍稀物种与大自然生灵。以极简多色手工版画印章捕捉国宝大熊猫、金丝猴、雪豹、朱鹮等野生动物的灵性神韵。",
+    "tagPrefix": "物种",
+    "badgeFormat": "物种 {id}",
+    "items": [
+      {
+        "id": 1,
+        "name": "大熊猫",
+        "title": "大熊猫 · 竹林萌隐",
+        "category": "珍稀陆生",
+        "habitat": "四川·陕西秦岭竹海",
+        "features": "圆滚滚的大熊猫端坐啃食竹笋、黑白分明的眼圈与圆耳、几株挺拔修竹",
+        "keywords": [
+          "国宝",
+          "大熊猫",
+          "修竹",
+          "萌态"
+        ],
+        "colors": "炭黑 · 竹叶青绿 · 宣纸暖米",
+        "colors_en": "charcoal black, bamboo leaf green, and warm rice paper",
+        "output": "images/wildlife/01_大熊猫.png",
+        "theme_en": "Giant Panda in Bamboo Forest",
+        "subject_en": "a chubby giant panda sitting peacefully munching on fresh bamboo shoots, iconic black eye patches and round ears, framed by clean slender bamboo stalks and leaves"
+      },
+      {
+        "id": 2,
+        "name": "金丝猴",
+        "title": "金丝猴 · 秦岭跃金",
+        "category": "珍稀陆生",
+        "habitat": "秦岭·神农架深山",
+        "features": "灵动可爱的川金丝猴、金色蓬松长毛、仰首攀附古木横枝",
+        "keywords": [
+          "金丝猴",
+          "川金丝猴",
+          "秦岭",
+          "灵木"
+        ],
+        "colors": "金黄 · 黛蓝 · 树皮赭褐",
+        "colors_en": "golden ochre, indigo blue, and tree bark brown",
+        "output": "images/wildlife/02_金丝猴.png",
+        "theme_en": "Golden Snub-nosed Monkey in Alpine Forest",
+        "subject_en": "a graceful golden snub-nosed monkey with lush golden fur, blue facial tint, perched on a gnarled mossy tree branch looking back with curious eyes"
+      },
+      {
+        "id": 3,
+        "name": "东北虎",
+        "title": "东北虎 · 林海啸雪",
+        "category": "顶级捕食者",
+        "habitat": "长白山·小兴安岭",
+        "features": "威风凛凛的东北虎踏雪徐行、额间王字斑纹、苍松积雪为衬",
+        "keywords": [
+          "东北虎",
+          "百兽之王",
+          "林海雪原",
+          "雄威"
+        ],
+        "colors": "虎赤橙 · 墨黑 · 雪青白",
+        "colors_en": "tiger orange, ink black, and snow frost white",
+        "output": "images/wildlife/03_东北虎.png",
+        "theme_en": "Siberian Tiger in Snowy Forest",
+        "subject_en": "a magnificent Siberian tiger striding powerfully through a snowy forest clearing, bold black stripes and iconic king character marking on forehead, framed by snow-dusted pine needles"
+      },
+      {
+        "id": 4,
+        "name": "朱鹮",
+        "title": "朱鹮 · 东方宝石",
+        "category": "珍稀飞禽",
+        "habitat": "陕海洋县·秦岭南麓",
+        "features": "粉红羽翼的吉祥朱鹮、修长弯喙与飘逸凤冠羽、涉水回眸",
+        "keywords": [
+          "朱鹮",
+          "东方宝石",
+          "吉祥",
+          "涉水"
+        ],
+        "colors": "朱鹮绯红 · 素羽白 · 浅水苍青",
+        "colors_en": "ibis coral pink, feathered white, and river slate blue",
+        "output": "images/wildlife/04_朱鹮.png",
+        "theme_en": "Crested Ibis by the Wetland Stream",
+        "subject_en": "an elegant crested ibis with delicate coral pink wing feathers, a long curved beak and crest plumes, standing gracefully in shallow clear water ripples"
+      },
+      {
+        "id": 5,
+        "name": "藏羚羊",
+        "title": "藏羚羊 · 羌塘高原之舟",
+        "category": "高原精灵",
+        "habitat": "青藏高原·可可西里",
+        "features": "雄性藏羚羊乌黑修长双角如剑指苍穹、奔跃于荒原草甸",
+        "keywords": [
+          "藏羚羊",
+          "可可西里",
+          "雪原长角",
+          "坚韧"
+        ],
+        "colors": "荒原赭褐 · 羊角黑 · 远山雪蓝",
+        "colors_en": "tundra ochre brown, horn charcoal black, and mountain snow blue",
+        "output": "images/wildlife/05_藏羚羊.png",
+        "theme_en": "Tibetan Antelope on the Qinghai-Tibet Plateau",
+        "subject_en": "a proud male Tibetan antelope with long sword-like curved black horns leaping across the high-altitude plateau steppe with distant snow peak contours"
+      },
+      {
+        "id": 6,
+        "name": "雪豹",
+        "title": "雪豹 · 雪山隐士",
+        "category": "顶级捕食者",
+        "habitat": "天山·喜马拉雅山脉",
+        "features": "大尾蓬松的雪豹盘踞于险峻岩石、灰色底皮与深色玫瑰斑纹",
+        "keywords": [
+          "雪豹",
+          "雪山隐士",
+          "高原王者",
+          "岩石"
+        ],
+        "colors": "银霜灰 · 斑驳墨黑 · 苍石灰",
+        "colors_en": "frost silver grey, spotted ink black, and rocky granite grey",
+        "output": "images/wildlife/06_雪豹.png",
+        "theme_en": "Snow Leopard on Mountain Ridge",
+        "subject_en": "a majestic snow leopard with thick spotted rosette coat and a long fluffy tail crouched watchfully on a rugged craggy alpine mountain boulder"
+      },
+      {
+        "id": 7,
+        "name": "中华穿山甲",
+        "title": "中华穿山甲 · 披甲行客",
+        "category": "珍稀陆生",
+        "habitat": "华南丘陵山林",
+        "features": "层叠瓦片状鳞甲的穿山甲抱团蜷缩、古朴憨厚身姿",
+        "keywords": [
+          "穿山甲",
+          "鳞甲",
+          "守林",
+          "古拙"
+        ],
+        "colors": "陶土褐 · 焦墨 · 苔藓绿",
+        "colors_en": "terracotta brown, deep ink, and moss green",
+        "output": "images/wildlife/07_中华穿山甲.png",
+        "theme_en": "Chinese Pangolin with Scale Armor",
+        "subject_en": "a Chinese pangolin with distinct overlapping armor-like scales curled gently beside a woodland tree root and small ferns"
+      },
+      {
+        "id": 8,
+        "name": "长江江豚",
+        "title": "长江江豚 · 微笑天使",
+        "category": "淡水水生",
+        "habitat": "长江中下游流域",
+        "features": "圆滚光洁的江豚跃出清澈江面、嘴角天然微笑曲线、水花飞溅",
+        "keywords": [
+          "江豚",
+          "微笑天使",
+          "长江",
+          "跃水"
+        ],
+        "colors": "江豚黛灰 · 水花白 · 碧江蓝",
+        "colors_en": "slate dolphin grey, wave foam white, and river teal blue",
+        "output": "images/wildlife/08_长江江豚.png",
+        "theme_en": "Yangtze Finless Porpoise Smiling in River",
+        "subject_en": "a smooth curved Yangtze finless porpoise arching joyfully out of gentle river swells, with subtle splashing ripples and a gentle smiling snout"
+      },
+      {
+        "id": 9,
+        "name": "麋鹿",
+        "title": "麋鹿 · 四不像",
+        "category": "湿地珍兽",
+        "habitat": "江苏大丰·湿地保护区",
+        "features": "枝杈向后倒生的巨大雄鹿角、涉水立于芦苇湿地、气宇轩昂",
+        "keywords": [
+          "麋鹿",
+          "四不像",
+          "芦苇湿地",
+          "神鹿"
+        ],
+        "colors": "鹿皮暖褐 · 角枝墨褐 · 芦草浅黄",
+        "colors_en": "deer pelt warm brown, antler dark brown, and reed pale yellow",
+        "output": "images/wildlife/09_麋鹿.png",
+        "theme_en": "Milu Deer in Wetland Reeds",
+        "subject_en": "a magnificent male Milu deer (Père David deer) with complex backward-pointing branched antlers standing proudly amidst wetland reeds and shallow marsh water"
+      },
+      {
+        "id": 10,
+        "name": "亚洲象",
+        "title": "亚洲象 · 雨林巨灵",
+        "category": "热带陆生",
+        "habitat": "云南西双版纳",
+        "features": "温和魁梧的亚洲象缓步穿行于热带芭蕉叶与参天古树之间",
+        "keywords": [
+          "亚洲象",
+          "西双版纳",
+          "巨灵",
+          "雨林"
+        ],
+        "colors": "象皮青灰 · 芭蕉翠绿 · 泥土赭黄",
+        "colors_en": "elephant slate grey, palm leaf green, and clay ochre yellow",
+        "output": "images/wildlife/10_亚洲象.png",
+        "theme_en": "Asian Elephant in Rainforest",
+        "subject_en": "a gentle Asian elephant with gracefully raised trunk walking past broad tropical banana palm leaves and rain-soaked forest earth"
+      },
+      {
+        "id": 11,
+        "name": "丹顶鹤",
+        "title": "丹顶鹤 · 仙鹤瑞羽",
+        "category": "湿地飞禽",
+        "habitat": "扎龙·盐城湿地",
+        "features": "头顶一抹丹红的白鹤独立寒水、修长单腿伫立、双翼如泼墨",
+        "keywords": [
+          "丹顶鹤",
+          "仙鹤",
+          "长寿",
+          "傲雪"
+        ],
+        "colors": "丹顶朱红 · 鹤羽墨黑 · 素白",
+        "colors_en": "crest cinnabar red, tail ink black, and pure crane white",
+        "output": "images/wildlife/11_丹顶鹤.png",
+        "theme_en": "Red-crowned Crane by Frozen Marsh",
+        "subject_en": "a graceful red-crowned crane standing on one slender leg amidst winter marsh grasses, with its striking bright red crown patch and clean black and white wing contrast"
+      },
+      {
+        "id": 12,
+        "name": "绿孔雀",
+        "title": "绿孔雀 · 百鸟之王",
+        "category": "热带飞禽",
+        "habitat": "云南澜沧江流域",
+        "features": "高傲挺拔的雄性绿孔雀展开华丽翠绿色眼状尾羽、冠羽直立",
+        "keywords": [
+          "绿孔雀",
+          "开屏",
+          "翠羽",
+          "高贵"
+        ],
+        "colors": "孔雀翠绿 · 尾翎金黄 · 墨青",
+        "colors_en": "emerald peacock green, golden eye feather, and deep ink cyan",
+        "output": "images/wildlife/12_绿孔雀.png",
+        "theme_en": "Green Peafowl Displaying Feathers",
+        "subject_en": "a proud green peafowl standing tall on a rock with its magnificent fan of emerald green tail covert feathers adorned with golden eyespots"
+      },
+      {
+        "id": 13,
+        "name": "荒漠猫",
+        "title": "荒漠猫 · 草原幽灵",
+        "category": "特有猫科",
+        "habitat": "青藏高原荒漠灌丛",
+        "features": "耳尖长有深色毛簇的荒漠猫低姿潜行于荒草岩缝中、浅蓝宝石瞳眸",
+        "keywords": [
+          "荒漠猫",
+          "草原幽灵",
+          "耳簇",
+          "潜行"
+        ],
+        "colors": "沙草褐黄 · 耳尖墨黑 · 冰蓝眸色",
+        "colors_en": "sand grass yellow, ear-tip charcoal black, and ice blue eyes",
+        "output": "images/wildlife/13_荒漠猫.png",
+        "theme_en": "Chinese Mountain Cat in Steppe",
+        "subject_en": "a rare Chinese mountain cat stalking low with tufted ears, dense sandy-grey fur, and piercing gaze moving stealthily through dry steppe grasses"
+      },
+      {
+        "id": 14,
+        "name": "普氏野马",
+        "title": "普氏野马 · 戈壁天骄",
+        "category": "原始奇蹄",
+        "habitat": "新疆准噶尔盆地",
+        "features": "粗壮直立鬃毛的原生野马在戈壁荒漠扬蹄疾驰、肌肉线条强健",
+        "keywords": [
+          "普氏野马",
+          "直立鬃毛",
+          "戈壁",
+          "原始奔腾"
+        ],
+        "colors": "马身沙金 · 直鬃深黑 · 荒原赤褐",
+        "colors_en": "dun horse ochre, mane charcoal black, and desert brick red",
+        "output": "images/wildlife/14_普氏野马.png",
+        "theme_en": "Przewalski Wild Horse Galloping in Gobi",
+        "subject_en": "a stocky wild Przewalski horse with short upright dark mane galloping with raw untamed energy across a barren gravel desert plain"
+      },
+      {
+        "id": 15,
+        "name": "扬子鳄",
+        "title": "扬子鳄 · 活化石鼍龙",
+        "category": "古代爬行",
+        "habitat": "安徽江南水乡湿地",
+        "features": "憨态可掬的扬子鳄浮于水草丛中、短吻微扬、坚韧骨质鳞甲",
+        "keywords": [
+          "扬子鳄",
+          "鼍龙",
+          "活化石",
+          "水乡"
+        ],
+        "colors": "鳄甲墨绿 · 鳞纹黑 · 水萍浅绿",
+        "colors_en": "crocodile moss green, scale black, and duckweed pale green",
+        "output": "images/wildlife/15_扬子鳄.png",
+        "theme_en": "Chinese Alligator Resting by Wetland Pond",
+        "subject_en": "an ancient Chinese alligator basking peacefully on a muddy riverbank with distinct armored back ridges and snout resting near floating water lilies"
+      },
+      {
+        "id": 16,
+        "name": "藏狐",
+        "title": "藏狐 · 方脸哲人",
+        "category": "高原犬科",
+        "habitat": "青藏高原高山草甸",
+        "features": "标志性方形大脸与细眯双眼的藏狐静坐于荒草丛中、充满哲学凝视",
+        "keywords": [
+          "藏狐",
+          "方脸",
+          "淡定",
+          "高原荒草"
+        ],
+        "colors": "狐毛姜黄 · 脸颊白 · 荒草浅灰",
+        "colors_en": "ginger ochre yellow, cheek white, and dried grass grey",
+        "output": "images/wildlife/16_藏狐.png",
+        "theme_en": "Tibetan Sand Fox Staring on Plateau",
+        "subject_en": "a humorous yet stoic Tibetan fox with distinctive wide square face and narrow calm squinting eyes sitting upright on dry high-plateau grassland"
+      },
+      {
+        "id": 17,
+        "name": "兔狲",
+        "title": "兔狲 · 圆脸绒球",
+        "category": "高寒猫科",
+        "habitat": "西北荒漠石山",
+        "features": "极其蓬松圆滚的兔狲蹲伏在岩石顶端、低圆耳朵与凶萌表情",
+        "keywords": [
+          "兔狲",
+          "蓬松圆润",
+          "凶萌",
+          "高山磐石"
+        ],
+        "colors": "浓密绒灰 · 瞳孔明黄 · 岩石赭石",
+        "colors_en": "dense fluffy grey, eye yellow, and rock ochre brown",
+        "output": "images/wildlife/17_兔狲.png",
+        "theme_en": "Pallas Cat Crouched on Mountain Rock",
+        "subject_en": "a round fluffy Pallas cat with thick woolly grey fur and low-set ears crouched firmly on a high crag with an intensely adorable grumpy expression"
+      },
+      {
+        "id": 18,
+        "name": "黑颈鹤",
+        "title": "黑颈鹤 · 高原神鸟",
+        "category": "高原飞禽",
+        "habitat": "西藏那曲·青海湖湿地",
+        "features": "通体灰白、颈部至头部如墨染般的黑颈鹤双双立于高原湖畔",
+        "keywords": [
+          "黑颈鹤",
+          "高原神鸟",
+          "高洁",
+          "湖光雪影"
+        ],
+        "colors": "颈羽墨黑 · 顶冠朱红 · 湖水冰蓝",
+        "colors_en": "neck ink black, crown red, and lake ice blue",
+        "output": "images/wildlife/18_黑颈鹤.png",
+        "theme_en": "Black-necked Crane by Alpine Lake",
+        "subject_en": "a pair of magnificent black-necked cranes with velvety black necks and white body feathers standing gracefully beside an alpine glacial lake with distant mountain ridge"
+      },
+      {
+        "id": 19,
+        "name": "羚牛",
+        "title": "羚牛 · 秦岭金毛兽",
+        "category": "高山偶蹄",
+        "habitat": "秦岭太白山高山石海",
+        "features": "披一身厚密金黄色长毛的巨大秦岭金毛扭角羚傲立石海山巅",
+        "keywords": [
+          "羚牛",
+          "金毛扭角羚",
+          "秦岭四宝",
+          "傲立石海"
+        ],
+        "colors": "金毛暖黄 · 牛角青黑 · 山石淡灰",
+        "colors_en": "golden takin yellow, horn charcoal black, and mountain rock grey",
+        "output": "images/wildlife/19_羚牛.png",
+        "theme_en": "Golden Takin on Mountain Peak",
+        "subject_en": "a massive muscular golden takin with flowing bright golden-blonde coat and backward-hooked horns standing heroically atop a mist-shrouded mountain boulder"
+      },
+      {
+        "id": 20,
+        "name": "中华白海豚",
+        "title": "中华白海豚 · 水上大熊猫",
+        "category": "近海珍兽",
+        "habitat": "珠江口·厦门湾",
+        "features": "通体粉嫩纯净的白海豚成对跃出碧蓝海面、水花环绕",
+        "keywords": [
+          "白海豚",
+          "粉红海豚",
+          "海上国宝",
+          "跃浪"
+        ],
+        "colors": "海豚粉红 · 浪花白 · 碧海深蓝",
+        "colors_en": "dolphin pastel pink, wave spray white, and deep ocean blue",
+        "output": "images/wildlife/20_中华白海豚.png",
+        "theme_en": "Chinese White Dolphin Leaping in Ocean Waves",
+        "subject_en": "a pair of radiant pastel-pink Chinese white dolphins leaping gracefully in an arc above cresting ocean waves with delicate splash droplets"
+      }
+    ]
+  },
+  "marine": {
+    "id": "marine",
+    "title": "海洋生物",
+    "titleEn": "Marine Life",
+    "count": 20,
+    "kicker": "ocean creatures / marine biodiversity prints / 2026",
+    "headline": "橡胶戳深蓝幻境<br>海洋生物",
+    "desc": "20 尊深海巨灵与蔚蓝生灵。从万顷碧波的蓝鲸、虎鲸、蝠鲼，到发光水母与鹦鹉螺，以手工套印印章呈现深海的空灵与壮阔。",
+    "tagPrefix": "海灵",
+    "badgeFormat": "海灵 {id}",
+    "items": [
+      {
+        "id": 1,
+        "name": "蓝鲸",
+        "title": "蓝鲸 · 深海巨灵",
+        "category": "须鲸巨兽",
+        "habitat": "大洋深海·极地冷水域",
+        "features": "身形修长宏伟的巨型蓝鲸潜游、优美流线身躯、背部喷出高耸水雾气柱",
+        "keywords": [
+          "蓝鲸",
+          "深海巨灵",
+          "流线",
+          "水雾喷柱"
+        ],
+        "colors": "普鲁士深蓝 · 浪花白 · 浅海青",
+        "colors_en": "Prussian deep ocean blue, sea foam white, and shallow turquoise",
+        "output": "images/marine/01_蓝鲸.png",
+        "theme_en": "Blue Whale in Deep Ocean",
+        "subject_en": "a colossal blue whale swimming serenely through deep ocean waters, smooth streamlined body silhouette and a majestic spout of misty water rising into the sky"
+      },
+      {
+        "id": 2,
+        "name": "虎鲸",
+        "title": "虎鲸 · 逆戟霸主",
+        "category": "齿鲸霸主",
+        "habitat": "全球大洋·极地峡湾",
+        "features": "黑白分明对比强烈的虎鲸破浪而出、高耸挺拔的三角形背鳍、雄浑利落",
+        "keywords": [
+          "虎鲸",
+          "逆戟鲸",
+          "高耸背鳍",
+          "黑白破浪"
+        ],
+        "colors": "曜石墨黑 · 纯白腹纹 · 海青蓝",
+        "colors_en": "obsidian ink black, belly pure white, and ocean slate blue",
+        "output": "images/marine/02_虎鲸.png",
+        "theme_en": "Orca Killer Whale Breaching Ocean Surface",
+        "subject_en": "a powerful orca killer whale arching gracefully above the ocean surface with its iconic tall dorsal fin and sharp black and white markings amidst splash waves"
+      },
+      {
+        "id": 3,
+        "name": "蝠鲼",
+        "title": "蝠鲼 · 苍穹之翼",
+        "category": "软骨鱼类",
+        "habitat": "热带与亚热带珊瑚海",
+        "features": "如大鸟展翼般的巨大蝠鲼在碧蓝海水中翱翔滑行、流线型尾刺与头鳍",
+        "keywords": [
+          "蝠鲼",
+          "魔鬼鱼",
+          "深海飞鸟",
+          "滑翔"
+        ],
+        "colors": "蝠鲼墨青 · 腹底白 · 珊瑚浅蓝",
+        "colors_en": "manta deep indigo, belly pale white, and coral reef cyan",
+        "output": "images/marine/03_蝠鲼.png",
+        "theme_en": "Giant Manta Ray Gliding in Ocean",
+        "subject_en": "a magnificent giant oceanic manta ray with broad triangular wings gliding weightlessly through calm turquoise ocean waters"
+      },
+      {
+        "id": 4,
+        "name": "巨型章鱼",
+        "title": "巨型章鱼 · 深渊触腕",
+        "category": "头足纲",
+        "habitat": "北太平洋深海岩礁",
+        "features": "八条遒劲灵动触腕舒卷的巨型章鱼、圆润头部与密布吸盘剪影",
+        "keywords": [
+          "巨型章鱼",
+          "触腕",
+          "深海灵魅",
+          "舒卷"
+        ],
+        "colors": "珊瑚赭红 · 幽海深蓝 · 吸盘淡黄",
+        "colors_en": "coral russet red, deep abyss navy, and sucker pale ochre",
+        "output": "images/marine/04_巨型章鱼.png",
+        "theme_en": "Giant Pacific Octopus with Flowing Arms",
+        "subject_en": "a giant Pacific octopus with eight powerful gracefully coiling tentacles with distinct sucker rings floating beside sea floor rock kelp"
+      },
+      {
+        "id": 5,
+        "name": "锤头鲨",
+        "title": "锤头鲨 · 双髻巡弋",
+        "category": "掠食鲨鱼",
+        "habitat": "热带温带大洋暖水区",
+        "features": "独具一格T型双髻头部的双髻鲨优雅巡游、流线身形与锐利尾鳍",
+        "keywords": [
+          "锤头鲨",
+          "双髻鲨",
+          "T型头",
+          "巡弋"
+        ],
+        "colors": "鲨皮钢蓝 · 腹灰白 · 海水澄青",
+        "colors_en": "shark steel blue, belly ash white, and clear aqua blue",
+        "output": "images/marine/05_锤头鲨.png",
+        "theme_en": "Hammerhead Shark Cruising Open Waters",
+        "subject_en": "a sleek hammerhead shark with iconic T-shaped cephalofoil head cruising effortlessly through clear ocean currents"
+      },
+      {
+        "id": 6,
+        "name": "绿海龟",
+        "title": "绿海龟 · 碧海游踪",
+        "category": "海洋爬行",
+        "habitat": "热带浅海珊瑚礁",
+        "features": "背负几何纹理龟甲的绿海龟划动两双如桨前肢、悠然游弋于海藻间",
+        "keywords": [
+          "海龟",
+          "绿海龟",
+          "龟甲",
+          "珊瑚海"
+        ],
+        "colors": "龟甲橄榄绿 · 浅赭黄 · 海水天蓝",
+        "colors_en": "turtle shell olive green, shell edge pale ochre, and sea sky blue",
+        "output": "images/marine/06_绿海龟.png",
+        "theme_en": "Green Sea Turtle Swimming Above Coral",
+        "subject_en": "a serene green sea turtle with beautifully patterned shell plates paddling gracefully with broad flipper arms through light-dappled coral waters"
+      },
+      {
+        "id": 7,
+        "name": "发光水母",
+        "title": "发光水母 · 幽海流光",
+        "category": "刺胞动物",
+        "habitat": "大洋深层水域",
+        "features": "半透明伞状水母悬浮、纤长飘逸的触手如丝垂落、自体散发幽光",
+        "keywords": [
+          "水母",
+          "荧光",
+          "发光水母",
+          "轻灵飘逸"
+        ],
+        "colors": "荧光幽紫 · 水母浅粉 · 深海靛蓝",
+        "colors_en": "bioluminescent purple, jellyfish pastel pink, and deep indigo blue",
+        "output": "images/marine/07_发光水母.png",
+        "theme_en": "Bioluminescent Jellyfish Floating in Deep Sea",
+        "subject_en": "a delicate umbrella-domed jellyfish with long ethereal trailing tentacles drifting weightlessly with glowing bioluminescent light trails in dark water"
+      },
+      {
+        "id": 8,
+        "name": "抹香鲸",
+        "title": "抹香鲸 · 潜渊搏斗",
+        "category": "深潜齿鲸",
+        "habitat": "大洋数千米深渊",
+        "features": "方方正正巨型头部的抹香鲸竖直潜入深渊、强健尾鳍扬起巨大浪花",
+        "keywords": [
+          "抹香鲸",
+          "巨头",
+          "深渊潜水",
+          "尾鳍破浪"
+        ],
+        "colors": "深渊墨蓝 · 鲸身灰黑 · 浪花白",
+        "colors_en": "abyss midnight blue, whale slate grey, and foam white",
+        "output": "images/marine/08_抹香鲸.png",
+        "theme_en": "Sperm Whale Diving into the Abyss",
+        "subject_en": "a massive sperm whale with iconic blunt rectangular head angling downward into deep ocean trenches with its broad triangular tail fluke breaking the water"
+      },
+      {
+        "id": 9,
+        "name": "斑海豹",
+        "title": "斑海豹 · 礁滩憨卧",
+        "category": "鳍足类",
+        "habitat": "渤海辽东湾·冷温带近海",
+        "features": "圆滚圆滚的斑海豹仰头憨卧于海浪拍击的潮间带礁石上、满身芝麻斑点",
+        "keywords": [
+          "斑海豹",
+          "辽东湾",
+          "礁石",
+          "憨态"
+        ],
+        "colors": "斑纹灰褐 · 礁石深墨 · 浅浪青绿",
+        "colors_en": "spotted grey-brown, reef rock dark ink, and sea spray sage green",
+        "output": "images/marine/09_斑海豹.png",
+        "theme_en": "Spotted Seal Resting on Coastal Rock",
+        "subject_en": "a plump round spotted seal resting happily on a sea-washed coastal rock boulder with head lifted and flipper paws tucked beside foaming tide"
+      },
+      {
+        "id": 10,
+        "name": "海马",
+        "title": "海马 · 珊瑚立骨",
+        "category": "海龙科",
+        "habitat": "温暖浅海海草床",
+        "features": "卷曲尾巴紧紧缠绕海草的立姿小海马、管状长嘴与骨环铠甲轮廓",
+        "keywords": [
+          "海马",
+          "卷尾",
+          "海草床",
+          "骨质铠甲"
+        ],
+        "colors": "海马暖橙 · 海草翠绿 · 细沙米黄",
+        "colors_en": "seahorse warm orange, seagrass emerald green, and sand pale ochre",
+        "output": "images/marine/10_海马.png",
+        "theme_en": "Seahorse Clinging to Seagrass",
+        "subject_en": "a graceful upright seahorse with delicate curled tail anchored securely around a slender sea grass blade and tiny dorsal fin"
+      },
+      {
+        "id": 11,
+        "name": "鲸鲨",
+        "title": "鲸鲨 · 星斑巨灵",
+        "category": "须鲨目",
+        "habitat": "热带开阔大洋",
+        "features": "背部密布棋盘状白色星斑的温顺鲸鲨在浅层阳光下滤食、宽阔扁平巨吻",
+        "keywords": [
+          "鲸鲨",
+          "星斑",
+          "温和巨物",
+          "阳光波纹"
+        ],
+        "colors": "鲸鲨靛蓝 · 星斑纯白 · 阳光微金",
+        "colors_en": "whale shark indigo, white star spots, and sunlight gold",
+        "output": "images/marine/11_鲸鲨.png",
+        "theme_en": "Whale Shark with Starry Pattern",
+        "subject_en": "a gentle giant whale shark covered in iconic checkerboard white constellation spots swimming calmly under shimmering sunlit ocean ripples"
+      },
+      {
+        "id": 12,
+        "name": "鹦鹉螺",
+        "title": "鹦鹉螺 · 黄金螺旋",
+        "category": "头足纲活化石",
+        "habitat": "热带深海珊瑚斜坡",
+        "features": "完美对数螺旋形红白相间条纹外壳的鹦鹉螺、探出触须漂浮于海水中",
+        "keywords": [
+          "鹦鹉螺",
+          "黄金分割",
+          "活化石",
+          "几何螺旋"
+        ],
+        "colors": "螺旋赭红 · 贝壳白 · 深海黛蓝",
+        "colors_en": "spiral russet red, shell ivory white, and deep ocean navy",
+        "output": "images/marine/12_鹦鹉螺.png",
+        "theme_en": "Chambered Nautilus with Golden Spiral",
+        "subject_en": "a chambered nautilus featuring its iconic geometric logarithmic spiral shell with reddish-brown tiger stripes floating with small sensory tentacles extended"
+      },
+      {
+        "id": 13,
+        "name": "飞鱼",
+        "title": "飞鱼 · 破浪飞翼",
+        "category": "硬骨鱼类",
+        "habitat": "热带表层大洋",
+        "features": "生有宽大鸟羽状胸鳍的飞鱼腾跃出水、滑翔于碧蓝浪尖之上",
+        "keywords": [
+          "飞鱼",
+          "滑翔",
+          "飞翼",
+          "踏浪"
+        ],
+        "colors": "鱼身银蓝 · 飞翼翠青 · 浪尖素白",
+        "colors_en": "flying fish silver blue, wing membrane teal green, and wavecrest white",
+        "output": "images/marine/13_飞鱼.png",
+        "theme_en": "Flying Fish Gliding Over Ocean Waves",
+        "subject_en": "a sleek flying fish with expansive transparent wing-like pectoral fins soaring in mid-glide just above the frothing crests of ocean waves"
+      },
+      {
+        "id": 14,
+        "name": "一角鲸",
+        "title": "一角鲸 · 极海独角兽",
+        "category": "齿鲸类",
+        "habitat": "北极冰洋裂隙",
+        "features": "头部生有一根螺旋直刺向天的修长象牙状长角的雄性一角鲸穿破浮冰",
+        "keywords": [
+          "一角鲸",
+          "独角兽",
+          "极地浮冰",
+          "螺旋长角"
+        ],
+        "colors": "极海灰蓝 · 独角象牙白 · 冰块冷青",
+        "colors_en": "arctic grey-blue, tusk ivory white, and sea ice frosty blue",
+        "output": "images/marine/14_一角鲸.png",
+        "theme_en": "Narwhal with Spiral Tusk in Arctic Waters",
+        "subject_en": "a mythical-looking male narwhal with its long spiraled ivory tusk breaking through icy arctic waters alongside blue ice floes"
+      },
+      {
+        "id": 15,
+        "name": "帝企鹅",
+        "title": "帝企鹅 · 极地绅士",
+        "category": "极地海鸟",
+        "habitat": "南极大陆坚冰",
+        "features": "身披燕尾服般黑白分明的帝企鹅昂首立于南极冰川之上、颈间一抹暖金",
+        "keywords": [
+          "帝企鹅",
+          "极地守望",
+          "冰川",
+          "金羽"
+        ],
+        "colors": "企鹅墨黑 · 颈羽金黄 · 坚冰雪白",
+        "colors_en": "penguin tuxedo black, neck golden yellow, and glacier ice white",
+        "output": "images/marine/15_帝企鹅.png",
+        "theme_en": "Emperor Penguin Standing on Antarctic Ice",
+        "subject_en": "a regal emperor penguin standing proudly on an Antarctic ice sheet with sleek tuxedo-black back, pristine white chest, and golden-yellow ear patches"
+      },
+      {
+        "id": 16,
+        "name": "旗鱼",
+        "title": "旗鱼 · 极速破风",
+        "category": "高速大洋鱼类",
+        "habitat": "热带大洋表层",
+        "features": "高展帆状背鳍、长矛般锋利上颌的旗鱼如离弦之箭疾刺而出、激浪排空",
+        "keywords": [
+          "旗鱼",
+          "帆状背鳍",
+          "海洋极速",
+          "破浪剑吻"
+        ],
+        "colors": "旗鳍深蓝 · 鱼身银灰 · 飞浪素白",
+        "colors_en": "sail fin deep navy blue, fish body silver grey, and splash white",
+        "output": "images/marine/16_旗鱼.png",
+        "theme_en": "Sailfish Leaping with Expanded Dorsal Fin",
+        "subject_en": "a high-speed sailfish bursting from ocean swells with its dramatic expansive sail-like dorsal fin raised and spear-like bill piercing the spray"
+      },
+      {
+        "id": 17,
+        "name": "海獭",
+        "title": "海獭 · 仰泳敲贝",
+        "category": "海洋哺乳",
+        "habitat": "北太平洋海藻森林",
+        "features": "仰躺在巨型海藻丛中漂浮的海獭、双手在肚皮上抱着贝壳敲击、萌态可掬",
+        "keywords": [
+          "海獭",
+          "仰泳",
+          "海藻床",
+          "敲贝壳"
+        ],
+        "colors": "海獭暖褐 · 海藻墨绿 · 水花浅蓝",
+        "colors_en": "sea otter fur warm brown, kelp forest deep green, and water ripple aqua",
+        "output": "images/marine/17_海獭.png",
+        "theme_en": "Sea Otter Floating on Back with Clam",
+        "subject_en": "an adorable sea otter floating on its back wrapped gently in tangled kelp fronds, holding a small sea shell onto its belly"
+      },
+      {
+        "id": 18,
+        "name": "大白鲨",
+        "title": "大白鲨 · 蔚蓝霸主",
+        "category": "软骨鱼顶级掠食",
+        "habitat": "全球温带近海大洋",
+        "features": "线条充满爆发力的大白鲨自深水向上冲刺巡弋、三角形锯齿利齿与黑曜眼眸",
+        "keywords": [
+          "大白鲨",
+          "顶级掠食者",
+          "利齿",
+          "海洋霸主"
+        ],
+        "colors": "鲨背铁灰 · 腹底纯白 · 深海幽蓝",
+        "colors_en": "shark steel grey, belly white, and deep ocean navy",
+        "output": "images/marine/18_大白鲨.png",
+        "theme_en": "Great White Shark Gliding Through Ocean",
+        "subject_en": "a formidable great white shark swimming powerfully through deep open ocean with iconic triangular dorsal fin and streamlined muscular body"
+      },
+      {
+        "id": 19,
+        "name": "小丑鱼与海葵",
+        "title": "小丑鱼 · 珊瑚共生",
+        "category": "珊瑚礁鱼类",
+        "habitat": "热带珊瑚礁",
+        "features": "鲜艳橙白三道条纹的小丑鱼穿梭在柔软摇曳的紫海葵触须之间",
+        "keywords": [
+          "小丑鱼",
+          "海葵",
+          "珊瑚礁",
+          "共生"
+        ],
+        "colors": "小丑鱼鲜橙 · 白条纹 · 海葵淡紫",
+        "colors_en": "clownfish vibrant orange, stripe white, and anemone soft lavender purple",
+        "output": "images/marine/19_小丑鱼与海葵.png",
+        "theme_en": "Clownfish Sheltered in Sea Anemone",
+        "subject_en": "a bright orange clownfish with distinctive white body stripes peeking out from the flowing soft tentacles of a gentle sea anemone"
+      },
+      {
+        "id": 20,
+        "name": "翻车鱼",
+        "title": "翻车鱼 · 巨盘奇兽",
+        "category": "大洋奇特硬骨鱼",
+        "habitat": "大洋表层晒太阳区",
+        "features": "圆盘大饼状扁平身躯的翻车鱼侧浮水面晒太阳、短小尾鳍与高耸背臀鳍",
+        "keywords": [
+          "翻车鱼",
+          "巨盘鱼",
+          "呆萌",
+          "侧浮日晒"
+        ],
+        "colors": "鱼身石板灰 · 浅腹白 · 海水天蓝",
+        "colors_en": "mola body slate grey, belly off-white, and surface sea cyan",
+        "output": "images/marine/20_翻车鱼.png",
+        "theme_en": "Ocean Sunfish Mola Mola Basking at Sea Surface",
+        "subject_en": "an iconic disc-shaped ocean sunfish (Mola mola) with tall vertical fins basking calmly near the ocean surface with tiny bubbles"
+      }
+    ]
+  },
+  "atmosphere": {
+    "id": "atmosphere",
+    "title": "大气现象",
+    "titleEn": "Atmospheric Phenomena",
+    "count": 20,
+    "kicker": "celestial wonders / atmospheric optics & weather / 2026",
+    "headline": "橡胶戳穹苍奇观<br>大气现象",
+    "desc": "20 种壮丽奇绝的大气与天象奇观。极光、双彩虹、日全食、龙卷风、海市蜃楼、丁达尔光……以极简木刻橡胶印章凝固天空的神奇时刻。",
+    "tagPrefix": "天象",
+    "badgeFormat": "天象 {id}",
+    "items": [
+      {
+        "id": 1,
+        "name": "极光",
+        "title": "极光 · 欧若拉之舞",
+        "category": "高纬光学",
+        "phenomenon": "高层大气带电粒子激发的带状流光",
+        "features": "夜空中如绿色绸缎般蜿蜒舞动的极光光带、倒映于极地冰湖之上、几抹紫红霞晕",
+        "keywords": [
+          "极光",
+          "欧若拉",
+          "绿幕绸缎",
+          "极地夜空"
+        ],
+        "colors": "极光荧绿 · 霞光紫红 · 夜幕深蓝",
+        "colors_en": "aurora neon green, violet purple glow, and midnight navy blue",
+        "output": "images/atmosphere/01_极光.png",
+        "theme_en": "Aurora Borealis Dancing in Night Sky",
+        "subject_en": "ethereal shimmering ribbon curtains of green and violet northern lights sweeping across a starry polar night sky above distant silhouetted spruce pines"
+      },
+      {
+        "id": 2,
+        "name": "双彩虹",
+        "title": "双彩虹 · 霁后双霓",
+        "category": "水汽光学",
+        "phenomenon": "雨后阳光经水滴二次折射与全反射形成的双重彩弧",
+        "features": "雨后晴空中一主一副两道弧形彩虹悬跨、下方几笔青翠雨洗山林与初晴阳光",
+        "keywords": [
+          "双彩虹",
+          "霓虹",
+          "雨后初晴",
+          "圆弧"
+        ],
+        "colors": "彩虹朱红 · 晴空淡青 · 草木新绿",
+        "colors_en": "rainbow vermilion red, sky pale blue, and meadow fresh green",
+        "output": "images/atmosphere/02_双彩虹.png",
+        "theme_en": "Double Rainbow After Rainstorm",
+        "subject_en": "a graceful arc of double rainbows spanning an open clearing after summer rain with clearing sky and gentle distant hillside contours"
+      },
+      {
+        "id": 3,
+        "name": "日全食",
+        "title": "日全食 · 钻石环日冕",
+        "category": "天象交会",
+        "phenomenon": "月球完全遮蔽太阳本体、贝利珠与日冕银辉迸发",
+        "features": "漆黑圆月完全遮蔽太阳时迸发的璀璨钻石环闪光、四周放射状银白日冕羽芒",
+        "keywords": [
+          "日全食",
+          "钻石环",
+          "日冕",
+          "天象奇观"
+        ],
+        "colors": "曜石深黑 · 日冕银白 · 钻石光金",
+        "colors_en": "obsidian deep black, corona silver white, and diamond flare gold",
+        "output": "images/atmosphere/03_日全食.png",
+        "theme_en": "Total Solar Eclipse and Diamond Ring Corona",
+        "subject_en": "a stark black lunar disc eclipsing the sun with a dazzling single burst of diamond ring light flare and radial silver corona halo streams"
+      },
+      {
+        "id": 4,
+        "name": "龙卷风",
+        "title": "龙卷风 · 通天风柱",
+        "category": "剧烈强对流",
+        "phenomenon": "强烈对流积雨云下垂的高速旋转漏斗云柱",
+        "features": "自厚重漏斗乌云中旋转倒垂直抵大地的巨大龙卷漏斗柱、狂风卷起尘土线条",
+        "keywords": [
+          "龙卷风",
+          "风暴漏斗",
+          "气旋",
+          "狂风"
+        ],
+        "colors": "风暴深灰 · 尘土赭黄 · 积云青黑",
+        "colors_en": "storm funnel charcoal grey, dust ochre yellow, and cloud deep navy",
+        "output": "images/atmosphere/04_龙卷风.png",
+        "theme_en": "Tornado Funnel Cloud Touching Ground",
+        "subject_en": "a powerful spiraling funnel cloud tornado descending from a dark supercell thunderstorm base onto an open plain with swirling wind dust contours"
+      },
+      {
+        "id": 5,
+        "name": "雷暴闪电",
+        "title": "雷暴闪电 · 裂空金蛇",
+        "category": "放电天气",
+        "phenomenon": "积雨云层间与地表强电荷释放的树状闪电",
+        "features": "如金蛇狂舞般自滚滚浓重乌云中撕裂而下的分叉闪电树枝、击向远山孤峰",
+        "keywords": [
+          "雷暴",
+          "闪电",
+          "金蛇狂舞",
+          "劈空"
+        ],
+        "colors": "电光苍白 · 乌云墨紫 · 远峰黛蓝",
+        "colors_en": "lightning spark white, thundercloud dark violet, and distant peak slate blue",
+        "output": "images/atmosphere/05_雷暴闪电.png",
+        "theme_en": "Forked Lightning Striking Mountain Peak",
+        "subject_en": "a dramatic branched forked lightning bolt striking down from massive billowing dark thunderclouds toward a distant lone mountain ridge silhouette"
+      },
+      {
+        "id": 6,
+        "name": "幻日日晕",
+        "title": "幻日日晕 · 凌空三日",
+        "category": "冰晶光学",
+        "phenomenon": "高空卷云六角形冰晶折射形成的22度日晕环与两侧幻日光斑",
+        "features": "冬日晴空中一轮主日环绕着正圆光晕光环、两侧各有一团如伴星般灿烂的幻日光斑",
+        "keywords": [
+          "日晕",
+          "幻日",
+          "三日并出",
+          "冰晶环"
+        ],
+        "colors": "光晕暖金 · 冰晶浅青 · 天空冷蓝",
+        "colors_en": "halo warm gold, ice crystal pale turquoise, and cold sky blue",
+        "output": "images/atmosphere/06_幻日日晕.png",
+        "theme_en": "Solar Halo with Parhelia Sun Dogs",
+        "subject_en": "a majestic solar halo ring in a cold winter sky with two bright flanking sun dogs (parhelia) and a horizontal parhelic circle over snowy ground"
+      },
+      {
+        "id": 7,
+        "name": "晚霞火烧云",
+        "title": "晚霞火烧云 · 熔金天幕",
+        "category": "散射光学",
+        "phenomenon": "傍晚低仰角阳光瑞利散射将天际层状云染成炽烈红橙色",
+        "features": "层层叠叠如火熔金的晚霞云层铺满天际、由绯红渐变至金橙与暮色深紫",
+        "keywords": [
+          "火烧云",
+          "晚霞",
+          "熔金",
+          "落日霞光"
+        ],
+        "colors": "晚霞赤红 · 霞光橙金 · 暮霭深紫",
+        "colors_en": "sunset fiery red, twilight orange-gold, and dusk deep purple",
+        "output": "images/atmosphere/07_晚霞火烧云.png",
+        "theme_en": "Twilight Sunset Glow and Fiery Clouds",
+        "subject_en": "dramatic layered fiery sunset clouds glowing in brilliant shades of crimson and burnt orange above gentle tranquil mountain slopes"
+      },
+      {
+        "id": 8,
+        "name": "夜光云",
+        "title": "夜光云 · 极地银波",
+        "category": "中顶层高空云",
+        "phenomenon": "80公里中间层高空微细冰晶在夏夜黄昏反射地平线下阳光",
+        "features": "深蓝夏夜高空中如银丝水波般闪烁着幽冷青白荧光的波纹状夜光云",
+        "keywords": [
+          "夜光云",
+          "高空冰晶",
+          "银丝波纹",
+          "幽冷荧光"
+        ],
+        "colors": "荧光银蓝 · 夜空靛青 · 繁星素白",
+        "colors_en": "noctilucent silver-cyan, night sky deep indigo, and star sparkle white",
+        "output": "images/atmosphere/08_夜光云.png",
+        "theme_en": "Noctilucent Clouds Glowing in Twilit Summer Sky",
+        "subject_en": "delicate rippling electric-blue noctilucent clouds glowing with luminous silver crests high in the deep twilit polar midnight sky"
+      },
+      {
+        "id": 9,
+        "name": "平流雾",
+        "title": "平流雾 · 云海锁峰",
+        "category": "水汽凝结",
+        "phenomenon": "暖湿空气流经冷海面或山谷形成的浩瀚如海平流雾",
+        "features": "白茫茫如平整棉絮般的茫茫云海中、几座孤立的翠绿山峰如仙岛穿透雾面",
+        "keywords": [
+          "平流雾",
+          "云海",
+          "山顶仙岛",
+          "云遮雾罩"
+        ],
+        "colors": "雾海纯白 · 峰峦黛青 · 晨曦微金",
+        "colors_en": "fog sea pure white, mountain peak dark teal, and dawn soft gold",
+        "output": "images/atmosphere/09_平流雾.png",
+        "theme_en": "Advection Valley Fog with Mountain Peaks",
+        "subject_en": "a blanket of smooth white advection sea fog filling the mountain valleys with only the highest rocky peaks emerging like islands in a sea of clouds"
+      },
+      {
+        "id": 10,
+        "name": "彗星",
+        "title": "彗星 · 掠空长尾",
+        "category": "天体穿梭",
+        "phenomenon": "冰冻彗核接近太阳时升华出由气体与尘埃组成的辉煌彗尾",
+        "features": "一颗璀璨明亮的彗星划过深邃夜空、身后拖着一条长长扫帚状的银白与海蓝离子尘埃尾",
+        "keywords": [
+          "彗星",
+          "长尾彗星",
+          "星空掠影",
+          "尘埃尾"
+        ],
+        "colors": "彗核亮白 · 彗尾冰蓝 · 苍穹深黑",
+        "colors_en": "comet coma brilliant white, comet tail ice blue, and cosmic deep black",
+        "output": "images/atmosphere/10_彗星.png",
+        "theme_en": "Bright Comet with Long Sweeping Dust Tail",
+        "subject_en": "a brilliant comet with glowing nucleus and an expansive double sweeping dust and ion tail trailing gracefully across a field of sparse stars"
+      },
+      {
+        "id": 11,
+        "name": "流星雨",
+        "title": "流星雨 · 银汉落雨",
+        "category": "流星群",
+        "phenomenon": "地球穿越彗星轨道尘埃带时密集成群划亮夜空的流星",
+        "features": "多道如银箭般平行的流星划痕穿透夜空、下方为静谧的古柏林木剪影与远山",
+        "keywords": [
+          "流星雨",
+          "银汉落雨",
+          "划痕",
+          "夜空祈愿"
+        ],
+        "colors": "流星银白 · 夜空蓝紫 · 林木焦墨",
+        "colors_en": "meteor streak silver white, night sky indigo violet, and pine silhouette black",
+        "output": "images/atmosphere/11_流星雨.png",
+        "theme_en": "Meteor Shower Streaking Across Starry Night",
+        "subject_en": "multiple dynamic streaks of bright shooting stars radiating across a dark velvet starry night sky above the calm silhouettes of evergreen pines"
+      },
+      {
+        "id": 12,
+        "name": "佛光宝光",
+        "title": "佛光 · 峨眉宝光",
+        "category": "衍射反射光学",
+        "phenomenon": "山顶背光人影投射于前方云雾层上形成周围环绕同心彩色光环的布罗肯幽灵",
+        "features": "云海之上一道神圣同心圆七彩光晕光环、中心隐现人影剪影、宛如佛光普照",
+        "keywords": [
+          "佛光",
+          "宝光",
+          "布罗肯幽灵",
+          "同心光环"
+        ],
+        "colors": "彩晕金红 · 光环青绿 · 云雾米白",
+        "colors_en": "solar halo red-gold, diffraction ring teal green, and mist cloud white",
+        "output": "images/atmosphere/12_佛光宝光.png",
+        "theme_en": "Brocken Spectre and Buddha Light Halo",
+        "subject_en": "a mystical circular concentric rainbow halo (Brocken spectre or Buddha's light) glowing around a magnified shadow figure cast onto floating mountain mist clouds"
+      },
+      {
+        "id": 13,
+        "name": "海市蜃楼",
+        "title": "海市蜃楼 · 蜃楼虚阁",
+        "category": "复杂光线折射",
+        "phenomenon": "不同温度空气层密度差异导致远处景物光线曲折而在地平线上空成像",
+        "features": "平静无波的大海或沙丘地平线上方、悬空浮现一座若隐若现的古朴楼阁仙山虚影",
+        "keywords": [
+          "海市蜃楼",
+          "蜃楼",
+          "虚阁仙山",
+          "光线折射"
+        ],
+        "colors": "蜃景浅黛灰 · 海水天蓝 · 暖沙金",
+        "colors_en": "mirage ghost grey, horizon pale blue, and warm sand gold",
+        "output": "images/atmosphere/13_海市蜃楼.png",
+        "theme_en": "Fata Morgana Mirage Castle Over Ocean",
+        "subject_en": "an ethereal illusory floating ancient pavilion city skyline suspended just above a shimmering desert or calm sea horizon line"
+      },
+      {
+        "id": 14,
+        "name": "沙尘暴",
+        "title": "沙尘暴 · 瀚海沙墙",
+        "category": "干旱风沙天气",
+        "phenomenon": "强冷锋前缘狂风卷起数千米高的巨大黄沙尘暴墙",
+        "features": "一堵顶天立地、遮天蔽日的厚重黄沙风暴高墙排山倒海滚滚向前推进",
+        "keywords": [
+          "沙尘暴",
+          "沙墙",
+          "瀚海狂风",
+          "遮天蔽日"
+        ],
+        "colors": "沙尘赭黄 · 风暴土褐 · 荒野深灰",
+        "colors_en": "sandstorm ochre yellow, storm dust earth brown, and wilderness grey",
+        "output": "images/atmosphere/14_沙尘暴.png",
+        "theme_en": "Towering Sandstorm Haboob Dust Wall",
+        "subject_en": "a colossal sheer wall of rolling desert sandstorm haboob advancing dramatically across a vast open desert landscape"
+      },
+      {
+        "id": 15,
+        "name": "冰雹积雨云",
+        "title": "冰雹积雨云 · 巨砧压境",
+        "category": "强超级单体",
+        "phenomenon": "极其强烈的上升气流塑造出顶部扁平如铁砧的巨大积雨云团",
+        "features": "一朵高耸入平流层、顶部平展如铁砧的庞大超级单体积雨云、云底垂下青绿冰雹柱",
+        "keywords": [
+          "积雨云",
+          "铁砧云",
+          "超级单体",
+          "冰雹"
+        ],
+        "colors": "砧状云苍灰 · 雹云墨青 · 暮光淡金",
+        "colors_en": "anvil cloud slate grey, hail base deep green-blue, and twilight pale gold",
+        "output": "images/atmosphere/15_冰雹积雨云.png",
+        "theme_en": "Supercell Anvil Thunderstorm Cloud",
+        "subject_en": "a solitary towering supercell thunderstorm with a massive flat anvil top catching the high sunlight above a dark turbulent rain shaft"
+      },
+      {
+        "id": 16,
+        "name": "雨幡",
+        "title": "雨幡 · 悬垂水幕",
+        "category": "蒸发云象",
+        "phenomenon": "高空降水在落到干燥地面前完全蒸发而形成的悬挂云底的羽状雨丝",
+        "features": "高悬云朵底部飘落垂悬的丝绸状倾斜雨幡细丝线条、未触及大地便随风飘散",
+        "keywords": [
+          "雨幡",
+          "幡状云",
+          "悬垂水幕",
+          "空谷雨丝"
+        ],
+        "colors": "雨幡灰青 · 积云深蓝 · 地平线暖赭",
+        "colors_en": "virga rain streak slate grey, cloud navy blue, and horizon warm ochre",
+        "output": "images/atmosphere/16_雨幡.png",
+        "theme_en": "Virga Rain Shafts Trailing from Clouds",
+        "subject_en": "graceful wispy curtains of virga rain shafts trailing from dark isolated clouds evaporating mid-air before reaching the open plains below"
+      },
+      {
+        "id": 17,
+        "name": "丁达尔光",
+        "title": "丁达尔光 · 圣辉穿林",
+        "category": "微粒胶体散射",
+        "phenomenon": "清晨阳光穿透薄雾森林缝隙散射出肉眼可见的束状金色光路",
+        "features": "几束笔直明亮的光芒如天柱般自茂密古树树冠斜穿而下、照亮林间微尘水汽",
+        "keywords": [
+          "丁达尔效应",
+          "耶稣光",
+          "圣光穿林",
+          "晨雾光束"
+        ],
+        "colors": "光束暖金 · 树冠墨绿 · 晨岚浅灰",
+        "colors_en": "sunbeam radiant gold, forest canopy deep green, and morning mist light grey",
+        "output": "images/atmosphere/17_丁达尔光.png",
+        "theme_en": "Crepuscular Sunbeams Breaking Through Forest",
+        "subject_en": "dramatic diagonal golden sunbeams (crepuscular rays) streaming down through the gaps of tall ancient tree canopy into a misty woodland floor"
+      },
+      {
+        "id": 18,
+        "name": "雾凇",
+        "title": "雾凇 · 琼树玉花",
+        "category": "过冷却凝结",
+        "phenomenon": "严寒冬日过冷却雾滴在树枝与电线上骤然冻结成的纯白冰晶沉积",
+        "features": "每一根干枯树枝都包裹上厚密洁白毛茸茸针状冰晶的玉树琼枝、傲立雪野",
+        "keywords": [
+          "雾凇",
+          "树挂",
+          "冰晶琼枝",
+          "银装素裹"
+        ],
+        "colors": "雾凇纯白 · 树干焦褐 · 寒天苍蓝",
+        "colors_en": "rime frost pure white, tree trunk charcoal brown, and winter sky frosty blue",
+        "output": "images/atmosphere/18_雾凇.png",
+        "theme_en": "Rime Frost Coating Winter Tree Branches",
+        "subject_en": "a solitary winter tree encrusted with delicate feathery white rime frost crystals against a clean pale blue winter sky"
+      },
+      {
+        "id": 19,
+        "name": "红色精灵",
+        "title": "红色精灵 · 高空红妖",
+        "category": "中高层放电",
+        "phenomenon": "雷暴积雨云顶上方50-90公里高空中瞬闪即逝的水母状红色发光事件",
+        "features": "漆黑夜空中、雷暴云顶之上突兀绽放的一团如倒悬红色水母般的高空红色发光枝状精灵",
+        "keywords": [
+          "红色精灵",
+          "中高层放电",
+          "高空红妖",
+          "倒悬水母"
+        ],
+        "colors": "精灵赤红 · 闪光浅紫 · 穹苍深黑",
+        "colors_en": "sprite crimson red, electric lavender glow, and high altitude black",
+        "output": "images/atmosphere/19_红色精灵.png",
+        "theme_en": "Red Sprite Lightning Above Thunderstorm",
+        "subject_en": "an ephemeral jellyfish-shaped red sprite electrical discharge flashing in the upper atmosphere high above the dark anvil silhouette of a thunderstorm cloud"
+      },
+      {
+        "id": 20,
+        "name": "午夜太阳",
+        "title": "午夜太阳 · 极昼不落",
+        "category": "高纬极昼天象",
+        "phenomenon": "极圈内夏季太阳24小时始终在地平线以上游弋的极昼奇景",
+        "features": "一轮低悬于地平线山脊上永不沉没的金色暖阳、将极地苔原与冷海染上长久金辉",
+        "keywords": [
+          "午夜太阳",
+          "极昼",
+          "不落太阳",
+          "苔原金晖"
+        ],
+        "colors": "低阳金橙 · 苔原黄绿 · 极海深蓝",
+        "colors_en": "midnight sun golden orange, tundra olive green, and polar ocean navy",
+        "output": "images/atmosphere/20_午夜太阳.png",
+        "theme_en": "Midnight Sun Hovering Over Arctic Tundra",
+        "subject_en": "a glowing golden midnight sun skimming low along the arctic tundra mountain horizon without setting, casting long warm golden light over still polar waters"
+      }
+    ]
+  },
   "zodiac": {
     "id": "zodiac",
     "title": "十二生肖",
@@ -2796,6 +3975,9 @@ window.COLLECTIONS = {
 window.CITIES = window.COLLECTIONS.cities.items;
 window.SCENIC_SPOTS = window.COLLECTIONS.scenic_spots.items;
 window.POETRY = window.COLLECTIONS.poetry.items;
+window.WILDLIFE = window.COLLECTIONS.wildlife.items;
+window.MARINE = window.COLLECTIONS.marine.items;
+window.ATMOSPHERE = window.COLLECTIONS.atmosphere.items;
 window.ZODIAC = window.COLLECTIONS.zodiac.items;
 window.SOLAR_TERMS = window.COLLECTIONS.solar_terms.items;
 window.SHANHAIJING = window.COLLECTIONS.shanhaijing.items;
